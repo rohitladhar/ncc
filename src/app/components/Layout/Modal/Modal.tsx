@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { sendCareerForm, sendQuoteForm } from "@/app/utils/apiCalls";
 type BasicModalProps = {
   open: boolean;
   onClose: () => void;
@@ -25,18 +26,17 @@ export const getImgPath = (path: string): string => {
 const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
   const { theme } = useTheme();
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    name: "",
+    address: "",
     email: "",
-    phnumber: "",
-    message: "",
+    phone: "",
+    comments: "",
   });
 
   const [showThanks, setShowThanks] = useState(false);
   const [loader, setLoader] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
 
-  // Validate form
   useEffect(() => {
     const isValid = Object.values(formData).every(
       (value) => value.trim() !== ""
@@ -50,36 +50,41 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
-  const resetForm = () => {
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phnumber: "",
-      message: "",
-    });
-  };
-
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+  const [message, setMessage] = useState("");
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoader(true);
-
     try {
-      const response = await fetch("#", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
+      if (flag === true) {
+        const formdata = new FormData();
+        formdata.append("name", formData.name);
+        formdata.append("address", formData.address);
+        formdata.append("email", formData.email);
+        formdata.append("phone", formData.phone);
+        formdata.append("comments", formData.comments);
+        formdata.append("resume", resumeFile || new Blob());
 
-      if (data.success) {
-        setShowThanks(true);
-        resetForm();
-        setTimeout(() => setShowThanks(false), 5000);
+        sendCareerForm(formdata)
+          .then((response) => console.log(response))
+          .catch((err) => console.error(err));
+        setResumeFile(null);
+      } else {
+        await sendQuoteForm(formData);
       }
-    } catch (err) {
-      console.error("Error:", err);
+
+      setShowThanks(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        comments: "",
+      });
+      setMessage("Thank you for contacting us! We will get back to you soon.");
+    } catch (error: unknown) {
+      console.error("Error submitting form:", error);
+      setMessage("We having problem at our end.");
     } finally {
       setLoader(false);
     }
@@ -106,17 +111,17 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex gap-4 flex-col sm:flex-row">
               <input
-                name="firstname"
-                value={formData.firstname}
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
-                placeholder="First Name"
+                placeholder="Name"
                 className="flex-1 px-4 py-2 rounded-lg border border-black/20 dark:border-white/20 focus:border-cyan-500 dark:focus:border-cyan-400 focus:outline-none transition"
               />
               <input
-                name="lastname"
-                value={formData.lastname}
+                name="address"
+                value={formData.address}
                 onChange={handleChange}
-                placeholder="Last Name"
+                placeholder="Address"
                 className="flex-1 px-4 py-2 rounded-lg border border-black/20 dark:border-white/20 focus:border-cyan-500 dark:focus:border-cyan-400 focus:outline-none transition"
               />
             </div>
@@ -131,9 +136,9 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
                 className="flex-1 px-4 py-2 rounded-lg border border-black/20 dark:border-white/20 focus:border-cyan-500 dark:focus:border-cyan-400 focus:outline-none transition"
               />
               <input
-                name="phnumber"
-                type="tel"
-                value={formData.phnumber}
+                name="phone"
+                type="number"
+                value={formData.phone}
                 onChange={handleChange}
                 placeholder="Phone Number"
                 className="flex-1 px-4 py-2 rounded-lg border border-black/20 dark:border-white/20 focus:border-cyan-500 dark:focus:border-cyan-400 focus:outline-none transition"
@@ -141,8 +146,8 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
             </div>
 
             <textarea
-              name="message"
-              value={formData.message}
+              name="comments"
+              value={formData.comments}
               onChange={handleChange}
               placeholder="Comments"
               rows={4}
@@ -173,10 +178,11 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
                 <input
                   id="file-upload"
                   type="file"
+                  accept=".pdf,.docx,.jpg,.jpeg,.png"
                   className="hidden"
                   onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    console.log(file);
+                    const file = e.target.files?.[0] ?? null;
+                    setResumeFile(file);
                   }}
                 />
               </div>
@@ -198,7 +204,7 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
 
           {showThanks && (
             <div className="mt-4 text-center text-white bg-cyan-500 dark:bg-cyan-600 rounded-lg p-2 animate-pulse">
-              Thank you! We will get back to you soon.
+              {message}
             </div>
           )}
         </div>

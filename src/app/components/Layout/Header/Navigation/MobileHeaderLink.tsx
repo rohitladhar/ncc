@@ -6,7 +6,7 @@ import { Dispatch, SetStateAction } from "react";
 import BasicModal from "../../Modal/Modal";
 type MobileHeaderLinkProps = {
   item: NavLinkType;
-  setNavbarOpen: Dispatch<SetStateAction<boolean>>; // state setter from parent
+  setNavbarOpen: Dispatch<SetStateAction<boolean>>; 
 };
 
 const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
@@ -34,7 +34,7 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
   return (
     <>
       <BasicModal open={open} onClose={() => setOpen(false)} flag={true} />
-      <div className="relative w-full">
+      <div className=" relative w-full">
         <Link
           href={item.href}
           onClick={handleClick}
@@ -68,7 +68,7 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
               <Link
                 key={index}
                 href={subItem.href}
-                onClick={() => setNavbarOpen(false)} // close navbar when clicking submenu
+                onClick={() => setNavbarOpen(false)}
                 className="block py-2 text-darkblue dark:text-white hover:bg-neutral-50 dark:hover:bg-darkmode/10 hover:text-primary dark:hover:text-primary"
               >
                 {subItem.label}

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "NCC",
   description: "Cleaning Business in UK",
   icons: {
-    icon: "/favicon.svg", // path to your favicon.svg in the public folder
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 };
 

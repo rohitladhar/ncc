@@ -19,6 +19,10 @@
     {
       "label": "Careers",
       "href": "/#careers"
+    },
+    {
+      "label": "E Brochure",
+      "href": "/#eBrochure"
     }
   ],
   "PortfolioData": [
@@ -133,7 +137,7 @@
 
       "desc": {
         "one": "Clean, safe, and welcoming spaces for every stay and workspace.",
-        "two": "Safe, sanitary, and spotless care environments—because cleanliness is care."
+        "two": "Safe, sanitary, and spotless care environments because cleanliness is care."
       },
       "option": {
         "one": [

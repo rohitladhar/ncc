@@ -1,71 +1,54 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-
+import { sendContactForm } from "../../utils/apiCalls";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    name: "",
+    address: "",
     email: "",
-    phnumber: "",
-    Message: "",
+    phone: "",
+    comments: "",
   });
   const [showThanks, setShowThanks] = useState(false);
   const [loader, setLoader] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
-
+  const [message, setMessage] = useState("");
   useEffect(() => {
     const isValid = Object.values(formData).every(
       (value) => value.trim() !== ""
     );
     setIsFormValid(isValid);
   }, [formData]);
-  const handleChange = (e: any) => {
+  const handleChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
-  const reset = () => {
-    formData.firstname = "";
-    formData.lastname = "";
-    formData.email = "";
-    formData.phnumber = "";
-    formData.Message = "";
-  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoader(true);
+    try {
+      await sendContactForm(formData);
 
-    fetch("#", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify({
-        Name: formData.firstname,
-        LastName: formData.lastname,
-        Email: formData.email,
-        PhoneNo: formData.phnumber,
-        Message: formData.Message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          setShowThanks(true);
-          reset();
-
-          setTimeout(() => {
-            setShowThanks(false);
-          }, 5000);
-        }
-
-        reset();
-      })
-      .catch((error) => {
-        setLoader(false);
-        console.log(error.message);
+      setShowThanks(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        comments: "",
       });
+      setMessage("Thank you for contacting us! We will get back to you soon.");
+    } catch (error: unknown) {
+      console.error("Error submitting form:", error);
+      setMessage("We having problem at our end.");
+    } finally {
+      setLoader(false);
+    }
   };
   return (
     <section id="contact" className="scroll-mt-12">
@@ -81,17 +64,14 @@ const ContactForm = () => {
             >
               <div className="sm:flex gap-6 w-full">
                 <div className="mx-0 my-2.5 flex-1">
-                  <label
-                    htmlFor="fname"
-                    className="pb-3 inline-block text-base"
-                  >
-                    First Name
+                  <label htmlFor="name" className="pb-3 inline-block text-base">
+                    Name
                   </label>
                   <input
-                    id="fname"
+                    id="name"
                     type="text"
-                    name="firstname"
-                    value={formData.firstname}
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
                     placeholder="John"
                     className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
@@ -99,16 +79,16 @@ const ContactForm = () => {
                 </div>
                 <div className="mx-0 my-2.5 flex-1">
                   <label
-                    htmlFor="lname"
+                    htmlFor="address"
                     className="pb-3 inline-block text-base"
                   >
-                    Last Name
+                    Address
                   </label>
                   <input
-                    id="lname"
+                    id="address"
                     type="text"
-                    name="lastname"
-                    value={formData.lastname}
+                    name="address"
+                    value={formData.address}
                     onChange={handleChange}
                     placeholder="Doe"
                     className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
@@ -141,11 +121,11 @@ const ContactForm = () => {
                     Phone Number
                   </label>
                   <input
-                    id="Phnumber"
-                    type="tel"
-                    name="phnumber"
+                    id="phone"
+                    type="number"
+                    name="phone"
                     placeholder="+1234567890"
-                    value={formData.phnumber}
+                    value={formData.phone}
                     onChange={handleChange}
                     className="w-full text-base px-4 py-2.5 rounded-lg border-black/20 dark:border-white/20 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
                   />
@@ -156,9 +136,9 @@ const ContactForm = () => {
                   Message
                 </label>
                 <textarea
-                  id="message"
-                  name="Message"
-                  value={formData.Message}
+                  id="comments"
+                  name="comments"
+                  value={formData.comments}
                   onChange={handleChange}
                   className="w-full mt-2 px-5 py-3 rounded-lg border-black/20 dark:border-white/20 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
                   placeholder="Anything else you wanna communicate"
@@ -182,7 +162,7 @@ const ContactForm = () => {
           </div>
           {showThanks && (
             <div className="text-white bg-primary rounded-full px-4 text-lg mb-4.5 mt-1 absolute flex items-center gap-2">
-              Thank you for contacting us! We will get back to you soon.
+              {message}
               <div className="w-3 h-3 rounded-full animate-spin border-2 border-solid border-white border-t-transparent"></div>
             </div>
           )}

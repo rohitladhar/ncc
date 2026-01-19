@@ -32,6 +32,9 @@ const HeaderLink: React.FC<{ item: NavLinkType }> = ({ item }) => {
           if (item.href === "/#careers") {
             setOpen(true);
           }
+          if (item.href === "/#eBrochure") {
+            window.open("/eBrochure.pdf", "_blank", "noopener,noreferrer");
+          }
         }}
         className={`text-base flex font-normal  text-darkblue dark:text-white hover:text-primary   ${
           item.href === path ? "!text-primary dark:!text-primary" : null
