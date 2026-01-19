@@ -1,0 +1,232 @@
+{
+  "NavLinkData": [
+    {
+      "label": "Portfolio",
+      "href": "/#portfolio"
+    },
+    {
+      "label": "Services",
+      "href": "/#services"
+    },
+    {
+      "label": "Why Choose Us",
+      "href": "/#specialize"
+    },
+    {
+      "label": "Certificate",
+      "href": "/#certificate"
+    },
+    {
+      "label": "Careers",
+      "href": "/#careers"
+    }
+  ],
+  "PortfolioData": [
+    {
+      "coverImg": "/images/portfolio/staff_one.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_two.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_three.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_four.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_five.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_six.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_seven.jpeg",
+      "name": "Staff"
+    },
+    {
+      "coverImg": "/images/portfolio/staff_eight.jpeg",
+      "name": "Staff"
+    }
+  ],
+  "RecordData": [
+    {
+      "imgSrc": "/images/records/star.svg",
+      "digit": "24/7",
+      "desc": "Available"
+    },
+    {
+      "imgSrc": "/images/records/user.svg",
+      "digit": "100%",
+      "desc": "Satification"
+    },
+
+    {
+      "imgSrc": "/images/records/star.svg",
+      "digit": "UK",
+      "desc": "Coverage"
+    }
+  ],
+
+  "CertificationData": [
+    {
+      "imgSrc": "/images/certificate/ISO9001.png",
+      "name": "ISO:9001",
+      "desc": "Quality Management"
+    },
+    {
+      "imgSrc": "/images/certificate/ISO14001.png",
+      "name": "ISO:14001",
+      "desc": "Environmental Management"
+    },
+    {
+      "imgSrc": "/images/certificate/ISO45001.png",
+      "name": "ISO:45001",
+      "desc": "Occupational Health & Safety"
+    }
+  ],
+
+  "SpecializeData": [
+    {
+      "imgSrc": "/images/specialization/badge.svg",
+      "title": "Guaranteed Quality",
+      "desc": "Rigorous training programmes and quality control systems ensure consistently exceptional results on every job"
+    },
+    {
+      "imgSrc": "/images/specialization/quality-service.svg",
+      "title": "Reliable Service",
+      "desc": "Punctual, dependable teams who arrive on time and complete work to schedule without compromising standards"
+    },
+    {
+      "imgSrc": "/images/specialization/ecological.svg",
+      "title": "Eco-Conscious",
+      "desc": "Environmentally responsible cleaning products and methods that protect both people and planet"
+    },
+    {
+      "imgSrc": "/images/specialization/diploma.svg",
+      "title": "Fully Certified",
+      "desc": "Comprehensive insurance, health & safety compliance, and industry accreditations for complete peace of mind"
+    },
+    {
+      "imgSrc": "/images/specialization/business-people.svg",
+      "title": "Customer Focused",
+      "desc": "Tailored solutions and responsive support that adapts to your unique requirements and feedback"
+    },
+    {
+      "imgSrc": "/images/specialization/coverage.svg",
+      "title": "Nationwide Coverage",
+      "desc": "Professional cleaning services delivered across the United Kingdom with local expertise"
+    }
+  ],
+  "ServiceData": [
+    {
+      "slide": {
+        "one": "HOME OFFICE ASYLUM ACCOMODATIONS",
+        "two": "HEALTHCARE AND CARE HOME CLEANING"
+      },
+
+      "desc": {
+        "one": "Clean, safe, and welcoming spaces for every stay and workspace.",
+        "two": "Safe, sanitary, and spotless care environments—because cleanliness is care."
+      },
+      "option": {
+        "one": [
+          "Dust surfaces, shelves, and furniture",
+          "Vacuum and mop floors",
+          "Clean kitchen: countertops, sink, stove,fridge",
+          "Clean bathroom: toilet, sink, shower, mirrors",
+          "Change bed linens and make beds",
+          "Empty trash bins"
+        ],
+        "two": [
+          "Disinfect patient rooms, beds, and furniture",
+          "Sanitize high-touch areas: door handles switches, handrails",
+          "Dust and wipe surfaces, shelves, and equipment",
+          "Empty and replace trash and clinical wastebins"
+        ]
+      }
+    },
+    {
+      "slide": {
+        "one": "OFFICE AND CORPORATE CLEANING",
+        "two": "COMMERCIAL BUILDING CLEANING"
+      },
+
+      "desc": {
+        "one": "Spotless offices, productive workplaces.",
+        "two": "Immaculate spaces, professional impressions."
+      },
+      "option": {
+        "one": [
+          "Wipe and disinfect phones, keyboards, and office equipment",
+          "Spot-clean walls, doors, and light switches",
+          "Organize common areas and meeting rooms",
+          "Clean windows, glass partitions, and mirrors"
+        ],
+        "two": [
+          "Vacuum and mop floors, carpets, and entryways",
+          "Clean elevators, stairways, and hallways",
+          "Spot-clean walls, vents, and ceilings",
+          "Refill soap, paper towels, and toilet paper"
+        ]
+      }
+    },
+    {
+      "slide": {
+        "one": "EDUCATIONAL FACILITIES CLEANING",
+        "two": "DEEP AND SPECIALIST CLEANING"
+      },
+
+      "desc": {
+        "one": "Clean classrooms, brighter learning",
+        "two": "Expert cleaning for every hidden corner"
+      },
+      "option": {
+        "one": [
+          "Dust and wipe desks, tables, shelves, and surfaces",
+          "Maintain cafeteria and kitchen hygiene",
+          "Clean windows, mirrors, and glass surfaces",
+          "Clean laboratory benches and equipment",
+          "Maintain hallways, staircases, and common areas"
+        ],
+        "two": [
+          "Deep carpet and upholstery cleaning",
+          "Deep bathroom and tile scrubbing",
+          "Mold, mildew, and stain removal",
+          "Window and glass cleaning, including hard-to-reach areas",
+          "Floor stripping, polishing, and waxing"
+        ]
+      }
+    }
+  ],
+
+  "FooterLinkData": [
+    {
+      "section": "NCC",
+      "links": [
+        {
+          "label": "Portfolio",
+          "href": "/#portfolio"
+        },
+        {
+          "label": "Services",
+          "href": "/#services"
+        },
+        {
+          "label": "Why Choose Us",
+          "href": "/#specialize"
+        },
+        {
+          "label": "Certificate",
+          "href": "/#certificate"
+        }
+      ]
+    }
+  ]
+}
