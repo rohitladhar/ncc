@@ -36,7 +36,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="shadow-lg dark:shadow-neutral-50/5 bg-white dark:bg-darkmode">
+    <footer className="shadow-lg dark:shadow-neutral-50/5 dark:bg-darkmode bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff]`">
       <div className="container mx-auto pt-3">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
           <div className="flex flex-col items-start gap-6">
@@ -92,8 +92,11 @@ const Footer = () => {
               </div>
             ))}
           </div>
-
+          {/* linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%) */}
           <div className="flex flex-col gap-6 min-w-[250px] cursor-pointer">
+            <p className="font-bold text-offwhite text-primary dark:text-white">
+              CONTACT US
+            </p>
             <div className="flex items-start gap-1">
               <Icon
                 icon="tabler:map-pin"
@@ -127,7 +130,7 @@ const Footer = () => {
               />
               <div>
                 <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
-                  info@ncccleaning.co.uk <br /> services@ncccleaning.co.uk
+                  info@ncccleaning.co.uk <br /> service@ncccleaning.co.uk
                 </p>
               </div>
             </div>
@@ -135,7 +138,7 @@ const Footer = () => {
         </div>
 
         <div className="py-6 mt-10 border-t border-darkblue/20 text-center text-sm">
-          <p>@2025 - All Rights Reserved by NCC</p>
+          <p>@2023-2026 All Rights Reserved by NCC</p>
         </div>
       </div>
     </footer>

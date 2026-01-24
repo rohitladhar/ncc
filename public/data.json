@@ -27,11 +27,11 @@
   ],
   "PortfolioData": [
     {
-      "coverImg": "/images/portfolio/staff_one.jpeg",
+      "coverImg": "/images/portfolio/staff_one.jpg",
       "name": "Staff"
     },
     {
-      "coverImg": "/images/portfolio/staff_two.jpeg",
+      "coverImg": "/images/portfolio/staff_two.jpg",
       "name": "Staff"
     },
     {
@@ -39,25 +39,15 @@
       "name": "Staff"
     },
     {
-      "coverImg": "/images/portfolio/staff_four.jpeg",
+      "coverImg": "/images/portfolio/staff_four.jpg",
       "name": "Staff"
     },
-    {
-      "coverImg": "/images/portfolio/staff_five.jpeg",
-      "name": "Staff"
-    },
+    
     {
       "coverImg": "/images/portfolio/staff_six.jpeg",
       "name": "Staff"
-    },
-    {
-      "coverImg": "/images/portfolio/staff_seven.jpeg",
-      "name": "Staff"
-    },
-    {
-      "coverImg": "/images/portfolio/staff_eight.jpeg",
-      "name": "Staff"
     }
+  
   ],
   "RecordData": [
     {
