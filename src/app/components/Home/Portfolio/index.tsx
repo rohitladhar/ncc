@@ -81,7 +81,7 @@ const Project = () => {
               Comfort, Hygiene, and Peace
             </p>
           </div>
-          {/* slider */}
+
           <div className="relative z-20">
             <Slider {...settings}>
               {loading
@@ -91,15 +91,16 @@ const Project = () => {
                 : portfolio.map((item, i) => (
                     <div key={i}>
                       <div className="p-5 bg-white dark:bg-lightdarkblue m-3 rounded-lg">
-                        <div className="w-full mb-4">
+                        <div className="mb-4">
                           <Image
                             src={getImgPath(item.coverImg)}
                             alt={item.coverImg}
                             width={234}
-                            height={236}
-                            className="w-full rounded-lg"
+                            height={325}
+                            className="w-[234px] h-[325px] rounded-lg object-cover"
                           />
                         </div>
+
                         <div className="flex items-center gap-2">
                           <Image
                             src={getImgPath("/images/logo/logo.svg")}
