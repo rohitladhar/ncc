@@ -39,19 +39,19 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
 
   useEffect(() => {
     const isValid = Object.values(formData).every(
-      (value) => value.trim() !== ""
+      (value) => value.trim() !== "",
     );
     setIsFormValid(isValid);
   }, [formData]);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<string[]>([]);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoader(true);
@@ -65,26 +65,63 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
         formdata.append("comments", formData.comments);
         formdata.append("resume", resumeFile || new Blob());
 
-        sendCareerForm(formdata)
-          .then((response) => console.log(response))
-          .catch((err) => console.error(err));
-        setResumeFile(null);
+        const response = await sendCareerForm(formdata);
+        
+        if (response.error) {
+          let err: string[] = Object.values(
+            response.error as Record<string, string[]>,
+          ).flat();
+          setShowThanks(true);
+          setMessage(
+            err.length
+              ? err
+              : ["An unexpected error occurred. Please try again."],
+          );
+        } else {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            address: "",
+            comments: "",
+          });
+          setShowThanks(true);
+          setMessage([
+            "Thank you for contacting us! We will get back to you soon.",
+          ]);
+          setResumeFile(null);
+        }
+       
       } else {
-        await sendQuoteForm(formData);
+        const response =await sendQuoteForm(formData);
+        if (response.error) {
+          let err: string[] = Object.values(
+            response.error as Record<string, string[]>,
+          ).flat();
+          setShowThanks(true);
+          setMessage(
+            err.length
+              ? err
+              : ["An unexpected error occurred. Please try again."],
+          );
+        } else {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            address: "",
+            comments: "",
+          });
+          setShowThanks(true);
+          setMessage([
+            "Thank you for contacting us! We will get back to you soon.",
+          ]);
+          setResumeFile(null);
+        }
       }
 
-      setShowThanks(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-        comments: "",
-      });
-      setMessage("Thank you for contacting us! We will get back to you soon.");
     } catch (error: unknown) {
       console.error("Error submitting form:", error);
-      setMessage("We having problem at our end.");
     } finally {
       setLoader(false);
     }
@@ -163,7 +200,7 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
                     src={getImgPath(
                       theme === "dark"
                         ? "/images/cleaning/file-white.png"
-                        : "/images/cleaning/file.png"
+                        : "/images/cleaning/file.png",
                     )}
                     alt="Upload"
                     width={50}
@@ -204,7 +241,13 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, onClose, flag }) => {
 
           {showThanks && (
             <div className="mt-4 text-center text-white bg-cyan-500 dark:bg-cyan-600 rounded-lg p-2 animate-pulse">
-              {message}
+              {message.length > 0 && (
+                <ul>
+                  {message.map((msg, index) => (
+                    <li key={index}>{msg}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           )}
         </div>

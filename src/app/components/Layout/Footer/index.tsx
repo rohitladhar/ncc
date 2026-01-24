@@ -92,7 +92,6 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          {/* linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%) */}
           <div className="flex flex-col gap-6 min-w-[250px] cursor-pointer">
             <p className="font-bold text-offwhite text-primary dark:text-white">
               CONTACT US

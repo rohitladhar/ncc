@@ -1,61 +1,38 @@
 const API_ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT;
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 export function sendContactForm(formData) {
-  return fetch(API_ENDPOINT+'/contact', { 
+  return fetch(API_ENDPOINT+'/addcontact', { 
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": API_KEY
+   
     },
     body: JSON.stringify(formData)
   })
     .then((response) => {
-      if (!response.ok) {
-        return response.json().then((err) => {
-          throw new Error(err.message || "Failed to submit form");
-        });
-      }
-      return response.json();
-    });
+      return response.json()
+    }).catch((error)=>console.log(error))
 }
 
 export function sendQuoteForm(formData) {
-  console.log(formData)
-  return fetch(API_ENDPOINT+'/onlinequote', { 
+  return fetch(API_ENDPOINT+'/addonlinequote', { 
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": API_KEY
     },
     body: JSON.stringify(formData)
   })
     .then((response) => {
-      if (!response.ok) {
-        return response.json().then((err) => {
-          throw new Error(err.message || "Failed to submit form");
-        });
-      }
-      return response.json();
-    });
+      return response.json()
+    }).catch((error)=>console.log(error))
 }
 
 export function sendCareerForm(formData) {
-  return fetch(API_ENDPOINT+'/career', { 
+  return fetch(API_ENDPOINT+'/addcareer', { 
     method: "POST",
-    headers: {
-      "x-api-key": API_KEY
-    },
     body:formData,
     credentials: 'include',
   })
     .then((response) => {
-   
-      if (!response.ok) {
-        return response.json().then((err) => {
-         
-          throw new Error(err.message || "Failed to submit form");
-        });
-      }
-      return response.json();
-    });
+      return response.json()
+    }).catch((error)=>console.log(error))
 }

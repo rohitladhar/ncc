@@ -13,10 +13,10 @@ const ContactForm = () => {
   const [showThanks, setShowThanks] = useState(false);
   const [loader, setLoader] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<string[]>([]);
   useEffect(() => {
     const isValid = Object.values(formData).every(
-      (value) => value.trim() !== ""
+      (value) => value.trim() !== "",
     );
     setIsFormValid(isValid);
   }, [formData]);
@@ -31,25 +31,44 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoader(true);
-    try {
-      await sendContactForm(formData);
 
-      setShowThanks(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-        comments: "",
-      });
-      setMessage("Thank you for contacting us! We will get back to you soon.");
+    try {
+      const response = await sendContactForm(formData);
+
+      if (response.error) {
+        let err: string[] = Object.values(
+          response.error as Record<string, string[]>,
+        ).flat();
+        setShowThanks(true);
+        setMessage(
+          err.length
+            ? err
+            : ["An unexpected error occurred. Please try again."],
+        );
+      } else {
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          address: "",
+          comments: "",
+        });
+        setShowThanks(true);
+        setMessage([
+          "Thank you for contacting us! We will get back to you soon.",
+        ]);
+        
+      }
     } catch (error: unknown) {
       console.error("Error submitting form:", error);
-      setMessage("We having problem at our end.");
+      setMessage([
+        "We are having a problem on our end. Please try again later.",
+      ]);
     } finally {
       setLoader(false);
     }
   };
+
   return (
     <section id="contact" className="scroll-mt-12">
       <div className="container">
@@ -162,7 +181,13 @@ const ContactForm = () => {
           </div>
           {showThanks && (
             <div className="text-white bg-primary rounded-full px-4 text-lg mb-4.5 mt-1 absolute flex items-center gap-2">
-              {message}
+              {message.length > 0 && (
+                <ul>
+                  {message.map((msg, index) => (
+                    <li key={index}>{msg}</li>
+                  ))}
+                </ul>
+              )}
               <div className="w-3 h-3 rounded-full animate-spin border-2 border-solid border-white border-t-transparent"></div>
             </div>
           )}
