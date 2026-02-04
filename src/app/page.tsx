@@ -11,11 +11,9 @@ export default function Home() {
     <main>
       <Hero />
       <Specialize />
-
       <Certificate />
       <Portfolio />
       <Pricing />
-
       <ContactForm />
     </main>
   );

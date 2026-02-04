@@ -117,7 +117,6 @@ const Project = () => {
                   ))}
             </Slider>
           </div>
-          {/* floating images */}
           <div className="absolute top-28 -left-9 dark:opacity-5">
             <Image
               src={getImgPath("/images/banner/pattern1.svg")}

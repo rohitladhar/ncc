@@ -27,10 +27,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${DMSans.variable} antialiased dark:bg-darkmode`}>
+        <head>
+          <script
+            src="https://cdn.jsdelivr.net/npm/heic2any"
+            type="text/javascript"
+            async
+          ></script>
+          </head>
         <ThemeProvider
           attribute="class"
           enableSystem={false}
-          defaultTheme="light"
+          defaultTheme="dark"
         >
           <Header />
           {children}

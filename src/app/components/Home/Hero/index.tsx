@@ -36,12 +36,12 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-7 relative h-[300px] md:h-[400px] lg:h-[500px]">
+          <div className="lg:col-span-7 relative h-[350px] md:h-[450px] lg:h-[600px]">
             <Image
-              src={getImgPath("/images/cleaning/banner.png")}
+              src={getImgPath("/images/cleaning/wallpaper.png")}
               alt="banner"
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="100vw"
             />
           </div>
