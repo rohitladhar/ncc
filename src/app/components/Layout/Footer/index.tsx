@@ -137,7 +137,8 @@ const Footer = () => {
         </div>
 
         <div className="py-6 mt-10 border-t border-darkblue/20 text-center text-sm">
-          <p>@2023-2026 All Rights Reserved by NCC</p>
+          <p className="font-bold text-offwhite text-primary dark:text-white"><span className="text-xl">&copy;
+            </span> 2023-2026 All Rights Reserved by NCC</p>
         </div>
       </div>
     </footer>

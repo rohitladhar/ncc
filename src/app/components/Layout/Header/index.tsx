@@ -118,10 +118,10 @@ const Header: React.FC = () => {
             />
           </button>
           <Link
-            href="/#contact"
+            href="/quote"
             className="hidden xl:block px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold"
           >
-            Contact Us
+            Get a Free Quote
           </Link>
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
@@ -139,7 +139,7 @@ const Header: React.FC = () => {
       )}
       <div
         ref={mobileMenuRef}
-        className={`xl:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-darklight shadow-lg transform transition-transform duration-300 max-w-xs ${
+        className={`xl:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-darklight shadow-lg transform transition-transform duration-300 ${
           navbarOpen ? "translate-x-0" : "translate-x-full"
         } z-50`}
       >
@@ -177,13 +177,13 @@ const Header: React.FC = () => {
           ))}
           <div className="mt-4 flex flex-col gap-4 w-full">
             <Link
-              href="/#contact"
+              href="/quote"
               className="px-4 w-full py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold"
               onClick={() => {
                 setNavbarOpen(false);
               }}
             >
-              Contact Us
+              Get a Free Quote
             </Link>
           </div>
         </nav>

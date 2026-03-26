@@ -36,7 +36,7 @@ const Pricing = () => {
 
   return (
     <section id="services" className="scroll-mt-12">
-      <div className="container">
+      <div className="container pt-10">
         <div className="text-center">
           <h2 className="dark:text-white text-primary">Our Services</h2>
           <p className="text-lg font-normal max-w-lg mx-auto my-6 dark:text-white  text-primary">
@@ -65,7 +65,7 @@ const Pricing = () => {
                           : item.desc.two}
                       </p>
                     </div>
-                    {/* options */}
+
                     <div>
                       <ul className="flex flex-col gap-6 my-6 dark:text-white  text-primary">
                         {(selectedCategory === "one"
