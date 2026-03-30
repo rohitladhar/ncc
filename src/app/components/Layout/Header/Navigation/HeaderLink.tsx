@@ -6,7 +6,6 @@ import { NavLinkType } from "@/app/types/navlink";
 import { motion, AnimatePresence } from "framer-motion";
 const HeaderLink: React.FC<{ item: NavLinkType }> = ({ item }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
-  const [open, setOpen] = useState(false);
   const path = usePathname();
 
   const handleMouseEnter = () => {
@@ -59,7 +58,7 @@ const HeaderLink: React.FC<{ item: NavLinkType }> = ({ item }) => {
             transition={{ duration: 0.2 }}
             className="fixed left-0 top-[80px] w-screen bg-white dark:bg-white/10 shadow-lg py-6 z-50 backdrop-blur-md"
           >
-            <ul className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 h-[130px]">
+            <ul className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 h-[200px]">
               {item.submenu.map((subItem, index) => (
                 <li key={index}>
                   <Link

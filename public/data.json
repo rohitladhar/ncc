@@ -1,39 +1,53 @@
 {
   "NavLinkData": [
-  {
-    "label": "Cleaning Services",
-    "submenu": [
-      { "label": "HOME OFFICE ASYLUM", "href": "/services/asylum" },
-      { "label": "OFFICE AND CORPORATE CLEANING", "href": "/services/office" },
-      { "label": "EDUCATIONAL FACILITIES CLEANING", "href": "/services/education" },
-      { "label": "HEALTHCARE AND CARE HOME CLEANING", "href": "/services/healthcare" },
-      { "label": "COMMERCIAL BUILDING CLEANING", "href": "/services/commercial" },
-      { "label": "DEEP CLEANING", "href": "/services/specialist" }
-    ]
-  },
-  {
-    "label": "About Us",
-    "submenu": [
-      { "label": "Our Values", "href": "/about" },
-      { "label": "Why Choose Us", "href": "/about/whychooseus" },
-      { "label": "Areas We Cover", "href": "/about" },
-      { "label": "Charitable Causes", "href": "/about" },
-      { "label": "Our Accreditations", "href": "/about" },
-      { "label": "Health & Safety", "href": "/about" },
-      { "label": "Testimonials", "href": "/about" },
-      { "label": "Frequently Asked Questions", "href": "/about/faqs" },
-      { "label": "E Brochure", "href": "/about" }  
-    ]
-  },
+    {
+      "label": "Cleaning Services",
+      "submenu": [
+        { "label": "HOME OFFICE ASYLUM", "href": "/services/asylum" },
+        {
+          "label": "OFFICE AND CORPORATE CLEANING",
+          "href": "/services/office"
+        },
+        {
+          "label": "EDUCATIONAL FACILITIES CLEANING",
+          "href": "/services/education"
+        },
+        {
+          "label": "HEALTHCARE AND CARE HOME CLEANING",
+          "href": "/services/healthcare"
+        },
+        {
+          "label": "COMMERCIAL BUILDING CLEANING",
+          "href": "/services/commercial"
+        },
+        { "label": "DEEP CLEANING", "href": "/services/specialist" }
+      ]
+    },
+    {
+      "label": "About Us",
+      "submenu": [
+        { "label": "Our Values", "href": "/about/ourvalues" },
+        { "label": "Why Choose Us", "href": "/about/whychooseus" },
+        { "label": "Areas We Cover", "href": "/about" },
+        { "label": "How We Work", "href": "/about/howwework" },
+         { "label": "C.A.R.E", "href": "/about/CARE" },
+        { "label": "Charitable Causes", "href": "/about" },
+        { "label": "Our Accreditations", "href": "/about/accreditations" },
+        { "label": "Health & Safety", "href": "/about/Health&Safety" },
+        { "label": "Testimonials", "href": "/about" },
+        { "label": "Frequently Asked Questions", "href": "/about/faqs" },
+        { "label": "E Brochure", "href": "/about" }
+      ]
+    },
 
-  {
-    "label": "Jobs",
-    "href": "/careers"
-  },
-  {
-    "label": "Contact",
-    "href": "/contact"
-  }
+    {
+      "label": "Jobs",
+      "href": "/careers"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
   ],
   "PortfolioData": [
     {
@@ -52,12 +66,11 @@
       "coverImg": "/images/portfolio/staff_four.jpg",
       "name": "Staff"
     },
-    
+
     {
       "coverImg": "/images/portfolio/staff_six.jpg",
       "name": "Staff"
     }
-  
   ],
   "RecordData": [
     {
@@ -234,7 +247,7 @@
     }
   ],
 
-  "ServicesData":[
+  "ServicesData": [
     {
       "id": 1,
       "title": "HOME OFFICE ASYLUM ACCOMODATIONS",
@@ -374,39 +387,39 @@
       }
     }
   ],
-  "ServiceCards":[
+  "ServiceCards": [
     {
       "src": "/images/services/1.png",
       "title": "HOME OFFICE ASYLUM ACCOMODATIONS",
-      "href":"/services/asylum"
+      "href": "/services/asylum"
     },
     {
       "src": "/images/services/2.png",
       "title": "HEALTHCARE AND CARE HOME CLEANING",
-      "href":"/services/healthcare"
+      "href": "/services/healthcare"
     },
     {
       "src": "/images/services/7.png",
       "title": "OFFICE AND CORPORATE CLEANING",
-      "href":"/services/office"
+      "href": "/services/office"
     },
     {
       "src": "/images/services/8.png",
       "title": "COMMERCIAL BUILDING CLEANING",
-      "href":"/services/commercial"
+      "href": "/services/commercial"
     },
     {
       "src": "/images/services/5.png",
       "title": "EDUCATIONAL FACILITIES CLEANING",
-      "href":"/services/education"
+      "href": "/services/education"
     },
     {
       "src": "/images/services/6.png",
       "title": "DEEP CLEANING",
-      "href":"/services/specialist"
+      "href": "/services/specialist"
     }
   ],
-  "CleaningIcons" : [
+  "CleaningIcons": [
     { "id": 1, "icon": "mdi:broom" },
     { "id": 2, "icon": "mdi:vacuum" },
     { "id": 3, "icon": "mdi:hand-wash" },
@@ -419,91 +432,91 @@
     { "id": 10, "icon": "mdi:air-purifier" }
   ],
   "FAQOne": [
-  {
-    "question": "What time do you arrive on site?",
-    "answer": "We provide a fully flexible service and can visit your premises at a time that suits you best, including early morning, during the day, or in the evening."
-  },
-  {
-    "question": "What are your hourly rates?",
-    "answer": "We use a flexible pricing model instead of a fixed hourly rate. Costs are based on project requirements, including equipment, materials, and task complexity."
-  },
-  {
-    "question": "Are you fully insured?",
-    "answer": "Yes. Our coverage includes Public Liability (£5,000,000), Products Liability (£5,000,000), and Employers' Liability (£10,000,000)."
-  },
-  {
-    "question": "Will the changeover to NCC Cleaning Services Ltd be smooth?",
-    "answer": "Yes. We ensure a smooth transition through careful planning, communication, and compliance with all relevant legislation."
-  },
-  {
-    "question": "How often do you clean a site?",
-    "answer": "Cleaning frequency is customised. It can range from once or twice a week to daily services with multiple cleaners depending on client needs."
-  },
-  {
-    "question": "Can you provide references?",
-    "answer": "Yes. References are provided after a formal quotation, and testimonials are also available on our website."
-  },
-  {
-    "question": "Do you have high staff turnover?",
-    "answer": "No. We maintain high staff retention due to strong training, compensation, and management practices."
-  },
-  {
-    "question": "Can you unlock/lock and alarm the building?",
-    "answer": "Yes. This service is available to all clients and allows cleaning outside normal working hours."
-  },
-  {
-    "question": "Will we always have the same cleaner?",
-    "answer": "Yes, wherever possible. We aim to provide consistency to build trust and maintain site knowledge."
-  },
-  {
-    "question": "Are we issued a cleaning contract?",
-    "answer": "Yes. A signed contract is required before work begins, along with opening an account."
-  },
-  {
-    "question": "Do your staff receive training?",
-    "answer": "Yes. All staff undergo comprehensive training, including health and safety, company policies, and job-specific skills."
-  }
+    {
+      "question": "What time do you arrive on site?",
+      "answer": "We provide a fully flexible service and can visit your premises at a time that suits you best, including early morning, during the day, or in the evening."
+    },
+    {
+      "question": "What are your hourly rates?",
+      "answer": "We use a flexible pricing model instead of a fixed hourly rate. Costs are based on project requirements, including equipment, materials, and task complexity."
+    },
+    {
+      "question": "Are you fully insured?",
+      "answer": "Yes. Our coverage includes Public Liability (£5,000,000), Products Liability (£5,000,000), and Employers' Liability (£10,000,000)."
+    },
+    {
+      "question": "Will the changeover to NCC Cleaning Services Ltd be smooth?",
+      "answer": "Yes. We ensure a smooth transition through careful planning, communication, and compliance with all relevant legislation."
+    },
+    {
+      "question": "How often do you clean a site?",
+      "answer": "Cleaning frequency is customised. It can range from once or twice a week to daily services with multiple cleaners depending on client needs."
+    },
+    {
+      "question": "Can you provide references?",
+      "answer": "Yes. References are provided after a formal quotation, and testimonials are also available on our website."
+    },
+    {
+      "question": "Do you have high staff turnover?",
+      "answer": "No. We maintain high staff retention due to strong training, compensation, and management practices."
+    },
+    {
+      "question": "Can you unlock/lock and alarm the building?",
+      "answer": "Yes. This service is available to all clients and allows cleaning outside normal working hours."
+    },
+    {
+      "question": "Will we always have the same cleaner?",
+      "answer": "Yes, wherever possible. We aim to provide consistency to build trust and maintain site knowledge."
+    },
+    {
+      "question": "Are we issued a cleaning contract?",
+      "answer": "Yes. A signed contract is required before work begins, along with opening an account."
+    },
+    {
+      "question": "Do your staff receive training?",
+      "answer": "Yes. All staff undergo comprehensive training, including health and safety, company policies, and job-specific skills."
+    }
   ],
-  "FAQTwo" :[
-  {
-    "question": "Can we contact you outside office hours in case of an emergency?",
-    "answer": "Yes. A 24/7 hotline is included in your contract for emergencies."
-  },
-  {
-    "question": "Are all your staff vetted?",
-    "answer": "Yes. We carry out reference checks, verify identity and right to work, and conduct DBS checks when required."
-  },
-  {
-    "question": "Do you support any local charities?",
-    "answer": "Yes. We actively support local charities within our community."
-  },
-  {
-    "question": "How do we pay you?",
-    "answer": "Invoices are issued monthly with 30 days to pay."
-  },
-  {
-    "question": "What do you do for the local community?",
-    "answer": "We support community initiatives and charities that enhance local welfare."
-  },
-  {
-    "question": "Do you supply everything required?",
-    "answer": "Yes. We provide all labour, equipment, and materials, including consumables which are billed monthly."
-  },
-  {
-    "question": "What happens if our regular cleaner is unavailable?",
-    "answer": "We provide a trained replacement who is familiar with your site requirements and security procedures."
-  },
-  {
-    "question": "Are your cleaning contracts flexible?",
-    "answer": "Yes. Contracts can be adjusted to suit changing needs, including hours, schedules, and services."
-  },
-  {
-    "question": "How do you ensure cleaning quality is maintained?",
-    "answer": "We use structured processes, regular inspections, and client feedback to maintain high standards."
-  },
-  {
-    "question": "Do you use environmentally responsible cleaning products?",
-    "answer": "Yes. We prioritise eco-friendly products and can offer specialised sustainable cleaning options."
-  }
+  "FAQTwo": [
+    {
+      "question": "Can we contact you outside office hours in case of an emergency?",
+      "answer": "Yes. A 24/7 hotline is included in your contract for emergencies."
+    },
+    {
+      "question": "Are all your staff vetted?",
+      "answer": "Yes. We carry out reference checks, verify identity and right to work, and conduct DBS checks when required."
+    },
+    {
+      "question": "Do you support any local charities?",
+      "answer": "Yes. We actively support local charities within our community."
+    },
+    {
+      "question": "How do we pay you?",
+      "answer": "Invoices are issued monthly with 30 days to pay."
+    },
+    {
+      "question": "What do you do for the local community?",
+      "answer": "We support community initiatives and charities that enhance local welfare."
+    },
+    {
+      "question": "Do you supply everything required?",
+      "answer": "Yes. We provide all labour, equipment, and materials, including consumables which are billed monthly."
+    },
+    {
+      "question": "What happens if our regular cleaner is unavailable?",
+      "answer": "We provide a trained replacement who is familiar with your site requirements and security procedures."
+    },
+    {
+      "question": "Are your cleaning contracts flexible?",
+      "answer": "Yes. Contracts can be adjusted to suit changing needs, including hours, schedules, and services."
+    },
+    {
+      "question": "How do you ensure cleaning quality is maintained?",
+      "answer": "We use structured processes, regular inspections, and client feedback to maintain high standards."
+    },
+    {
+      "question": "Do you use environmentally responsible cleaning products?",
+      "answer": "Yes. We prioritise eco-friendly products and can offer specialised sustainable cleaning options."
+    }
   ]
 }
