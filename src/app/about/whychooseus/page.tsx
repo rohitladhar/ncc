@@ -5,7 +5,7 @@ const WhyChooseUs: React.FC = () => {
   return (
     <section className="mt-8 md:mt-16">
       <div className="container">
-        <Specialize />;
+        <Specialize />
       </div>
     </section>
   );

@@ -44,7 +44,7 @@ const Service: React.FC<ServiceProps> = ({ data }) => {
   };
 
   return (
-    <section className="mt-16 md:mt-32">
+    <section className="mt-16 md:mt-12">
       <div className="container mx-auto pt-10">
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2 text-center md:text-left">

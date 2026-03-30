@@ -8,7 +8,7 @@
       { "label": "EDUCATIONAL FACILITIES CLEANING", "href": "/services/education" },
       { "label": "HEALTHCARE AND CARE HOME CLEANING", "href": "/services/healthcare" },
       { "label": "COMMERCIAL BUILDING CLEANING", "href": "/services/commercial" },
-      { "label": "DEEP AND SPECIALIST CLEANING", "href": "/services/specialist" }
+      { "label": "DEEP CLEANING", "href": "/services/specialist" }
     ]
   },
   {
@@ -352,11 +352,11 @@
     },
     {
       "id": 6,
-      "title": "DEEP AND SPECIALIST CLEANING",
+      "title": "DEEP CLEANING",
       "imgSrcOne": "/images/services/6.png",
       "imgSrcTwo": "/images/services/6.png",
-      "paragraph": "Our deep and specialist cleaning services are designed to provide intensive, thorough cleaning for areas that require more than routine maintenance. This includes carpets, upholstery, tiles, grout, windows, hard-to-reach areas, and post-construction or end-of-tenancy spaces. Our trained staff use professional-grade equipment and cleaning solutions to remove dirt, stains, mold, and allergens that standard cleaning might miss. We focus on restoring surfaces to their best condition while ensuring hygienic standards are met. Deep cleaning not only enhances the appearance of spaces but also improves indoor air quality and reduces health risks. Whether it’s a residential, commercial, or specialized setting, our services address hidden corners, high-use areas, and challenging surfaces with precision. By maintaining a cleaner, safer, and more organized environment, deep cleaning supports comfort, health, and longevity of furnishings, flooring, and fixtures, providing a refreshed and professional environment for occupants.",
-      "benefits": "Deep and specialist cleaning goes beyond standard cleaning by targeting hidden dirt, stubborn stains, allergens, and bacteria that accumulate over time. This comprehensive approach significantly improves hygiene and indoor air quality, creating a healthier environment for all occupants. By removing contaminants, deep cleaning helps prevent illnesses, reduces allergy triggers, and promotes overall wellbeing. It also restores the appearance of carpets, upholstery, floors, and surfaces, extending the life of furniture, fixtures, and equipment, and reducing long-term maintenance costs. Deep cleaning is essential for specific needs such as post-construction, end-of-tenancy, or specialized commercial and residential spaces. It ensures compliance with stringent cleanliness and safety standards, providing peace of mind for property owners, tenants, and employees. Ultimately, specialist cleaning delivers a thorough, reliable, and lasting clean that enhances both health and aesthetics, making spaces safe, fresh, and visually appealing.",
+      "paragraph": "Our deep cleaning services are designed to provide intensive, thorough cleaning for areas that require more than routine maintenance. This includes carpets, upholstery, tiles, grout, windows, hard-to-reach areas, and post-construction or end-of-tenancy spaces. Our trained staff use professional-grade equipment and cleaning solutions to remove dirt, stains, mold, and allergens that standard cleaning might miss. We focus on restoring surfaces to their best condition while ensuring hygienic standards are met. Deep cleaning not only enhances the appearance of spaces but also improves indoor air quality and reduces health risks. Whether it’s a residential, commercial, or specialized setting, our services address hidden corners, high-use areas, and challenging surfaces with precision. By maintaining a cleaner, safer, and more organized environment, deep cleaning supports comfort, health, and longevity of furnishings, flooring, and fixtures, providing a refreshed and professional environment for occupants.",
+      "benefits": "Deep cleaning goes beyond standard cleaning by targeting hidden dirt, stubborn stains, allergens, and bacteria that accumulate over time. This comprehensive approach significantly improves hygiene and indoor air quality, creating a healthier environment for all occupants. By removing contaminants, deep cleaning helps prevent illnesses, reduces allergy triggers, and promotes overall wellbeing. It also restores the appearance of carpets, upholstery, floors, and surfaces, extending the life of furniture, fixtures, and equipment, and reducing long-term maintenance costs. Deep cleaning is essential for specific needs such as post-construction, end-of-tenancy, or specialized commercial and residential spaces. It ensures compliance with stringent cleanliness and safety standards, providing peace of mind for property owners, tenants, and employees. Ultimately, specialist cleaning delivers a thorough, reliable, and lasting clean that enhances both health and aesthetics, making spaces safe, fresh, and visually appealing.",
       "content": {
         "summary": "Expert cleaning for every hidden corner",
         "tasks": [
@@ -402,7 +402,7 @@
     },
     {
       "src": "/images/services/6.png",
-      "title": "DEEP AND SPECIALIST CLEANING",
+      "title": "DEEP CLEANING",
       "href":"/services/specialist"
     }
   ],
