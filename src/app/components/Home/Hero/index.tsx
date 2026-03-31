@@ -1,18 +1,13 @@
 "use client";
-
-import { useState } from "react";
 import { getImgPath } from "@/app/utils/paths";
 import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
-  const [open, setOpen] = useState(false);
-
   return (
     <section className="py-12 lg:py-20">
       <div className="container pt-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
           <div className="lg:col-span-5 space-y-6">
             <h2 className="max-w-lg text-primary dark:text-white leading-tight">
               PROFESSIONAL CLEANING SERVICES ACROSS THE UK
@@ -38,19 +33,20 @@ const Hero = () => {
               ))}
             </ul>
 
-            <div className="pt-4">
+            <div className="pt-4 flex gap-x-4">
               <Link href="/quote">
-                <button
-                  onClick={() => setOpen(true)}
-                  className="px-10 py-3 font-medium text-white border rounded-lg border-primary bg-primary hover:bg-transparent hover:text-primary duration-300"
-                >
+                <button className="px-10 py-3 font-medium text-white border rounded-lg border-primary bg-primary hover:bg-transparent hover:text-primary duration-300">
                   Get a free Quote
                 </button>
               </Link>
+             <a href="/eBrochure.pdf" target="_blank" rel="noopener noreferrer">
+  <button className="px-10 py-3 font-medium text-white border rounded-lg border-primary bg-primary hover:bg-transparent hover:text-primary duration-300">
+    E Brochure
+  </button>
+</a>
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="lg:col-span-7 relative h-[300px] md:h-[400px] lg:h-[520px]">
             <Image
               src={getImgPath("/images/cleaning/banner.png")}
@@ -60,7 +56,6 @@ const Hero = () => {
               sizes="100vw"
             />
           </div>
-
         </div>
       </div>
     </section>

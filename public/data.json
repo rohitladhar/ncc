@@ -33,8 +33,7 @@
         { "label": "C.A.R.E", "href": "/about/CARE" },
         { "label": "Our Accreditations", "href": "/about/accreditations" },
         { "label": "Health & Safety", "href": "/about/Health&Safety" },
-        { "label": "Frequently Asked Questions", "href": "/about/faqs" },
-        { "label": "E Brochure", "href": "/about" }
+        { "label": "Frequently Asked Questions", "href": "/about/faqs" }
       ]
     },
 
