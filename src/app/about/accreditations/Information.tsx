@@ -84,7 +84,7 @@ export default function Information({ isOpen, onClose, children }: InformationPr
       />
 
       <div
-        className={`relative z-10 w-full max-w-lg mx-4 rounded-2xl bg-primary backdrop-blur-md shadow-xl p-6 transform transition-all duration-300 ${
+        className={`relative z-10 w-full max-w-lg mx-4 rounded-2xl bg-white dark:bg-primary backdrop-blur-md shadow-xl p-6 transform transition-all duration-300 ${
           isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()}

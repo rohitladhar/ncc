@@ -29,32 +29,32 @@ const pillars = [
 
 const OurValues = () => {
   return (
-    <section className="mt-8 md:mt-12 h-screen">
+    <section className="mt-8 md:mt-12 h-auto md:h-screen">
       <div className="container mx-auto pt-10">
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
           Our Values
         </h1>
-      <div className=" py-12 flex justify-center px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {pillars.map((pillar, index) => (
-          <div key={index} className="flex justify-center">
-            <div className="relative">
-              <div
-                className={`w-72 h-72 ${pillar.color} transform rotate-45 shadow-lg flex items-center justify-center`}
-              >
-                <div className="transform -rotate-45 text-center text-white px-2">
-                  <h3 className="font-bold">{pillar.title}</h3>
-                  <p className="text-sm mt-1 text-white">{pillar.description}</p>
+
+        <div className="py-12 flex justify-center px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {pillars.map((pillar, index) => (
+              <div key={index} className="flex justify-center">
+                <div className="relative">
+                  <div
+                    className={`w-60 h-60 md:w-72 md:h-72 ${pillar.color} transform rotate-45 shadow-lg flex items-center justify-center`}
+                  >
+                    <div className="transform -rotate-45 text-center text-white px-2">
+                      <h3 className="font-bold">{pillar.title}</h3>
+                      <p className="text-sm mt-1 text-white">{pillar.description}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
       </div>
     </section>
-    
   );
 };
 

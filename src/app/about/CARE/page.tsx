@@ -35,10 +35,10 @@ const Care = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } 
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -49,17 +49,17 @@ const Care = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="mt-8 md:mt-12 h-screen">
+    <section ref={sectionRef} className="mt-8 md:mt-12 min-h-screen">
       <div className="container mx-auto">
-        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-6 dark:text-white text-primary text-center">
           C.A.R.E
         </h1>
 
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6 justify-center items-center">
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:flex-wrap sm:justify-center">
           {items.map((item, index) => (
             <div
               key={index}
-              className="w-72 h-72 rounded-full bg-primary flex flex-col justify-center items-center text-center p-4"
+              className="w-full max-w-[18rem] h-72 rounded-full bg-primary flex flex-col justify-center items-center text-center p-4"
               style={{
                 animation: visible
                   ? `fadeIn 0.5s ease forwards ${delays[index]}s`

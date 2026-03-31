@@ -7,7 +7,7 @@ export default function Quotes() {
         <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
             <img
-              src="/images/services/c2.png"
+              src="/images/services/cleaner.png"
               alt="Service Image"
               className="w-full max-w-md h-auto rounded-lg shadow-lg"
             />

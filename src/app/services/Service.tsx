@@ -72,12 +72,12 @@ const Service: React.FC<ServiceProps> = ({ data }) => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-10 mt-16 md:mt-40">
-          <div className="md:w-1/2 flex justify-center md:justify-start">
+        <div className="flex flex-col md:flex-row items-center gap-6 mt-16 md:mt-40">
+          <div className="md:w-1/2 flex justify-between md:justify-between ">
             <img
               src={data?.imgSrcTwo || "/placeholder-image.png"}
               alt="Service Image"
-              className="w-full max-w-lg rounded-lg shadow-lg"
+              className="max-h-[500px] rounded-lg shadow-lg object-contain"
             />
           </div>
 
