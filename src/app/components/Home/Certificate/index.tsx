@@ -30,13 +30,13 @@ const Certificate = () => {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 500,
+    speed: 1000,
     cssEase: "linear",
     responsive: [
       {
@@ -62,19 +62,13 @@ const Certificate = () => {
 
   return (
     <div id="certificate" className="scroll-mt-12">
-      <section className="bg-secondary dark:bg-darklight">
+      <section>
         <div className="container">
           <div className="mb-10 text-center">
             <div className="relative inline-block group">
               <h2 className="cursor-pointer  text-primary dark:text-white">
-                Certificate
+                Our Accreditations
               </h2>
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block">
-                <div className="relative px-3 py-2 text-xs text-white dark:text-primary  bg-primary dark:bg-white rounded-md shadow-lg">
-                  Certificate No:503862025
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-primary dark:bg-white  rotate-45"></div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -93,6 +87,7 @@ const Certificate = () => {
                             alt={item.name}
                             width={480}
                             height={480}
+                            className="max-h-[100px] w-auto object-contain"
                           />
                         </div>
                       </div>

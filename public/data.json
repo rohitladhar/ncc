@@ -87,7 +87,6 @@
       "desc": "Coverage"
     }
   ],
-
   "CertificationData": [
     {
       "imgSrc": "/images/certificate/ISO9001.png",
@@ -103,9 +102,18 @@
       "imgSrc": "/images/certificate/ISO45001.png",
       "name": "ISO:45001",
       "desc": "Occupational Health & Safety"
+    },
+    {
+      "imgSrc": "/images/certificate/BICSc.png",
+      "name": "British Institute of Cleaning Science",
+      "desc": "Corporate Members"
+    },
+    {
+      "imgSrc": "/images/certificate/SafePQQ.png",
+      "name": "Safe Contractors",
+      "desc": "Safe Contractor Approved!"
     }
   ],
-
   "SpecializeData": [
     {
       "imgSrc": "/images/specialization/badge.svg",
@@ -219,7 +227,6 @@
       }
     }
   ],
-
   "FooterLinkData": [
     {
       "section": "NCC",
@@ -243,7 +250,6 @@
       ]
     }
   ],
-
   "ServicesData": [
     {
       "id": 1,
