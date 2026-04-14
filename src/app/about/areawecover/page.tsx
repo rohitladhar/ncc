@@ -1,63 +1,48 @@
-export default function AreasWeCover() {
-  const areas = [
-    {
-      name: "London",
-      description: "Serving all areas of London with fast and professional solutions.",
-      image: "/images/location/london.jpg",
-    },
-    {
-      name: "Luton",
-      description: "Reliable services across Luton, covering residential and commercial needs.",
-      image: "/images/location/luton.jpg",
-    },
-    {
-      name: "Bedford",
-      description: "Trusted services throughout Bedford and surrounding neighbourhoods.",
-      image: "/images/location/bedford.jpg",
-    },
-    {
-      name: "Clacton On Sea",
-      description: "Quality services available across Clacton-on-Sea and coastal areas.",
-      image: "/images/location/clacton_on_sea.jpg",
-    },
-  ];
+import Link from "next/link";
+import { Icon } from "@iconify/react";
+import Slider from "react-slick";
+import { getDataPath } from "@/app/utils/paths";
 
+const AreaWeCover = () => {
   return (
-    <section className="mt-8 md:mt-12 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-primary dark:text-white">
-          Areas We Cover
-        </h1>
+    <section className="mt-10 md:mt-16 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src={"/images/location/UK.png"}
+            alt="Area We Cover"
+            className="w-full max-w-[400px] max-h-[600px] md:max-w-[500px] md:max-h-[500px] rounded-lg shadow-lg object-contain"
+          />
+        </div>
 
-        <p className="text-gray-600 dark:text-gray-300 text-center max-w-2xl mx-auto mb-10">
-          We proudly provide our services across multiple locations, ensuring quality,
-          reliability, and customer satisfaction wherever you are.
-        </p>
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-primary dark:text-white">
+            Area We Cover
+          </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {areas.map((area, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300"
-            >
-              <img
-                src={area.image}
-                alt={area.name}
-                className="w-full h-40 object-cover"
-              />
+          <p className="mb-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-full md:max-w-[600px] mx-auto md:mx-0">
+            NCC Cleaning Services provides professional and reliable corporate
+            cleaning solutions across the United Kingdom, with a strong presence
+            in London and Bedfordshire. We specialise in delivering exceptional
+            cleaning services for offices, commercial spaces, and business
+            environments.
+          </p>
 
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                  {area.name}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {area.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          <p className="mb-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-full md:max-w-[600px] mx-auto md:mx-0">
+            Our experienced and fully trained team uses industry-leading
+            techniques and high-quality products to create safe, clean, and
+            productive environments for your staff and clients.
+          </p>
+
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-full md:max-w-[600px] mx-auto md:mx-0">
+            Whether you require daily office cleaning, deep cleaning, or
+            specialised commercial services, we are committed to reliability,
+            attention to detail, and complete customer satisfaction.
+          </p>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default AreaWeCover;

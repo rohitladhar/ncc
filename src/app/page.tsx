@@ -10,11 +10,11 @@ export default function Home() {
     <main>
       <Hero />
       <Certificate/>
-      <Specialize />
-      <HowWeWork />
-      <AreasWeCover />
-      <Care />
       <OurValues />
+      <Specialize />
+      <Care />
+      <AreasWeCover />
+      <HowWeWork />
     </main>
   );
 }

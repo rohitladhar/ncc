@@ -31,6 +31,7 @@
         { "label": "Areas We Cover", "href": "/about/areawecover" },
         { "label": "How We Work", "href": "/about/howwework" },
         { "label": "C.A.R.E", "href": "/about/CARE" },
+        { "label": "Charitable Causes", "href": "/about/charitable" },
         { "label": "Our Accreditations", "href": "/about/accreditations" },
         { "label": "Health & Safety", "href": "/about/Health&Safety" },
         { "label": "Frequently Asked Questions", "href": "/about/faqs" }
@@ -112,6 +113,16 @@
       "imgSrc": "/images/certificate/SafePQQ.png",
       "name": "Safe Contractors",
       "desc": "Safe Contractor Approved!"
+    },
+    {
+      "imgSrc": "/images/certificate/cyber.png",
+      "name": "Cyber Essential",
+      "desc": "SSIP Approved!"
+    },
+    {
+      "imgSrc": "/images/certificate/ssip.jpeg",
+      "name": "SSIP",
+      "desc": "SSIP Approved!"
     }
   ],
   "SpecializeData": [
@@ -229,24 +240,48 @@
   ],
   "FooterLinkData": [
     {
-      "section": "NCC",
+      "section": "Our Services",
       "links": [
         {
-          "label": "Portfolio",
-          "href": "/#portfolio"
+          "label": "HOME OFFICE ASYLUM",
+          "href": "/services/asylum"
         },
         {
-          "label": "Services",
-          "href": "/#services"
+          "label": "OFFICE AND CORPORATE CLEANING",
+          "href": "/services/office"
         },
         {
-          "label": "Why Choose Us",
-          "href": "/#specialize"
+          "label": "EDUCATIONAL FACILITIES CLEANING",
+          "href": "/services/education"
         },
         {
-          "label": "Certificate",
-          "href": "/#certificate"
+          "label": "HEALTHCARE AND CARE HOME CLEANING",
+          "href": "/services/healthcare"
+        },
+        {
+          "label": "COMMERCIAL BUILDING CLEANING",
+          "href": "/services/commercial"
+        },
+        {
+          "label": "DEEP CLEANING",
+          "href": "/services/specialist"
         }
+      ]
+    }
+  ],
+  "FooterLinkAboutData": [
+    {
+      "section": "About Us",
+      "links": [
+        { "label": "Our Values", "href": "/about/ourvalues" },
+        { "label": "Why Choose Us", "href": "/about/whychooseus" },
+        { "label": "Areas We Cover", "href": "/about/areawecover" },
+        { "label": "How We Work", "href": "/about/howwework" },
+        { "label": "C.A.R.E", "href": "/about/CARE" },
+        { "label": "Charitable Causes", "href": "/about/charitable" },
+        { "label": "Our Accreditations", "href": "/about/accreditations" },
+        { "label": "Health & Safety", "href": "/about/Health&Safety" },
+        { "label": "Frequently Asked Questions", "href": "/about/faqs" }
       ]
     }
   ],

@@ -99,7 +99,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
         <div className="flex items-center gap-4">
-          <button
+          {/* <button
             aria-label="Toggle theme"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="flex items-center justify-center text-body-color duration-300 hover:cursor-pointer hover:text-primary dark:text-white bg-neutral-50 rounded-full dark:bg-darklight p-2 outline-none"
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
               height="24"
               className="dark:hidden block"
             />
-          </button>
+          </button> */}
           <Link
             href="/quote"
             className="hidden xl:block px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold"

@@ -1,5 +1,4 @@
 "use client";
-
 import { FooterLinkType } from "@/app/types/footerlinks";
 import { getDataPath } from "@/app/utils/paths";
 import { Icon } from "@iconify/react";
@@ -9,12 +8,12 @@ import Logo from "../Header/Logo";
 
 const Footer = () => {
   const [footerlink, SetFooterlink] = useState<FooterLinkType[]>([]);
+  const [footerAboutData, setFooterAboutData] = useState<FooterLinkType[]>([]);
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
     setIsDark(matchMedia.matches);
-
     const listener = (e: MediaQueryListEvent) => setIsDark(e.matches);
     matchMedia.addEventListener("change", listener);
 
@@ -28,6 +27,7 @@ const Footer = () => {
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         SetFooterlink(data.FooterLinkData);
+        setFooterAboutData(data.FooterLinkAboutData);
       } catch (error) {
         console.error("Error fetching services:", error);
       }
@@ -45,7 +45,11 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-4 sm:mt-0">
-              <Link href="/" onClick={(e) => e.preventDefault()}>
+              <Link
+                href="https://www.instagram.com/ncc_cleaning_services?igsh=cG9rY2NpMW5hbHZt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Icon
                   icon={
                     isDark ? "tabler:brand-instagram" : "tabler:brand-instagram"
@@ -55,7 +59,11 @@ const Footer = () => {
                   className="text-darkblue dark:text-white bg-darkmode/5 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300"
                 />
               </Link>
-              <Link href="/" onClick={(e) => e.preventDefault()}>
+              <Link
+                href="https://uk.linkedin.com/company/ncc-cleaning-service-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Icon
                   icon={
                     isDark
@@ -67,6 +75,39 @@ const Footer = () => {
                   className="text-darkblue dark:text-white bg-darkmode/5 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300"
                 />
               </Link>
+              <Link
+                href="https://www.youtube.com/@NcccleaningservicesUK"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon={
+                    isDark
+                      ? "tabler:brand-youtube-filled"
+                      : "tabler:brand-youtube-filled"
+                  }
+                  width={45}
+                  height={45}
+                  className="text-darkblue dark:text-white bg-darkmode/5 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300"
+                />
+              </Link>
+              <Link
+                href="https://x.com/ncccleaninng"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon={
+                    isDark
+                      ? "tabler:brand-x-filled"
+                      : "tabler:brand-x-filled"
+                  }
+                  width={45}
+                  height={45}
+                  className="text-darkblue dark:text-white bg-darkmode/5 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300"
+                />
+              </Link>
+              
             </div>
           </div>
 
@@ -81,7 +122,27 @@ const Footer = () => {
                     <li key={j}>
                       <Link
                         href={item.href}
-                        onClick={(e) => e.preventDefault()}
+                        className=" text-primary dark:text-white hover:text-primary dark:hover:text-primary  text-base font-normal"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-10 lg:gap-20">
+            {footerAboutData.map((product, i) => (
+              <div key={i} className="flex flex-col min-w-[150px]">
+                <p className="text-xl font-semibold mb-4  text-primary dark:text-white">
+                  {product.section}
+                </p>
+                <ul className="flex flex-col gap-2 ">
+                  {product.links.map((item, j) => (
+                    <li key={j}>
+                      <Link
+                        href={item.href}
                         className=" text-primary dark:text-white hover:text-primary dark:hover:text-primary  text-base font-normal"
                       >
                         {item.label}
@@ -104,7 +165,8 @@ const Footer = () => {
                 className="text-primary dark:text-white mt-1"
               />
               <p className="text-base font-normal text-offwhite text-primary dark:text-white">
-                Unit 408, Bedford Heights Brickhill Drive, Bedford MK41 7PH
+                Unit 408, Bedford Heights Brickhill Drive, <br />
+                Bedford MK41 7PH
               </p>
             </div>
 
@@ -129,7 +191,7 @@ const Footer = () => {
               />
               <div>
                 <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
-                  info@ncccleaning.co.uk <br /> service@ncccleaning.co.uk
+                  info@ncccleaning.co.uk
                 </p>
               </div>
             </div>
@@ -137,8 +199,10 @@ const Footer = () => {
         </div>
 
         <div className="py-6 mt-10 border-t border-darkblue/20 text-center text-sm">
-          <p className="font-bold text-offwhite text-primary dark:text-white"><span className="text-xl">&copy;
-            </span> 2023-2026 All Rights Reserved by NCC</p>
+          <p className="font-bold text-offwhite text-primary dark:text-white">
+            <span className="text-xl">&copy;</span> 2023-2026 All Rights
+            Reserved by NCC
+          </p>
         </div>
       </div>
     </footer>

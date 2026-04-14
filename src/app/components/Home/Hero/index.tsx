@@ -39,11 +39,15 @@ const Hero = () => {
                   Get a free Quote
                 </button>
               </Link>
-             <a href="/eBrochure.pdf" target="_blank" rel="noopener noreferrer">
-  <button className="px-10 py-3 font-medium text-white border rounded-lg border-primary bg-primary hover:bg-transparent hover:text-primary duration-300">
-    E Brochure
-  </button>
-</a>
+              <a
+                href="/eBrochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="px-10 py-3 font-medium text-white border rounded-lg border-primary bg-primary hover:bg-transparent hover:text-primary duration-300">
+                  E Brochure
+                </button>
+              </a>
             </div>
           </div>
 

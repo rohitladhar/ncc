@@ -38,7 +38,7 @@ const Care = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) {
@@ -87,6 +87,11 @@ const Care = () => {
             }
           `}</style>
         </div>
+        <p className="mt-5">
+          If you are not completely satisfied during the first month, we will
+          provide a FULL REFUND—100% guaranteed. Note: Only for the contract
+          agreements.
+        </p>
       </div>
     </section>
   );

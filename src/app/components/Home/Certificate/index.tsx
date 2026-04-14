@@ -36,8 +36,11 @@ const Certificate = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1000,
+    autoplaySpeed: 0,
+    speed: 3000,
     cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
     responsive: [
       {
         breakpoint: 992,
@@ -66,9 +69,9 @@ const Certificate = () => {
         <div className="container">
           <div className="mb-10 text-center">
             <div className="relative inline-block group">
-              <h2 className="cursor-pointer  text-primary dark:text-white">
+              <h3 className="cursor-pointer  text-primary dark:text-white">
                 Our Accreditations
-              </h2>
+              </h3>
             </div>
           </div>
 
@@ -79,28 +82,23 @@ const Certificate = () => {
                 ))
               : certificate.map((item, i) => (
                   <div key={i}>
-                    <div className="m-3 p-6 bg-white dark:bg-lightdarkblue">
-                      <div className="flex items-center gap-4 mb-5">
+                    <div className="mx-0.5 p-6 bg-white dark:bg-darklight">
+                      <div className="flex items-center mb-5">
                         <div className="relative">
                           <Image
                             src={getImgPath(item.imgSrc)}
                             alt={item.name}
-                            width={480}
-                            height={480}
-                            className="max-h-[100px] w-auto object-contain"
+                            width={400}
+                            height={150}
+                            className="max-h-[120px] max-w-[320px] object-contain"
                           />
                         </div>
                       </div>
-                      <div>
+                      {/* <div>
                         <h6 className="dark:text-white  text-primary">
                           {item.name}
                         </h6>
-                      </div>
-                      <div>
-                        <p className="text-base font-normal dark:text-white  text-primary">
-                          {item.desc}
-                        </p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 ))}
