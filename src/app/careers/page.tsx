@@ -1,4 +1,4 @@
-import Career from './Career';
+import Career from "./Career";
 
 export default function Careers() {
   return (
@@ -9,13 +9,12 @@ export default function Careers() {
             <img
               src="/images/services/cleaner.png"
               alt="Service Image"
-              className="w-full max-w-md h-auto rounded-lg shadow-lg"
+              className="w-full max-w-md h-auto rounded-lg shadow-lg hidden md:block"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-start space-y-6">
             <Career />
           </div>
-
         </div>
       </div>
     </section>

@@ -20,10 +20,13 @@ export type CleaningIcon = {
 export type ServiceCard = {
   src: string;
   title: string;
-  href:string
+  href: string;
 };
 
 export type FetchDataType = {
   cleaningIcons: CleaningIcon[];
+};
+
+export type ServiceCardType = {
   serviceCards: ServiceCard[];
 };

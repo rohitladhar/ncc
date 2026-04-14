@@ -9,7 +9,7 @@ export default function Quotes() {
             <img
               src="/images/services/cleaner.png"
               alt="Service Image"
-              className="w-full max-w-md h-auto rounded-lg shadow-lg"
+              className="w-full max-w-md h-auto rounded-lg shadow-lg hidden md:block"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-start space-y-6">

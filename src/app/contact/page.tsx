@@ -1,4 +1,5 @@
 import ContactForm from "./Contact";
+
 export default function Careers() {
   return (
     <section className="scroll-mt-12 py-12 md:py-16">
@@ -8,7 +9,7 @@ export default function Careers() {
             <img
               src="/images/services/cleaner.png"
               alt="Service Image"
-              className="w-full max-w-md h-auto rounded-lg shadow-lg"
+              className="w-full max-w-md h-auto rounded-lg shadow-lg hidden md:block"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-start space-y-6">

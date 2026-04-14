@@ -31,7 +31,7 @@ const OurValues = () => {
   return (
     <section className="mt-8 md:mt-12 h-auto md:h-screen">
       <div className="container mx-auto pt-10">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
           Our Values
         </h1>
 
@@ -41,11 +41,19 @@ const OurValues = () => {
               <div key={index} className="flex justify-center">
                 <div className="relative">
                   <div
-                    className={`w-60 h-60 md:w-72 md:h-72 ${pillar.color} transform rotate-45 shadow-lg flex items-center justify-center`}
+                    className={`w-60 h-60 md:w-80 md:h-80 ${pillar.color} transform rotate-45 shadow-lg flex items-center justify-center`}
                   >
-                    <div className="transform -rotate-45 text-center text-white px-2">
-                      <h3 className="font-bold">{pillar.title}</h3>
-                      <p className="text-sm mt-1 text-white">{pillar.description}</p>
+                    <div className="transform -rotate-45 flex items-center justify-center text-center text-white px-2">
+                      <div>
+                        <h4 className="font-bold text-white pb-1 md:pb-6 text-base md:text-2xl">
+                          <span>{pillar.title.split(" ")[0]}</span>
+                          <br />
+                          <span>{pillar.title.split(" ")[1]}</span>
+                        </h4>
+                        <p className="text-sm mt-2 text-white w-50 h-40">
+                          {pillar.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

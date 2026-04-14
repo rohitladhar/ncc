@@ -5,16 +5,18 @@ import Care from "./about/CARE/page";
 import OurValues from "./about/ourvalues/page";
 import AreasWeCover from "./about/areawecover/page";
 import Certificate from "./components/Home/Certificate";
+import ServiceCard from "./services/ServiceCard";
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Certificate/>
+      <Certificate />
       <OurValues />
       <Specialize />
       <Care />
       <AreasWeCover />
       <HowWeWork />
+      <ServiceCard />
     </main>
   );
 }

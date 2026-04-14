@@ -16,15 +16,16 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
   setNavbarOpen,
 }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
-  const [open, setOpen] = useState(false);
   const path = usePathname();
 
   const handleClick = (e: React.MouseEvent) => {
     if (item.submenu) {
       e.preventDefault();
       setSubmenuOpen(true);
+    } else {
+      // If no submenu, close the navbar
+      setNavbarOpen(false);
     }
-
   };
 
   return (

@@ -33,7 +33,7 @@ const Hero = () => {
               ))}
             </ul>
 
-            <div className="pt-4 flex gap-x-4">
+            <div className="pt-4 flex gap-x-4 justify-center sm:justify-start">
               <Link href="/quote">
                 <button className="px-10 py-3 font-medium text-white border rounded-lg border-primary bg-primary hover:bg-transparent hover:text-primary duration-300">
                   Get a free Quote
