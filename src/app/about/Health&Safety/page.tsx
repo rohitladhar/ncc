@@ -2,9 +2,9 @@ import React from "react";
 
 export default function HealthSafetyPolicy() {
   return (
-    <section className="flex items-center justify-center mt-8 md:mt-12 min-h-screen ">
+    <section className="flex items-center justify-center mt-12 md:mt-12 min-h-screen ">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 text-center text-primary dark:text-white">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-2 text-center text-primary dark:text-white">
           Health and Safety Policy
         </h1>
 

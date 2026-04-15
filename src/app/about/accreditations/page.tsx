@@ -142,7 +142,7 @@ export default function Accreditations() {
   ];
 
   return (
-    <section className="mt-8 md:mt-12 py-12 dark:text-white">
+    <section className="mt-12 md:mt-12 py-12 dark:text-white">
       <div className="max-w-6xl mx-auto px-4 dark:text-white">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-primary dark:text-white">
           Our Accreditations & ISO Standards

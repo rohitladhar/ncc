@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="py-12 lg:py-20">
+    <section className="py-20 lg:py-20">
       <div className="container pt-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-5 space-y-6">
@@ -16,8 +16,8 @@ const Hero = () => {
             <ul className="space-y-3">
               {[
                 "Fully insured and thoroughly vetted cleaning professionals",
-                "Flexible service plans (daily, weekly, or tailored to your needs)",
-                "Cleaning services available outside standard hours, including evenings and weekends",
+                "Flexible service plans",
+                "Cleaning services available outside standard hours, including weekends",
               ].map((text, i) => (
                 <li
                   key={i}

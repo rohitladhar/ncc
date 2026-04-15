@@ -49,7 +49,7 @@ const Care = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="mt-8 md:mt-12 min-h-screen">
+    <section ref={sectionRef} className="mt-12 md:mt-12 min-h-screen">
       <div className="container mx-auto">
         <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-6 dark:text-white text-primary text-center">
           C.A.R.E
