@@ -46,7 +46,7 @@ const Footer = () => {
 
             <div className="flex gap-4 sm:mt-0">
               <Link
-                href="https://www.instagram.com/ncc_cleaning_services?igsh=cG9rY2NpMW5hbHZt"
+                href="https://www.instagram.com/ncccleaningservices"
                 target="_blank"
                 rel="noopener noreferrer"
               >

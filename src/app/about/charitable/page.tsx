@@ -1,54 +1,76 @@
-import Link from "next/link";
-import { Icon } from "@iconify/react";
-import Slider from "react-slick";
-import { getDataPath } from "@/app/utils/paths";
-
 const Service = () => {
   return (
     <section className="mt-16 md:mt-12">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-6 mt-16">
-          <div className="md:w-1/2 flex justify-between md:justify-between ">
-            <img
-              src={"/images/cleaning/banner.png"}
-              alt="Service Image"
-              className="max-h-[500px] rounded-lg shadow-lg object-contain"
-            />
-          </div>
+      <div className="container mx-auto max-w-5xl px-4">
+        <div className="w-full mb-8">
+          <img
+            src="/images/school_reader.png"
+            alt="Schoolreaders Partnership"
+            className="w-full aspect-[16/9] md:aspect-auto md:h-[400px] object-cover rounded-lg shadow-md"
+          />
+        </div>
 
-          <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-bold mb-4 dark:text-white text-primary">
-              Partnership with School Readers
-            </h2>
-            <p className="mb-6 text-gray-600 dark:text-gray-300">
-              Schoolreaders is a UK-based children’s literacy charity that
-              focuses on helping primary school pupils improve their reading
-              skills and confidence. The organisation was established in 2013
-              with the aim that every child, regardless of their background,
-              should leave primary school able to read well and succeed in their
-              future education. Schoolreaders works by recruiting volunteers
-              from local communities and placing them in primary schools, where
-              they provide one-to-one reading support to children who need extra
-              help. These volunteers usually visit schools once a week and spend
-              time reading with individual pupils, helping them improve their
-              fluency, comprehension, and enjoyment of reading. This support is
-              especially important because many children do not receive enough
-              reading practice at home, and without proper reading skills, they
-              may struggle in secondary school and beyond. According to the
-              organisation, one in four children in England does not reach the
-              expected reading level by the age of eleven, which highlights the
-              importance of their work. Schoolreaders currently supports tens of
-              thousands of children every week, showing the wide impact of its
-              programme across the country. In addition to improving reading
-              ability, the volunteers also help build children’s confidence and
-              create positive relationships, encouraging a love of reading that
-              can last a lifetime. Schools have reported that these volunteers
-              play a valuable role in both academic development and the overall
-              school community. Overall, Schoolreaders is an important
-              initiative that helps children develop essential literacy skills,
-              supports their education, and gives them better opportunities for
-              the future through the power of reading.
+        <div className="text-left">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-primary dark:text-white">
+            NCC Cleaning Services Partners with Schoolreaders to Help 75
+            Children Learn to Read
+          </h1>
+
+          <p className="text-lg text-gray-500 dark:text-gray-300 mb-6">
+            Local Bedford business funds 2,625 one-to-one reading sessions
+          </p>
+
+          <blockquote className="border-l-4 border-primary pl-4 italic text-gray-700 dark:text-gray-300 mb-8">
+            “At NCC Cleaning Services, we’re proud to be part of our local
+            community. Seeing the Schoolreaders team working in the same
+            building, making a real difference to children’s lives, inspired us
+            to get involved. Their dedication to helping young readers is
+            something we wanted to support.”
+            <br />
+            <span className="block mt-2 font-semibold">
+              — Managing Director, Mandeep Summan
+            </span>
+          </blockquote>
+
+          <div className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              We are excited to share that we have formed an official
+              partnership with Schoolreaders.
             </p>
+
+            <p>
+              With our support, they will be able to provide weekly reading
+              sessions for 75 children throughout the school year, totalling an
+              incredible 2,625 sessions. Each session gives young learners
+              valuable time and encouragement, helping them build both
+              confidence and a love of reading.
+            </p>
+
+            <p>
+              For us, this partnership means more than just funding. It’s about
+              investing in the future by supporting the children who will shape
+              our community. We are proud to work alongside a team that shows
+              passion and dedication every single day.
+            </p>
+
+            <p>
+              The CEO of Schoolreaders added: “We are delighted with the support
+              provided by NCC Cleaning Services. It’s fantastic to connect with
+              businesses working alongside us in Bedford Heights, and we hope
+              more companies will be inspired to join us in making an impact.”
+            </p>
+
+            <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
+              <h3 className="font-semibold text-lg mb-2 text-primary dark:text-white">
+                About Schoolreaders
+              </h3>
+              <p>
+                Schoolreaders is a charity that recruits, trains and places
+                volunteers to provide free, one-to-one reading support to
+                primary school children, ensuring they leave school with the
+                literacy skills they need for life.
+              </p>
+            </div>
           </div>
         </div>
       </div>

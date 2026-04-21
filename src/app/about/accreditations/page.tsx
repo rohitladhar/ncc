@@ -1,44 +1,7 @@
 "use client";
 import { useState } from "react";
 import Information from "./Information";
-
-type Accreditation = {
-  name: string;
-  type?: string;
-  provider?: string;
-  description: string;
-  importance?: string;
-  mission?: string[];
-  principles?: string[];
-  history?: string;
-  benefits?: string[];
-  company_statement: string;
-};
-
-type ISOStandard = {
-  name: string;
-  category: string;
-  introduced?: number;
-  description: string;
-  benefits?: string[];
-  purpose?: string[];
-};
-
-type AccreditationItem = {
-  company: string;
-  description: string;
-  commitment: {
-    summary: string;
-    key_achievement: string;
-  };
-  accreditations: Accreditation[];
-  iso_standards: ISOStandard[];
-};
-
-type CardItem = {
-  type: "accreditation" | "iso";
-  data: Accreditation | ISOStandard;
-};
+import { AccreditationItem, CardItem } from "../../types/accreditation";
 
 export default function Accreditations() {
   const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
@@ -57,6 +20,7 @@ export default function Accreditations() {
       {
         name: "SafeContractor",
         provider: "Alcumus SafeContractor",
+        image: "/images/certificate/SafePQQ.png",
         description:
           "A respected certification program recognising contractors who meet high standards for health and safety management.",
         importance: "Ensures organisations work with reliable partners.",
@@ -66,6 +30,7 @@ export default function Accreditations() {
       {
         name: "BICSc",
         type: "Corporate Membership",
+        image: "/images/certificate/BICSc.png",
         description:
           "The largest independent professional and educational body in the cleaning industry with over 5,000 members.",
         mission: [
@@ -86,6 +51,7 @@ export default function Accreditations() {
       },
       {
         name: "SSIP",
+        image: "/images/certificate/ssip.jpeg",
         description:
           "A UK accreditation that simplifies health and safety checks for businesses.",
         benefits: [
@@ -100,9 +66,11 @@ export default function Accreditations() {
     iso_standards: [
       {
         name: "ISO 14001",
+        image: "/images/certificate/ISO14001.png",
         category: "Environmental Management",
         introduced: 1996,
-        description: "An internationally recognised standard for managing environmental impact.",
+        description:
+          "An internationally recognised standard for managing environmental impact.",
         benefits: [
           "Reduce environmental impact",
           "Lower risk of pollution",
@@ -113,8 +81,10 @@ export default function Accreditations() {
       },
       {
         name: "ISO 9001",
+        image: "/images/certificate/ISO9001.png",
         category: "Quality Management",
-        description: "A widely recognised standard used by over a million organisations worldwide.",
+        description:
+          "A widely recognised standard used by over a million organisations worldwide.",
         purpose: [
           "Meet legal and regulatory requirements",
           "Ensure high-quality service delivery",
@@ -124,8 +94,10 @@ export default function Accreditations() {
       {
         name: "ISO 45001",
         category: "Health & Safety Management",
+        image: "/images/certificate/ISO45001.png",
         introduced: 2018,
-        description: "A standard designed to create safer and healthier workplaces.",
+        description:
+          "A standard designed to create safer and healthier workplaces.",
         benefits: [
           "Identify and manage health and safety risks",
           "Reduce workplace accidents",
@@ -137,8 +109,14 @@ export default function Accreditations() {
   };
 
   const cardItems: CardItem[] = [
-    ...companyData.accreditations.map((acc) => ({ type: "accreditation" as const, data: acc })),
-    ...companyData.iso_standards.map((iso) => ({ type: "iso" as const, data: iso })),
+    ...companyData.accreditations.map((acc) => ({
+      type: "accreditation" as const,
+      data: acc,
+    })),
+    ...companyData.iso_standards.map((iso) => ({
+      type: "iso" as const,
+      data: iso,
+    })),
   ];
 
   return (
@@ -163,9 +141,18 @@ export default function Accreditations() {
               <span className="inline-block text-xs font-medium bg-primary text-white px-3 py-1 rounded-full w-fit mb-2 dark:text-white">
                 {item.type === "accreditation" ? "Accreditation" : "ISO"}
               </span>
-              <h2 className="text-xl font-semibold dark:text-white">
-                {item.data.name}
-              </h2>
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+                <h2 className="text-xl font-semibold dark:text-white text-center sm:text-left">
+                  {item.data.name}
+                </h2>
+                <div className="w-full sm:w-[250px] h-[50px] flex items-center justify-center overflow-hidden">
+                  <img
+                    src={item.data.image}
+                    alt={item.data.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
               <p className="mt-2 flex-grow dark:text-white">
                 {"description" in item.data ? item.data.description : ""}
               </p>
@@ -180,17 +167,20 @@ export default function Accreditations() {
       >
         {selectedItem && (
           <div className="space-y-4 dark:text-white">
-            <h2 className="text-2xl font-bold dark:text-white">{selectedItem.data.name}</h2>
+            <h2 className="text-2xl font-bold dark:text-white">
+              {selectedItem.data.name}
+            </h2>
             {"category" in selectedItem.data && (
               <p className="dark:text-white">
                 <strong>Category:</strong> {selectedItem.data.category}
               </p>
             )}
-            {"introduced" in selectedItem.data && selectedItem.data.introduced && (
-              <p className="dark:text-white">
-                <strong>Introduced:</strong> {selectedItem.data.introduced}
-              </p>
-            )}
+            {"introduced" in selectedItem.data &&
+              selectedItem.data.introduced && (
+                <p className="dark:text-white">
+                  <strong>Introduced:</strong> {selectedItem.data.introduced}
+                </p>
+              )}
             {"provider" in selectedItem.data && selectedItem.data.provider && (
               <p className="dark:text-white">
                 <strong>Provider:</strong> {selectedItem.data.provider}
@@ -198,20 +188,25 @@ export default function Accreditations() {
             )}
             <p className="dark:text-white">{selectedItem.data.description}</p>
 
-            {"importance" in selectedItem.data && selectedItem.data.importance && (
-              <p className="dark:text-white">
-                <strong>Importance:</strong> {selectedItem.data.importance}
-              </p>
-            )}
+            {"importance" in selectedItem.data &&
+              selectedItem.data.importance && (
+                <p className="dark:text-white">
+                  <strong>Importance:</strong> {selectedItem.data.importance}
+                </p>
+              )}
 
             {"company_statement" in selectedItem.data && (
-              <p className="italic dark:text-white">{selectedItem.data.company_statement}</p>
+              <p className="italic dark:text-white">
+                {selectedItem.data.company_statement}
+              </p>
             )}
 
             {"benefits" in selectedItem.data && selectedItem.data.benefits && (
               <ul className="list-disc ml-5 mt-1 dark:text-white">
                 {selectedItem.data.benefits.map((b, i) => (
-                  <li key={i} className="dark:text-white">{b}</li>
+                  <li key={i} className="dark:text-white">
+                    {b}
+                  </li>
                 ))}
               </ul>
             )}
@@ -219,7 +214,9 @@ export default function Accreditations() {
             {"purpose" in selectedItem.data && selectedItem.data.purpose && (
               <ul className="list-disc ml-5 mt-1 dark:text-white">
                 {selectedItem.data.purpose.map((p, i) => (
-                  <li key={i} className="dark:text-white">{p}</li>
+                  <li key={i} className="dark:text-white">
+                    {p}
+                  </li>
                 ))}
               </ul>
             )}
@@ -227,18 +224,23 @@ export default function Accreditations() {
             {"mission" in selectedItem.data && selectedItem.data.mission && (
               <ul className="list-disc ml-5 mt-1 dark:text-white">
                 {selectedItem.data.mission.map((m, i) => (
-                  <li key={i} className="dark:text-white">{m}</li>
+                  <li key={i} className="dark:text-white">
+                    {m}
+                  </li>
                 ))}
               </ul>
             )}
 
-            {"principles" in selectedItem.data && selectedItem.data.principles && (
-              <ul className="list-disc ml-5 mt-1 dark:text-white">
-                {selectedItem.data.principles.map((p, i) => (
-                  <li key={i} className="dark:text-white">{p}</li>
-                ))}
-              </ul>
-            )}
+            {"principles" in selectedItem.data &&
+              selectedItem.data.principles && (
+                <ul className="list-disc ml-5 mt-1 dark:text-white">
+                  {selectedItem.data.principles.map((p, i) => (
+                    <li key={i} className="dark:text-white">
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
             {"history" in selectedItem.data && selectedItem.data.history && (
               <p className="dark:text-white">
