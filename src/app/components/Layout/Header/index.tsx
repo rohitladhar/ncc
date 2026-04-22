@@ -79,20 +79,20 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 py-1 z-50 w-full bg-transparent transition-all ${
+      className={`fixed top-0 py-1 z-50 w-full  bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff] transition-all ${
         sticky
           ? "shadow-lg dark:shadow-neutral-50/5 bg-white dark:bg-darklight"
           : "shadow-none"
       }`}
     >
       <div
-        className={`container flex items-center justify-between gap-10 duration-300  ${
-          sticky ? "py-3" : "py-4"
+        className={`container flex font-bold items-center justify-between gap-10 duration-300 bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff]  ${
+          sticky ? "py-1" : "py-1"
         }`}
       >
         <Logo />
         <nav>
-          <ul className="hidden xl:flex flex-grow items-center justify-start gap-10 ">
+          <ul className="hidden xl:flex flex-grow items-center justify-start gap-10 font-bold ">
             {navlink.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
@@ -135,11 +135,11 @@ const Header: React.FC = () => {
         </div>
       </div>
       {navbarOpen && (
-        <div className="fixed top-0 left-0 h-full bg-black/50 z-40" />
+        <div className="fixed top-0 left-0 h-full bg-black/50 z-40 " />
       )}
       <div
         ref={mobileMenuRef}
-        className={`xl:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-darklight shadow-lg transform transition-transform duration-300 ${
+        className={`xl:hidden fixed top-0 right-0 h-full w-full bg-white bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff] shadow-lg transform transition-transform duration-300 ${
           navbarOpen ? "translate-x-0" : "translate-x-full"
         } z-50`}
       >
@@ -167,7 +167,7 @@ const Header: React.FC = () => {
             </svg>
           </button>
         </div>
-        <nav className="flex flex-col items-start p-4">
+        <nav className="flex flex-col items-start p-4 ">
           {navlink.map((item, index) => (
             <MobileHeaderLink
               key={index}

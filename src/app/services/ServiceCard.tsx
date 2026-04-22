@@ -40,11 +40,11 @@ const ServiceCard = () => {
   };
 
   return (
-    <section className="mt-16 md:mt-12">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-6 dark:text-white text-primary text-center">
+    <section>
+      <div className="max-w-6xl mx-auto px-4 py-4">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
           Our Services
-        </h2>
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {fetchArr.serviceCards.map((card, index) => (

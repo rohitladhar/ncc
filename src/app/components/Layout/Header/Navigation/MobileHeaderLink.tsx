@@ -23,18 +23,17 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
       e.preventDefault();
       setSubmenuOpen(true);
     } else {
-      // If no submenu, close the navbar
       setNavbarOpen(false);
     }
   };
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff]">
         <Link
           href={item.href || "#"}
           onClick={handleClick}
-          className={`flex items-center justify-between w-full py-3 text-darkblue dark:text-white ${
+          className={`flex items-center justify-between w-full py-3 text-darkblue font-bold ${
             item.href === path ? "!text-primary" : ""
           }`}
         >
@@ -50,7 +49,7 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 w-screen h-screen bg-white dark:bg-gray-900 z-[999] p-4 overflow-y-auto"
+            className="fixed inset-0 w-screen h-screen bg-white bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff] z-[999] p-4 overflow-y-auto"
           >
             <div className="flex items-center gap-3 mb-6">
               <button
@@ -70,7 +69,7 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({
                   key={index}
                   href={subItem.href}
                   onClick={() => setNavbarOpen(false)}
-                  className="py-3 text-darkblue dark:text-gray-100 dark:bg-gray-900 hover:text-primary dark:hover:text-primary transition-colors"
+                  className="py-3 text-darkblue dark:text-gray-100 dark:bg-gray-900 hover:text-primary font-bold transition-colors"
                 >
                   {subItem.label}
                 </Link>

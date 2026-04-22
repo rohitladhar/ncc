@@ -23,15 +23,15 @@ const HeaderLink: React.FC<{ item: NavLinkType }> = ({ item }) => {
         onClick={(e) => {
           if (item.submenu) e.preventDefault();
         }}
-        className={`text-base flex items-center gap-1 font-normal text-darkblue dark:text-white hover:text-primary ${
-          item.href === path ? "!text-primary" : ""
+        className={`text-base  flex items-center gap-1 font-normal text-darkblue font-bold hover:text-primary ${
+          item.href === path ? "!text-primary font-bold" : ""
         }`}
       >
-        {item.label}
+        <span className="font-bold">{item.label}</span>
 
         {item.submenu && (
           <svg
-            className={`transition-transform duration-300 ${
+            className={`transition-transform duration-300  ${
               submenuOpen ? "rotate-180" : ""
             }`}
             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const HeaderLink: React.FC<{ item: NavLinkType }> = ({ item }) => {
                 <li key={index}>
                   <Link
                     href={subItem.href}
-                    className="block px-4 py-2 rounded-md text-darkblue dark:text-white hover:bg-neutral-100 dark:hover:bg-darkmode/20 hover:text-primary transition"
+                    className="block px-4 py-2 rounded-md text-darkblue dark:text-white hover:bg-neutral-100  dark:hover:bg-darkmode/20 hover:text-primary transition"
                   >
                     {subItem.label}
                   </Link>

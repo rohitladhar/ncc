@@ -26,7 +26,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className="mt-8 md:mt-12 h-screen">
+    <section className="mt-8 md:mt-8">
       <div className="container mx-auto pt-10">
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
           How We Work

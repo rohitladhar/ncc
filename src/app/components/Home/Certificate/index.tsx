@@ -69,9 +69,9 @@ const Certificate = () => {
         <div className="container">
           <div className="mb-10 text-center">
             <div className="relative inline-block group">
-              <h3 className="cursor-pointer  text-primary dark:text-white">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
                 Our Accreditations
-              </h3>
+              </h1>
             </div>
           </div>
 

@@ -289,7 +289,7 @@
     {
       "id": 1,
       "title": "HOME OFFICE ASYLUM ACCOMODATIONS",
-      "imgSrcOne": "/images/services/1.png",
+      "imgSrcOne": "/images/services/e3.png",
       "imgSrcTwo": "/images/services/c1.png",
       "paragraph": "Our home office and asylum accommodation cleaning services provide thorough solutions for hygienic, safe, and welcoming environments. We cover private and shared spaces, including living quarters, work areas, and common rooms, with routine dusting, mopping, and sanitizing kitchens and bathrooms. By maintaining cleanliness, organizing spaces, and attending to details like changing linens and arranging furniture, we enhance comfort, support mental wellbeing, reduce stress, and prevent the spread of germs, creating a healthy, productive, and positive environment for residents and staff.",
       "benefits": "Regular cleaning in home offices and asylum accommodations protects physical and mental wellbeing by reducing germs, allergens, and illness. It promotes comfort, dignity, and stability, enhances productivity in workspaces, preserves furniture and equipment, and creates a professional, welcoming environment. Consistent cleaning ensures safe, healthy, and pleasant spaces for all residents, staff, and visitors.",
@@ -335,7 +335,7 @@
     {
       "id": 3,
       "title": "OFFICE AND CORPORATE CLEANING",
-      "imgSrcOne": "/images/services/4.png",
+      "imgSrcOne": "/images/services/e4.png",
       "imgSrcTwo": "/images/services/c1.png",
       "paragraph": "Our office and corporate cleaning services are tailored to maintain professional, productive, and hygienic workplaces. We cover all aspects of office maintenance, including cleaning desks, workstations, meeting rooms, kitchens, and communal spaces. Regular cleaning minimizes dust, allergens, and germs, which improves employee health and reduces absenteeism. Organized and sanitized workspaces enhance focus, productivity, and morale. Our team uses industry-standard equipment and techniques to ensure high-quality results, including sanitizing high-touch surfaces, polishing glass, and maintaining floor cleanliness. A tidy office also leaves a positive impression on clients, visitors, and partners, reflecting professionalism and attention to detail. Our services support compliance with health and safety standards and contribute to the overall longevity of office furniture and equipment. By creating a clean, organized, and welcoming environment, we help businesses maintain an atmosphere conducive to productivity, wellbeing, and professional success.",
       "benefits": "A clean office environment plays a key role in improving employee productivity, health, and overall workplace satisfaction. Regular cleaning reduces the presence of dust, allergens, and germs, helping to minimize illness and reduce sick days. Employees are more likely to feel motivated, focused, and comfortable when working in a tidy and hygienic space. Clean workstations and organized surroundings also contribute to improved efficiency and fewer distractions. From a business perspective, maintaining a clean office enhances your professional image. Clients, visitors, and partners are more likely to trust and respect a company that prioritizes cleanliness and organization. Regular cleaning also helps protect office assets, including furniture, electronics, and flooring, extending their lifespan and reducing maintenance costs. Additionally, a well-maintained environment supports compliance with health and safety standards. Overall, professional cleaning creates a healthier, more productive, and more appealing workplace for everyone.",
@@ -427,7 +427,7 @@
   ],
   "ServiceCards": [
     {
-      "src": "/images/services/1.png",
+      "src": "/images/services/e3.png",
       "title": "HOME OFFICE ASYLUM ACCOMODATIONS",
       "href": "/services/asylum"
     },
@@ -437,7 +437,7 @@
       "href": "/services/healthcare"
     },
     {
-      "src": "/images/services/7.png",
+      "src": "/images/services/e4.png",
       "title": "OFFICE AND CORPORATE CLEANING",
       "href": "/services/office"
     },

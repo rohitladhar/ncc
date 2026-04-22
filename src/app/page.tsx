@@ -6,6 +6,7 @@ import OurValues from "./about/ourvalues/page";
 import AreasWeCover from "./about/areawecover/page";
 import Certificate from "./components/Home/Certificate";
 import ServiceCard from "./services/ServiceCard";
+import ChartiableCause from "./about/charitable/page";
 export default function Home() {
   return (
     <main>
@@ -16,6 +17,7 @@ export default function Home() {
       <Care />
       <AreasWeCover />
       <HowWeWork />
+      <ChartiableCause />
       <ServiceCard />
     </main>
   );

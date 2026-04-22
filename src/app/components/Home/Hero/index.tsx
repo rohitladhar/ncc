@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="py-20 lg:py-20">
+    <section className="py-20 lg:py-20 bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff]">
       <div className="container pt-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-5 space-y-6">

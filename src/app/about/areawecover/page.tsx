@@ -1,11 +1,6 @@
-import Link from "next/link";
-import { Icon } from "@iconify/react";
-import Slider from "react-slick";
-import { getDataPath } from "@/app/utils/paths";
-
 const AreaWeCover = () => {
   return (
-    <section className="mt-10 md:mt-16 px-4 sm:px-6 lg:px-8">
+    <section className="mt-10 md:mt-10 px-4 sm:px-6 lg:px-8 ">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
         <div className="w-full md:w-1/2 flex justify-center">
           <img
