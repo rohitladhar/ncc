@@ -37,7 +37,7 @@ const Certificate = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 3000,
+    speed: 10000,
     cssEase: "linear",
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -82,7 +82,7 @@ const Certificate = () => {
                 ))
               : certificate.map((item, i) => (
                   <div key={i}>
-                    <div className="mx-0.5 p-6 bg-white dark:bg-darklight">
+                    <div className=" bg-white dark:bg-darklight">
                       <div className="flex items-center mb-5">
                         <div className="relative">
                           <Image

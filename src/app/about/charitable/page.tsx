@@ -13,7 +13,7 @@ const Service = () => {
         <div className="text-left">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 text-primary dark:text-white">
             NCC Cleaning Service Partner with Schoolreaders to Help 75
-            Children Learn to Read
+            Children's reading session
           </h1>
 
           <p className="text-lg text-gray-500 dark:text-gray-300 mb-6">
