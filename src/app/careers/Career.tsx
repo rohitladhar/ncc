@@ -173,82 +173,76 @@ const CareerModal: React.FC = () => {
 
   return (
     <div className="relative">
-      <h2 className="mb-9 text-center dark:text-white  text-primary">Career</h2>
+      <h1 className="mb-9 text-center dark:text-white text-primary">Career</h1>
       <div className="relative border px-6 py-2 rounded-lg border-black/20 dark:border-white/20 dark:text-white  text-primary">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div className="flex gap-4 flex-col sm:flex-row">
-            <div className="flex-1">
-              <label htmlFor="name" className="pb-3 inline-block text-base">
-                Name
-              </label>
-              <input
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                placeholder="Name"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-              {touched.name && errors.name && (
-                <p className="text-red-500 text-sm">{errors.name}</p>
-              )}{" "}
-            </div>
-
-            <div className="flex-1">
-              <label htmlFor="address" className="pb-3 inline-block text-base">
-                Address
-              </label>
-              <input
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                placeholder="Address"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-              {touched.address && errors.address && (
-                <p className="text-red-500 text-sm">{errors.address}</p>
-              )}{" "}
-            </div>
+        <form onSubmit={handleSubmit} className="flex flex-wrap w-full m-auto justify-between">
+          <div className="w-full">
+            <label htmlFor="name" className="pb-3 inline-block text-base">
+              Name
+            </label>
+            <input
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Name"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/20 dark:border-white/20 focus:border-primary focus:outline-none"
+            />
+            {touched.name && errors.name && (
+              <p className="text-red-500 text-sm">{errors.name}</p>
+            )}{" "}
           </div>
-          <div className="flex gap-4 flex-col sm:flex-row">
-            <div className="flex-1">
-              <label htmlFor="email" className="pb-3 inline-block text-base">
-                Email
-              </label>
-              <input
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                placeholder="Email"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-              {touched.email && errors.email && (
-                <p className="text-red-500 text-sm">{errors.email}</p>
-              )}{" "}
-            </div>
-
-            <div className="flex-1">
-              <label htmlFor="phone" className="pb-3 inline-block text-base">
-                Phone
-              </label>
-              <input
-                name="phone"
-                type="number"
-                value={formData.phone}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                placeholder="Phone Number"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-              {touched.phone && errors.phone && (
-                <p className="text-red-500 text-sm">{errors.phone}</p>
-              )}{" "}
-            </div>
+          <div className="w-full">
+            <label htmlFor="address" className="pb-3 inline-block text-base">
+              Address
+            </label>
+            <input
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Address"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/20 dark:border-white/20 focus:border-primary focus:outline-none"
+            />
+            {touched.address && errors.address && (
+              <p className="text-red-500 text-sm">{errors.address}</p>
+            )}{" "}
           </div>
-          <div>
+          <div className="w-full">
+            <label htmlFor="email" className="pb-3 inline-block text-base">
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Email"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/20 dark:border-white/20 focus:border-primary focus:outline-none"
+            />
+            {touched.email && errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}{" "}
+          </div>
+          <div className="w-full">
+            <label htmlFor="phone" className="pb-3 inline-block text-base">
+              Phone
+            </label>
+            <input
+              name="phone"
+              type="number"
+              value={formData.phone}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Phone Number"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/20 dark:border-white/20 focus:border-primary focus:outline-none"
+            />
+            {touched.phone && errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone}</p>
+            )}{" "}
+          </div>
+          <div className="w-full">
             <label htmlFor="comments" className="pb-3 inline-block text-base">
               Comments
             </label>
@@ -259,7 +253,7 @@ const CareerModal: React.FC = () => {
               onBlur={handleBlur}
               placeholder="Comments"
               rows={4}
-              className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
+              className="w-full px-4 py-2.5 rounded-lg border border-black/20 dark:border-white/20 focus:border-primary focus:outline-none"
             />
             {touched.comments && errors.comments && (
               <p className="text-red-500 text-sm">{errors.comments}</p>

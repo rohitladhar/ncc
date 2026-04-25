@@ -70,9 +70,9 @@ const ContactForm = () => {
 
   return (
     <div className="relative">
-      <h2 className="mb-9 text-center dark:text-white  text-primary">
+      <h1 className="mb-9 text-center dark:text-white  text-primary mt-5">
         Contact Us
-      </h2>
+      </h1>
       <div className="relative border px-6 py-2 rounded-lg border-black/20 dark:border-white/20 dark:text-white  text-primary">
         <form
           onSubmit={handleSubmit}

@@ -127,12 +127,12 @@ const Quote: React.FC = () => {
 
   return (
     <div className="relative">
-      <h2 className="mb-9 text-center dark:text-white text-primary">
+      <h1 className="mb-9 text-center dark:text-white text-primary">
         Quote
-      </h2>
+      </h1>
 
       <div className="relative border px-6 py-2 rounded-lg border-black/20 dark:border-white/20 dark:text-white text-primary">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
+        <form onSubmit={handleSubmit} className="flex flex-wrap w-full m-auto justify-between">
 
           <div className="w-full">
             <label className="pb-3 inline-block text-base">Name</label>

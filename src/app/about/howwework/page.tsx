@@ -30,7 +30,6 @@ const HowWeWork = () => {
   return (
     <section className="py-12 md:py-16 bg-gray-50 dark:bg-black">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Header */}
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-primary dark:text-white mb-4">
           How We Work
         </h1>
@@ -39,20 +38,16 @@ const HowWeWork = () => {
           Our structured onboarding ensures a smooth experience from day one.
         </p>
 
-        {/* ================= MOBILE STEPPER ================= */}
+       
         <div className="md:hidden relative pl-6">
-          {/* vertical line */}
           <div className="absolute left-3 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700"></div>
 
           <div className="space-y-10">
             {steps.map((step, index) => (
               <div key={step.id} className="relative">
-                {/* Dot */}
                 <div className="absolute -left-[2px] top-1 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md">
                   {step.id}
                 </div>
-
-                {/* Content */}
                 <div className="pl-8">
                   <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                     {step.title}
@@ -65,8 +60,6 @@ const HowWeWork = () => {
             ))}
           </div>
         </div>
-
-        {/* ================= DESKTOP TIMELINE (UNCHANGED) ================= */}
         <div className="hidden md:block relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 dark:bg-gray-700 h-full"></div>
 
@@ -78,7 +71,6 @@ const HowWeWork = () => {
                   index % 2 === 0 ? "flex-row-reverse" : ""
                 }`}
               >
-                {/* Card */}
                 <div className="w-1/2 p-4">
                   <div className="bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-6">
                     <h3 className="text-xl font-semibold text-primary dark:text-white mb-2">
@@ -90,7 +82,6 @@ const HowWeWork = () => {
                   </div>
                 </div>
 
-                {/* Icon */}
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full shadow-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
