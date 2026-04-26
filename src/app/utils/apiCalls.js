@@ -37,13 +37,4 @@ export function sendCareerForm(formData) {
       return response.json();
     })
     .catch((error) => console.log(error));
-
-  // return fetch(API_ENDPOINT+'/addcareer', {
-  //   method: "POST",
-  //   body:formData,
-  //   credentials: 'include',
-  // })
-  //   .then((response) => {
-  //     return response.json()
-  //   }).catch((error)=>console.log(error))
 }

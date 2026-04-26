@@ -7,12 +7,16 @@ interface InformationProps {
   children: ReactNode;
 }
 
-export default function Information({ isOpen, onClose, children }: InformationProps) {
+export default function Information({
+  isOpen,
+  onClose,
+  children,
+}: InformationProps) {
   const handleEsc = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     },
-    [onClose]
+    [onClose],
   );
 
   useEffect(() => {
@@ -39,7 +43,7 @@ export default function Information({ isOpen, onClose, children }: InformationPr
     if (!isOpen) return;
 
     const focusable = document.querySelectorAll<HTMLElement>(
-      'button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])',
     );
 
     const first = focusable[0];
@@ -77,7 +81,6 @@ export default function Information({ isOpen, onClose, children }: InformationPr
       role="dialog"
       aria-modal="true"
     >
-     
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}

@@ -38,7 +38,6 @@ const HowWeWork = () => {
           Our structured onboarding ensures a smooth experience from day one.
         </p>
 
-       
         <div className="md:hidden relative pl-6">
           <div className="absolute left-3 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700"></div>
 
