@@ -3,7 +3,7 @@
     {
       "label": "Cleaning Services",
       "submenu": [
-        { "label": "HOME OFFICE ASYLUM", "href": "/services/asylum" },
+        { "label": "HOME OFFICE ACCOMODATIONS", "href": "/services/asylum" },
         {
           "label": "OFFICE AND CORPORATE CLEANING",
           "href": "/services/office"
@@ -160,7 +160,7 @@
   "ServiceData": [
     {
       "slide": {
-        "one": "HOME OFFICE ASYLUM ACCOMODATIONS",
+        "one": "HOME OFFICE ACCOMODATIONS",
         "two": "HEALTHCARE AND CARE HOME CLEANING"
       },
 
@@ -288,11 +288,11 @@
   "ServicesData": [
     {
       "id": 1,
-      "title": "HOME OFFICE ASYLUM ACCOMODATIONS",
+      "title": "HOME OFFICE ACCOMODATIONS",
       "imgSrcOne": "/images/services/a1.png",
       "imgSrcTwo": "/images/services/a2.png",
-      "paragraph": "Our home office and asylum accommodation cleaning services provide thorough solutions for hygienic, safe, and welcoming environments. We cover private and shared spaces, including living quarters, work areas, and common rooms, with routine dusting, mopping, and sanitizing kitchens and bathrooms. By maintaining cleanliness, organizing spaces, and attending to details like changing linens and arranging furniture, we enhance comfort, support mental wellbeing, reduce stress, and prevent the spread of germs, creating a healthy, productive, and positive environment for residents and staff.",
-      "benefits": "Regular cleaning in home offices and asylum accommodations protects physical and mental wellbeing by reducing germs, allergens, and illness. It promotes comfort, dignity, and stability, enhances productivity in workspaces, preserves furniture and equipment, and creates a professional, welcoming environment. Consistent cleaning ensures safe, healthy, and pleasant spaces for all residents, staff, and visitors.",
+      "paragraph": "Our home office accommodation cleaning services provide thorough solutions for hygienic, safe, and welcoming environments. We cover private and shared spaces, including living quarters, work areas, and common rooms, with routine dusting, mopping, and sanitizing kitchens and bathrooms. By maintaining cleanliness, organizing spaces, and attending to details like changing linens and arranging furniture, we enhance comfort, support mental wellbeing, reduce stress, and prevent the spread of germs, creating a healthy, productive, and positive environment for residents and staff.",
+      "benefits": "Regular cleaning in home offices accommodations protects physical and mental wellbeing by reducing germs, allergens, and illness. It promotes comfort, dignity, and stability, enhances productivity in workspaces, preserves furniture and equipment, and creates a professional, welcoming environment. Consistent cleaning ensures safe, healthy, and pleasant spaces for all residents, staff, and visitors.",
       "content": {
         "summary": "Clean, safe, and welcoming spaces for every stay and workspace.",
         "tasks": [
@@ -428,7 +428,7 @@
   "ServiceCards": [
     {
       "src": "/images/services/a1.png",
-      "title": "HOME OFFICE ASYLUM ACCOMODATIONS",
+      "title": "HOME OFFICE ACCOMODATIONS",
       "href": "/services/asylum"
     },
     {
