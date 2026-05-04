@@ -123,6 +123,11 @@
       "imgSrc": "/images/certificate/ssip.jpeg",
       "name": "SSIP",
       "desc": "SSIP Approved!"
+    },
+    {
+      "imgSrc": "/images/certificate/CHAS.png",
+      "name": "CHAS",
+      "desc": "CHAS Approved!"
     }
   ],
   "SpecializeData": [

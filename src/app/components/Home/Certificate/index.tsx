@@ -3,9 +3,6 @@
 import { useEffect, useState } from "react";
 import { CertificateType } from "@/app/types/certificate";
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ReviewSkeleton from "../../Skeleton/Review";
 import { getDataPath, getImgPath } from "@/app/utils/paths";
 
@@ -21,7 +18,7 @@ const Certificate = () => {
         const data = await res.json();
         setCertificate(data.CertificationData);
       } catch (error) {
-        console.error("Error fetching service", error);
+        console.log("Error fetching certificate", error);
       } finally {
         setLoading(false);
       }
@@ -29,80 +26,39 @@ const Certificate = () => {
     fetchData();
   }, []);
 
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 10000,
-    cssEase: "linear",
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div id="certificate" className="scroll-mt-12">
       <section>
         <div className="container">
           <div className="mb-10 text-center">
-            <div className="relative inline-block group">
-              <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary text-center">
-                Our Accreditations
-              </h1>
-            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 dark:text-white text-primary">
+              Our Accreditations
+            </h1>
           </div>
 
-          <Slider {...settings}>
-            {loading
-              ? Array.from({ length: 3 }).map((_, i) => (
+          <div className="overflow-hidden">
+            {loading ? (
+              <div className="flex gap-4">
+                {Array.from({ length: 3 }).map((_, i) => (
                   <ReviewSkeleton key={i} />
-                ))
-              : certificate.map((item, i) => (
-                  <div key={i}>
-                    <div className=" bg-white dark:bg-darklight">
-                      <div className="flex items-center mb-5">
-                        <div className="relative">
-                          <Image
-                            src={getImgPath(item.imgSrc)}
-                            alt={item.name}
-                            width={400}
-                            height={150}
-                            className="max-h-[120px] max-w-[320px] object-contain"
-                          />
-                        </div>
-                      </div>
-                      {/* <div>
-                        <h6 className="dark:text-white  text-primary">
-                          {item.name}
-                        </h6>
-                      </div> */}
-                    </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex w-max gap-6 animate-scroll">
+                {[...certificate, ...certificate].map((item, i) => (
+                  <div key={i} className="flex-shrink-0">
+                    <Image
+                      src={getImgPath(item.imgSrc)}
+                      alt={item.name}
+                      width={300}
+                      height={120}
+                      className="h-[100px] w-auto object-contain"
+                    />
                   </div>
                 ))}
-          </Slider>
+              </div>
+            )}
+          </div>
         </div>
       </section>
     </div>

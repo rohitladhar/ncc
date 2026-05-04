@@ -29,8 +29,8 @@ const HowWeWork = () => {
 
   return (
     <section className="mt-10 md:mt-16 py-12 md:py-16 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6 min-h-screen">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-primary dark:text-white mb-4">
+      <div className="container mx-auto px-4 md:px-6">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-primary dark:text-white mb-4 pt-5">
           How We Work
         </h1>
 

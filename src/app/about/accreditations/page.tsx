@@ -9,12 +9,12 @@ export default function Accreditations() {
   const companyData: AccreditationItem = {
     company: "NCC Cleaning",
     description:
-      "At NCC Cleaning, we believe that our partnerships improve the quality of our services. We are dedicated to providing excellent service while caring for the environment, as evidenced by our certifications and memberships.",
+      "At NCC Cleaning, we believe that our partnerships improve the quality of our services.",
     commitment: {
       summary:
-        "Our commitment to maintaining certifications demonstrates reliability and dedication to delivering top-notch service.",
+        "Our commitment to maintaining certifications demonstrates reliability and dedication.",
       key_achievement:
-        "ISO certification, highlighting continuous improvement and quality assurance.",
+        "ISO certification, highlighting continuous improvement.",
     },
     accreditations: [
       {
@@ -22,45 +22,63 @@ export default function Accreditations() {
         provider: "Alcumus SafeContractor",
         image: "/images/certificate/SafePQQ.png",
         description:
-          "A respected certification program recognising contractors who meet high standards for health and safety management.",
+          "A respected certification recognising high standards for health and safety.",
         importance: "Ensures organisations work with reliable partners.",
         company_statement:
-          "We have earned SafeContractor accreditation, reinforcing our commitment to a safe and healthy environment for employees and stakeholders.",
+          "We have earned SafeContractor accreditation, reinforcing our commitment.",
       },
       {
         name: "BICSc",
         type: "Corporate Membership",
         image: "/images/certificate/BICSc.png",
         description:
-          "The largest independent professional and educational body in the cleaning industry with over 5,000 members.",
+          "The largest independent professional body in the cleaning industry.",
         mission: [
-          "Raise standards of education in the cleaning industry",
-          "Build awareness through professional standards and training",
+          "Raise standards of education",
+          "Build awareness through training",
         ],
         principles: [
           "Protecting the operative",
-          "Providing a clean and safe environment",
-          "Preserving assets",
+          "Providing a clean environment",
           "Promoting sustainability",
-          "Producing best practice",
         ],
-        history:
-          "Formed in 1961 to raise the profile of the cleaning industry and establish educational standards.",
+        history: "Formed in 1961 to raise industry standards.",
         company_statement:
-          "NCC Cleaning Services adopts new standards and methodologies early to benefit clients and business.",
+          "NCC Cleaning adopts new standards early to benefit clients.",
       },
       {
         name: "SSIP",
         image: "/images/certificate/ssip.jpeg",
-        description:
-          "A UK accreditation that simplifies health and safety checks for businesses.",
+        description: "A UK accreditation simplifying health and safety checks.",
         benefits: [
-          "Reduces need for multiple assessments",
-          "Recognised by the Health and Safety Executive (HSE)",
-          "Improves efficiency in procurement processes",
+          "Reduces multiple assessments",
+          "Recognised by HSE",
+          "Improves efficiency",
         ],
         company_statement:
-          "We are proud members of SSIP, ensuring streamlined and recognised safety compliance.",
+          "We ensure streamlined and recognised safety compliance.",
+      },
+      {
+        name: "CHAS",
+        image: "/images/certificate/CHAS.png",
+        description:
+          "A leading UK accreditation for health and safety compliance.",
+        benefits: [
+          "Demonstrates compliance",
+          "Enhances credibility",
+          "Simplifies tendering",
+        ],
+        company_statement: "We maintain high standards of health and safety.",
+      },
+      {
+        name: "Cyber Essentials",
+        image: "/images/certificate/cyber.png",
+        description: "A UK certification protecting against cyber threats.",
+        benefits: [
+          "Protects against attacks",
+          "Shows cybersecurity commitment",
+        ],
+        company_statement: "We ensure strong protection against cyber threats.",
       },
     ],
     iso_standards: [
@@ -69,41 +87,23 @@ export default function Accreditations() {
         image: "/images/certificate/ISO14001.png",
         category: "Environmental Management",
         introduced: 1996,
-        description:
-          "An internationally recognised standard for managing environmental impact.",
-        benefits: [
-          "Reduce environmental impact",
-          "Lower risk of pollution",
-          "Improve operational efficiency",
-          "Ensure legal compliance",
-          "Support sustainable growth",
-        ],
+        description: "Standard for managing environmental impact.",
+        benefits: ["Reduce environmental impact", "Improve efficiency"],
       },
       {
         name: "ISO 9001",
         image: "/images/certificate/ISO9001.png",
         category: "Quality Management",
-        description:
-          "A widely recognised standard used by over a million organisations worldwide.",
-        purpose: [
-          "Meet legal and regulatory requirements",
-          "Ensure high-quality service delivery",
-          "Improve customer satisfaction",
-        ],
+        description: "Widely recognised quality management standard.",
+        purpose: ["Ensure high-quality service", "Improve satisfaction"],
       },
       {
         name: "ISO 45001",
-        category: "Health & Safety Management",
+        category: "Health & Safety",
         image: "/images/certificate/ISO45001.png",
         introduced: 2018,
-        description:
-          "A standard designed to create safer and healthier workplaces.",
-        benefits: [
-          "Identify and manage health and safety risks",
-          "Reduce workplace accidents",
-          "Ensure compliance with safety laws",
-          "Improve efficiency and effectiveness",
-        ],
+        description: "Creates safer workplaces.",
+        benefits: ["Reduce accidents", "Ensure compliance"],
       },
     ],
   };
@@ -120,42 +120,53 @@ export default function Accreditations() {
   ];
 
   return (
-    <section className="mt-12 md:mt-12 py-12 dark:text-white">
-      <div className="max-w-6xl mx-auto px-4 dark:text-white">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-primary dark:text-white">
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-primary mt-7">
+      <div className="max-w-6xl mx-auto px-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-[#d2ffdd] to-[#7ea9ff] bg-clip-text text-transparent mb-4">
           Our Accreditations & ISO Standards
         </h1>
 
-        <p className="text-center max-w-2xl mx-auto mb-10 dark:text-white">
-          At NCC Cleaning, our certifications and ISO standards reflect our
-          commitment to quality, safety, and environmental responsibility.
+        <p className="text-center max-w-2xl mx-auto mb-12 text-gray-600 dark:text-gray-300">
+          Our certifications reflect our commitment to quality, safety, and
+          environmental responsibility.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {cardItems.map((item) => (
             <div
               key={item.data.name}
               onClick={() => setSelectedItem(item)}
-              className="cursor-pointer rounded-2xl border p-6 shadow-sm hover:shadow-md transition h-full flex flex-col dark:text-white"
+              className="group cursor-pointer rounded-2xl border border-gray-200 dark:border-white/10 
+              bg-white/70 dark:bg-white/5 backdrop-blur-md 
+              p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 
+              transition-all duration-300 flex flex-col"
             >
-              <span className="inline-block text-xs font-medium bg-primary text-white px-3 py-1 rounded-full w-fit mb-2 dark:text-white">
+              <span
+                className="inline-block text-xs font-semibold tracking-wide 
+              bg-primary/10 text-primary px-3 py-1 rounded-full mb-3"
+              >
                 {item.type === "accreditation" ? "Accreditation" : "ISO"}
               </span>
-              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-                <h2 className="text-xl font-semibold dark:text-white text-center sm:text-left">
+
+              <div className="flex items-center justify-between gap-4">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {item.data.name}
                 </h2>
-                <div className="w-full sm:w-[250px] h-[50px] flex items-center justify-center overflow-hidden">
-                  <img
-                    src={item.data.image}
-                    alt={item.data.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+
+                <img
+                  src={item.data.image}
+                  alt={item.data.name}
+                  className="h-20 w-auto object-contain opacity-80 group-hover:opacity-100 transition"
+                />
               </div>
-              <p className="mt-2 flex-grow dark:text-white">
+
+              <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                 {"description" in item.data ? item.data.description : ""}
               </p>
+
+              <span className="mt-4 text-xs text-primary opacity-0 group-hover:opacity-100 transition">
+                Click to learn more →
+              </span>
             </div>
           ))}
         </div>
@@ -166,84 +177,72 @@ export default function Accreditations() {
         onClose={() => setSelectedItem(null)}
       >
         {selectedItem && (
-          <div className="space-y-4 dark:text-white">
-            <h2 className="text-2xl font-bold dark:text-white">
-              {selectedItem.data.name}
-            </h2>
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">{selectedItem.data.name}</h2>
+
             {"category" in selectedItem.data && (
-              <p className="dark:text-white">
+              <p>
                 <strong>Category:</strong> {selectedItem.data.category}
               </p>
             )}
+
             {"introduced" in selectedItem.data &&
               selectedItem.data.introduced && (
-                <p className="dark:text-white">
+                <p>
                   <strong>Introduced:</strong> {selectedItem.data.introduced}
                 </p>
               )}
+
             {"provider" in selectedItem.data && selectedItem.data.provider && (
-              <p className="dark:text-white">
+              <p>
                 <strong>Provider:</strong> {selectedItem.data.provider}
               </p>
             )}
-            <p className="dark:text-white">{selectedItem.data.description}</p>
+
+            <p>{selectedItem.data.description}</p>
 
             {"importance" in selectedItem.data &&
               selectedItem.data.importance && (
-                <p className="dark:text-white">
+                <p>
                   <strong>Importance:</strong> {selectedItem.data.importance}
                 </p>
               )}
 
             {"company_statement" in selectedItem.data && (
-              <p className="italic dark:text-white">
-                {selectedItem.data.company_statement}
-              </p>
+              <p className="italic">{selectedItem.data.company_statement}</p>
             )}
 
-            {"benefits" in selectedItem.data && selectedItem.data.benefits && (
-              <ul className="list-disc ml-5 mt-1 dark:text-white">
-                {selectedItem.data.benefits.map((b, i) => (
-                  <li key={i} className="dark:text-white">
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            )}
+            {(() => {
+              const renderList = (items?: string[]) => {
+                if (!Array.isArray(items) || items.length === 0) return null;
+                return (
+                  <ul className="list-disc ml-5 space-y-1">
+                    {items.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                );
+              };
 
-            {"purpose" in selectedItem.data && selectedItem.data.purpose && (
-              <ul className="list-disc ml-5 mt-1 dark:text-white">
-                {selectedItem.data.purpose.map((p, i) => (
-                  <li key={i} className="dark:text-white">
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            )}
+              return (
+                <>
+                  {"benefits" in selectedItem.data &&
+                    renderList(selectedItem.data.benefits)}
 
-            {"mission" in selectedItem.data && selectedItem.data.mission && (
-              <ul className="list-disc ml-5 mt-1 dark:text-white">
-                {selectedItem.data.mission.map((m, i) => (
-                  <li key={i} className="dark:text-white">
-                    {m}
-                  </li>
-                ))}
-              </ul>
-            )}
+                  {"purpose" in selectedItem.data &&
+                    renderList(selectedItem.data.purpose)}
 
-            {"principles" in selectedItem.data &&
-              selectedItem.data.principles && (
-                <ul className="list-disc ml-5 mt-1 dark:text-white">
-                  {selectedItem.data.principles.map((p, i) => (
-                    <li key={i} className="dark:text-white">
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                  {"mission" in selectedItem.data &&
+                    renderList(selectedItem.data.mission)}
+
+                  {"principles" in selectedItem.data &&
+                    renderList(selectedItem.data.principles)}
+                </>
+              );
+            })()}
 
             {"history" in selectedItem.data && selectedItem.data.history && (
-              <p className="dark:text-white">
+              <p>
                 <strong>History:</strong> {selectedItem.data.history}
               </p>
             )}
