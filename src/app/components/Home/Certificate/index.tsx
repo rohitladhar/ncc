@@ -9,6 +9,7 @@ import { getDataPath, getImgPath } from "@/app/utils/paths";
 const Certificate = () => {
   const [certificate, setCertificate] = useState<CertificateType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,13 +47,19 @@ const Certificate = () => {
             ) : (
               <div className="flex w-max gap-6 animate-scroll">
                 {[...certificate, ...certificate].map((item, i) => (
-                  <div key={i} className="flex-shrink-0">
+                  <div
+                    key={i}
+                    className="flex-shrink-0 cursor-pointer"
+                    onClick={() =>
+                      setActiveImage(getImgPath(item.imgSrc))
+                    }
+                  >
                     <Image
                       src={getImgPath(item.imgSrc)}
                       alt={item.name}
                       width={300}
                       height={120}
-                      className="h-[100px] w-auto object-contain"
+                      className="h-[100px] w-auto object-contain transition-transform duration-300 hover:scale-100"
                     />
                   </div>
                 ))}
@@ -61,6 +68,22 @@ const Certificate = () => {
           </div>
         </div>
       </section>
+
+
+      {activeImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setActiveImage(null)}
+        >
+          <Image
+            src={activeImage}
+            alt="Full Preview"
+            width={1000}
+            height={600}
+            className="max-h-[90vh] w-auto object-contain rounded-lg shadow-2xl"
+          />
+        </div>
+      )}
     </div>
   );
 };
