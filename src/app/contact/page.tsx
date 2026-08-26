@@ -1,4 +1,4 @@
-import ContactForm from "./Contact";
+import ContactInfo from "./Contact";
 
 export default function Contact() {
   return (
@@ -18,7 +18,7 @@ export default function Contact() {
           </div>
           <div className="w-full h-full pt-10 flex">
             <div className="bg-gradient-to-r from-emerald-50 via-blue-50 to-indigo-100 border border-white/40 shadow-lg rounded-r-2xl p-6 sm:p-8 w-full h-full flex items-center">
-              <ContactForm />
+              <ContactInfo />
             </div>
           </div>
         </div>

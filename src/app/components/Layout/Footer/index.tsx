@@ -98,16 +98,13 @@ const Footer = () => {
               >
                 <Icon
                   icon={
-                    isDark
-                      ? "tabler:brand-x-filled"
-                      : "tabler:brand-x-filled"
+                    isDark ? "tabler:brand-x-filled" : "tabler:brand-x-filled"
                   }
                   width={45}
                   height={45}
                   className="text-darkblue dark:text-white bg-darkmode/5 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300"
                 />
               </Link>
-              
             </div>
           </div>
 
@@ -192,6 +189,34 @@ const Footer = () => {
               <div>
                 <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
                   info@ncccleaning.co.uk
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-1">
+              <Icon
+                icon="tabler:shield-lock"
+                width={22}
+                height={22}
+                className="text-primary dark:text-white mt-1"
+              />
+
+              <div>
+                <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+                  <Link href="/privacy-policy">Privacy Policy</Link>
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-1">
+              <Icon
+                icon="tabler:cookie"
+                width={22}
+                height={22}
+                className="text-primary dark:text-white mt-1"
+              />
+
+              <div>
+                <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+                  <Link href="/cookie-policy">Cookie Policy</Link>
                 </p>
               </div>
             </div>

@@ -1,186 +1,143 @@
 "use client";
-import React from "react";
-import { useState, useEffect } from "react";
-import { sendContactForm } from "../utils/apiCalls";
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    address: "",
-    email: "",
-    phone: "",
-    comments: "",
-  });
-  const [showThanks, setShowThanks] = useState(false);
-  const [loader, setLoader] = useState(false);
-  const [isFormValid, setIsFormValid] = useState(false);
-  const [message, setMessage] = useState<string[]>([]);
-  useEffect(() => {
-    const isValid = Object.values(formData).every(
-      (value) => value.trim() !== "",
-    );
-    setIsFormValid(isValid);
-  }, [formData]);
-  const handleChange = (e: { target: { name: string; value: string } }) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+const contactDetails = [
+  {
+    title: "Company",
+    content: ["NCC Cleaning Service LTD"],
+  },
+  {
+    title: "Address",
+    content: [
+      "Unit 408, Bedford Heights",
+      "Brickhill Drive",
+      "Bedford MK41 7PH",
+    ],
+  },
+  {
+    title: "Phone",
+    content: ["+44 1234745377"],
+    link: "tel:+441234745377",
+  },
+];
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoader(true);
+const emailContacts = [
+  {
+    role: "Managing Director",
+    email: "info@ncccleaning.co.uk",
+  },
+  {
+    role: "General Manager",
+    email: "service@ncccleaning.co.uk",
+  },
+  {
+    role: "Sales Manager",
+    email: "sales@ncccleaning.co.uk",
+  },
+];
 
-    try {
-      const response = await sendContactForm(formData);
+const openingHours = [
+  "Monday: 9 to 5 PM",
+  "Tuesday: 9 to 5 PM",
+  "Wednesday: 9 to 5 PM",
+  "Thursday: 9 to 5 PM",
+  "Friday: 9 to 5 PM",
+  "Saturday: Closed",
+  "Sunday: Closed",
+];
 
-      if (response.error) {
-        let err: string[] = Object.values(
-          response.error as Record<string, string[]>,
-        ).flat();
-        setShowThanks(true);
-        setMessage(
-          err.length
-            ? err
-            : ["An unexpected error occurred. Please try again."],
-        );
-      } else {
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          address: "",
-          comments: "",
-        });
-        setShowThanks(true);
-        setMessage([
-          "Thank you for contacting us! We will get back to you soon.",
-        ]);
-      }
-    } catch (error: unknown) {
-      console.error("Error submitting form:", error);
-      setMessage([
-        "We are having a problem on our end. Please try again later.",
-      ]);
-    } finally {
-      setLoader(false);
-    }
-  };
-
+const ContactInfo = () => {
   return (
-    <div className="relative">
-      <h1 className="mb-9 text-center dark:text-white  text-primary mt-5">
+    <section
+      aria-labelledby="contact-title"
+      className="mx-auto max-w-4xl py-12 text-primary dark:text-white"
+    >
+      <h1
+        id="contact-title"
+        className="mb-12 text-center text-6xl font-bold tracking-tight"
+      >
         Contact Us
       </h1>
-      <div className="relative border px-6 py-2 rounded-lg border-black/20 dark:border-white/20 dark:text-white  text-primary">
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-wrap w-full m-auto justify-between"
-        >
-          <div className="w-full">
-            <div className="mx-0 my-2.5 flex-1">
-              <label htmlFor="name" className="pb-3 inline-block text-base">
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="John"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-            </div>
-            <div className="mx-0 my-2.5 flex-1">
-              <label htmlFor="address" className="pb-3 inline-block text-base">
-                Address
-              </label>
-              <input
-                id="address"
-                type="text"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                placeholder="Doe"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-            </div>
-          </div>
-          <div className="w-full">
-            <div className="mx-0 my-2.5 flex-1">
-              <label htmlFor="email" className="pb-3 inline-block text-base">
-                Email Address
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="john.doe@example.com"
-                className="w-full text-base px-4 rounded-lg border-black/20 dark:border-white/20 py-2.5 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
-            </div>
-            <div className="mx-0 my-2.5 flex-1">
-              <label htmlFor="Phnumber" className="pb-3 inline-block text-base">
-                Phone Number
-              </label>
-              <input
-                id="phone"
-                type="number"
-                name="phone"
-                placeholder="+1234567890"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full text-base px-4 py-2.5 rounded-lg border-black/20 dark:border-white/20 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              />
+
+      <div className="divide-y divide-black/10 dark:divide-white/10">
+        {contactDetails.map((item) => (
+          <div
+            key={item.title}
+            className="flex flex-col gap-3 py-8 md:flex-row md:gap-12"
+          >
+            <h2 className="w-full text-2xl font-semibold md:w-64">
+              {item.title}
+            </h2>
+
+            <div>
+              {item.title === "Company" ? (
+                <p className="text-xl font-bold tracking-tight transition-colors hover:text-primary">
+                  NCC Cleaning Service LTD
+                </p>
+              ) : (
+                <div className="text-xl leading-8">
+                  {item.content.map((line) =>
+                    item.link ? (
+                      <a
+                        key={line}
+                        href={item.link}
+                        className="transition-colors hover:text-primary"
+                      >
+                        {line}
+                      </a>
+                    ) : (
+                      <p
+                        key={line}
+                        className="transition-colors hover:text-primary"
+                      >
+                        {line}
+                      </p>
+                    ),
+                  )}
+                </div>
+              )}
             </div>
           </div>
-          <div className="w-full mx-0 my-2.5 flex-1">
-            <label htmlFor="message" className="text-base inline-block">
-              Message
-            </label>
-            <textarea
-              id="comments"
-              name="comments"
-              value={formData.comments}
-              onChange={handleChange}
-              className="w-full mt-2 px-5 py-3 rounded-lg border-black/20 dark:border-white/20 border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:outline-0"
-              placeholder="Anything else you wanna communicate"
-            ></textarea>
+        ))}
+
+        <div className="flex flex-col gap-3 py-8 md:flex-row md:gap-12">
+          <h2 className="w-full text-2xl font-semibold md:w-64">
+            Email
+          </h2>
+
+          <div className="space-y-5 text-xl">
+            {emailContacts.map((contact) => (
+              <div key={contact.email}>
+                <p className="font-semibold">{contact.role}</p>
+
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="transition-colors hover:text-primary"
+                >
+                  {contact.email}
+                </a>
+              </div>
+            ))}
           </div>
-          <div className="mx-0 my-2.5 w-full">
-            <button
-              type="submit"
-              disabled={!isFormValid || loader}
-              className={`w-full py-3 rounded-lg text-white font-medium  
-                    ${
-                      !isFormValid || loader
-                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                        : "bg-primary border-primary text-white hover:bg-transparent hover:text-primary cursor-pointer"
-                    }`}
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-      </div>
-      {showThanks && (
-        <div className="text-white bg-primary rounded-full px-4 text-lg mb-4.5 mt-1 absolute flex items-center gap-2">
-          {message.length > 0 && (
-            <ul>
-              {message.map((msg, index) => (
-                <li key={index}>{msg}</li>
-              ))}
-            </ul>
-          )}
-          <div className="w-3 h-3 rounded-full animate-spin border-2 border-solid border-white border-t-transparent"></div>
         </div>
-      )}
-    </div>
+
+        <div className="flex flex-col gap-3 py-8 md:flex-row md:gap-12">
+          <h2 className="w-full text-2xl font-semibold md:w-64">
+            Opening Hours
+          </h2>
+
+          <div className="space-y-2 text-xl">
+            {openingHours.map((hours) => (
+              <p
+                key={hours}
+                className="transition-colors hover:text-primary"
+              >
+                {hours}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default ContactForm;
+export default ContactInfo;

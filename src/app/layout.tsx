@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+
 import Header from "./components/Layout/Header";
-import { ThemeProvider } from "next-themes";
 import Footer from "./components/Layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import NewsletterPopup from "./components/Layout/NewsletterPopup";
+
+import { ThemeProvider } from "next-themes";
+import { NewsletterProvider } from "./context/NewsletterContext";
 
 const DMSans = DM_Sans({
   variable: "--font-DM-Sans",
@@ -33,16 +37,24 @@ export default function RootLayout({
             type="text/javascript"
             async
           ></script>
-          </head>
+        </head>
+
         <ThemeProvider
           attribute="class"
           enableSystem={false}
           defaultTheme="light"
         >
-          <Header />
-          {children}
-          <Footer />
-          <ScrollToTop />
+          <NewsletterProvider>
+            <Header />
+
+            {children}
+
+            <Footer />
+
+            <ScrollToTop />
+
+            <NewsletterPopup />
+          </NewsletterProvider>
         </ThemeProvider>
       </body>
     </html>
