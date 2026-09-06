@@ -16,7 +16,7 @@ export function sendContactForm(formData) {
 }
 
 export function sendQuoteForm(formData) {
-  return fetch(MARKETING_API_ENDPOINT + "/addonlinequote", {
+  return fetch(API_ENDPOINT + "/addonlinequote", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export function sendCareerForm(formData) {
 }
 
 export function sendMarketingEmail(email) {
-  return fetch(API_ENDPOINT + "/add-marketing-email", {
+  return fetch(MARKETING_API_ENDPOINT + "/add-marketing-email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
