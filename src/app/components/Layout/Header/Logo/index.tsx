@@ -4,20 +4,14 @@ import { getImgPath } from "@/app/utils/paths";
 
 const Logo = () => {
   return (
-    <Link href="/">
+    <Link href="/" className="block w-fit">
       <Image
         src={getImgPath("/images/logo/logo.svg")}
-        alt="logo"
-        width={151}
+        alt="Logo"
+        width={121}
         height={56}
-        className="w-full block dark:hidden"
-      />
-      <Image
-        src={getImgPath("/images/logo/logo.svg")}
-        alt="logo"
-        width={151}
-        height={56}
-        className="w-full hidden dark:block"
+        priority
+        
       />
     </Link>
   );
