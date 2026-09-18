@@ -6,12 +6,10 @@ import HeaderLink from "./Navigation/HeaderLink";
 import MobileHeaderLink from "./Navigation/MobileHeaderLink";
 import { NavLinkType } from "@/app/types/navlink";
 import { Icon } from "@iconify/react";
-import { useTheme } from "next-themes";
 import { getDataPath } from "@/app/utils/paths";
 
 const Header: React.FC = () => {
   const [navlink, setNavlink] = useState<NavLinkType[]>([]);
-  const { theme, setTheme } = useTheme();
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const [isSignInOpen, setIsSignInOpen] = useState(false);
@@ -92,31 +90,41 @@ const Header: React.FC = () => {
       >
         <Logo />
         <nav>
-          <ul className="hidden xl:flex flex-grow items-center justify-start gap-10 font-bold ">
+          <ul className="hidden xl:flex flex-grow items-center justify-start gap-5 font-bold ">
             {navlink.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
           </ul>
         </nav>
+
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-6">
+          <div className="flex items-center gap-1">
+            <Icon
+              icon="tabler:phone"
+              width={22}
+              height={22}
+              className="text-primary dark:text-white"
+            />
+            <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+              +44 1234745377
+            </p>
+          </div>
+          <div className="flex items-start gap-1">
+            <Icon
+              icon="tabler:mail"
+              width={22}
+              height={22}
+              className="text-primary dark:text-white mt-1"
+            />
+            <div>
+              <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+                info@ncccleaning.co.uk
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="flex items-center gap-4">
-          {/* <button
-            aria-label="Toggle theme"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="flex items-center justify-center text-body-color duration-300 hover:cursor-pointer hover:text-primary dark:text-white bg-neutral-50 rounded-full dark:bg-darklight p-2 outline-none"
-          >
-            <Icon
-              icon="solar:sun-2-bold"
-              width="24"
-              height="24"
-              className="hidden dark:block"
-            />
-            <Icon
-              icon="solar:moon-bold"
-              width="24"
-              height="24"
-              className="dark:hidden block"
-            />
-          </button> */}
           <Link
             href="/quote"
             className="hidden xl:block px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold"
