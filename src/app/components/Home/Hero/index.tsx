@@ -20,7 +20,7 @@ import "swiper/css/effect-fade";
 const Hero = () => {
   const slides = [
     {
-      image: "/images/slider/slider-1.jpg",
+      image: "/images/slider/slider-1.png",
       title: "PROFESSIONAL CLEANING SERVICES ACROSS THE UK",
       points: [
         "Fully insured and thoroughly vetted cleaning professionals",
@@ -29,7 +29,7 @@ const Hero = () => {
       ],
     },
     {
-      image: "/images/slider/slider-2.jpg",
+      image: "/images/slider/slider-2.png",
       title: "RELIABLE CLEANING SERVICES FOR YOUR HOME AND BUSINESS",
       points: [
         "Fully insured and thoroughly vetted cleaning professionals",
@@ -38,7 +38,7 @@ const Hero = () => {
       ],
     },
     {
-      image: "/images/slider/slider-3.jpg",
+      image: "/images/slider/slider-3.png",
       title: "A CLEANER SPACE, A BETTER EXPERIENCE",
       points: [
         "Professional and experienced cleaning teams",
@@ -89,7 +89,7 @@ const Hero = () => {
                   className="object-cover"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/5 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/100 via-white/75 to-transparent" />
               </div>
 
 

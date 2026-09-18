@@ -44,29 +44,6 @@
       "href": "/contact"
     }
   ],
-  "PortfolioData": [
-    {
-      "coverImg": "/images/portfolio/staff_one.jpg",
-      "name": "Staff"
-    },
-    {
-      "coverImg": "/images/portfolio/staff_two.jpg",
-      "name": "Staff"
-    },
-    {
-      "coverImg": "/images/portfolio/staff_three.jpg",
-      "name": "Staff"
-    },
-    {
-      "coverImg": "/images/portfolio/staff_four.jpg",
-      "name": "Staff"
-    },
-
-    {
-      "coverImg": "/images/portfolio/staff_six.jpg",
-      "name": "Staff"
-    }
-  ],
   "RecordData": [
     {
       "imgSrc": "/images/records/star.svg",
@@ -288,7 +265,7 @@
     {
       "id": 1,
       "title": "HOME OFFICE ACCOMODATIONS",
-      "imgSrcOne": "/images/services/a1.jpg",
+      "imgSrcOne": "/images/services/a1.png",
       "imgSrcTwo": "/images/services/a2.png",
       "paragraph": "Our home office accommodation cleaning services keep private, shared, and work areas clean, safe, and welcoming. We provide dusting, mopping, sanitizing kitchens and bathrooms, changing linens, and organizing spaces. Regular cleaning reduces germs, supports wellbeing, minimizes stress, and creates a comfortable, healthy, and productive environment for residents and staff.",
       "benefits": "Reduces germs and harmful bacteria.Minimises allergens and supports healthier environments.Promotes wellbeing for residents and staff.Protects furniture, fixtures, and equipment.Improves productivity and workplace efficiency.Creates safe and comfortable surroundings.Maintains hygienic and welcoming spaces.Provides a positive environment for visitors.",
@@ -311,7 +288,7 @@
     {
       "id": 2,
       "title": "HEALTHCARE AND CARE HOME CLEANING",
-      "imgSrcOne": "/images/services/h1.jpg",
+      "imgSrcOne": "/images/services/h1.png",
       "imgSrcTwo": "/images/services/h2.png",
       "paragraph": "Our healthcare and care home cleaning services provide high standards of hygiene, safety, and infection control. We thoroughly sanitize patient rooms, bathrooms, communal areas, high-touch surfaces, floors, windows, and equipment. Our trained team follows strict procedures to reduce cross-contamination, protect residents, patients, visitors, and staff, and maintain clean, comfortable, welcoming environments.",
       "benefits": "Prevents the spread of infections and harmful pathogens.Protects vulnerable patients and elderly residents.Supports health regulations and inspection requirements.Promotes faster recovery and better patient outcomes.Improves staff wellbeing, efficiency, and performance.Creates a safe, clean, and comfortable environment.Builds confidence among families, visitors, and patients.Maintains a professional and trustworthy care setting.",
@@ -334,7 +311,7 @@
     {
       "id": 3,
       "title": "OFFICE AND CORPORATE CLEANING",
-      "imgSrcOne": "/images/services/o1.jpg",
+      "imgSrcOne": "/images/services/o1.png",
       "imgSrcTwo": "/images/services/o2.png",
       "paragraph": "Our office and corporate cleaning services maintain professional, hygienic, and productive workplaces. We clean workstations, meeting rooms, kitchens, and communal areas while sanitizing high-touch surfaces and maintaining floors. Regular cleaning reduces germs and allergens, supports employee wellbeing, improves productivity, protects office equipment, and creates a welcoming, professional environment for clients, visitors, and staff.",
       "benefits": "Reduces germs, dust, and allergens.Supports employee health and wellbeing.Improves focus, productivity, and efficiency.Enhances professional image.Protects furniture, equipment, and flooring.Supports health and safety compliance.Creates a welcoming workplace for everyone",
@@ -357,7 +334,7 @@
     {
       "id": 4,
       "title": "COMMERCIAL BUILDING CLEANING",
-      "imgSrcOne": "/images/services/c1.jpg",
+      "imgSrcOne": "/images/services/c1.png",
       "imgSrcTwo": "/images/services/c2.png",
       "paragraph": "Our commercial building cleaning services keep workplaces clean, safe, hygienic, and welcoming. We thoroughly clean high-traffic areas, restrooms, floors, glass, lobbies, hallways, elevators, and stairways. Regular professional cleaning reduces germs, improves safety, protects furnishings, extends asset lifespan, supports health standards, and creates a positive, professional impression for employees, tenants, clients, and visitors.",
       "benefits": "Creates a professional and welcoming first impression.Reduces dirt, dust, germs, and allergens.Improves hygiene and workplace safety.Supports employee and visitor wellbeing.Protects floors, fixtures, and furnishings.Reduces long-term repair and replacement costs.Supports health and safety compliance.Promotes comfort, confidence, and productivity.",
@@ -380,7 +357,7 @@
     {
       "id": 5,
       "title": "EDUCATIONAL FACILITIES CLEANING",
-      "imgSrcOne": "/images/services/e1.jpg",
+      "imgSrcOne": "/images/services/e1.png",
       "imgSrcTwo": "/images/services/e2.png",
       "paragraph": "Our educational facility cleaning services keep schools, colleges, and learning spaces safe, hygienic, and welcoming. We clean classrooms, laboratories, cafeterias, restrooms, hallways, and common areas, focusing on high-touch surfaces. Regular cleaning reduces germs, allergens, and illness, supports student concentration, protects staff wellbeing, and creates a positive environment for learning, teaching, and academic success.",
       "benefits": "Reduces the spread of germs and viruses.Improves student and staff health.Reduces illness-related absenteeism.Supports better focus and concentration.Creates a positive, welcoming learning environment.Protects furniture, equipment, and flooring.Reduces long-term maintenance costs.Supports health and safety compliance.Builds confidence among parents and visitors.",
@@ -403,7 +380,7 @@
     {
       "id": 6,
       "title": "DEEP CLEANING",
-      "imgSrcOne": "/images/services/d1.jpg",
+      "imgSrcOne": "/images/services/d1.png",
       "imgSrcTwo": "/images/services/d2.png",
       "paragraph": "Our deep cleaning services provide intensive cleaning for carpets, upholstery, tiles, grout, windows, and hard-to-reach areas. Using professional equipment and techniques, we remove dirt, stains, mould, and allergens often missed by routine cleaning. Deep cleaning improves hygiene, indoor air quality, and appearance while protecting furnishings, flooring, and fixtures and creating healthier environments.",
       "benefits": "Removes hidden dirt, stains, allergens, and bacteria.Improves hygiene and indoor air quality.Reduces illness and allergy triggers.Protects carpets, furniture, and surfaces.Extends property and equipment lifespan.Supports cleanliness and safety standards.Creates fresh, healthy, and appealing spaces",
@@ -426,32 +403,32 @@
   ],
   "ServiceCards": [
     {
-      "src": "/images/services/a1.jpg",
+      "src": "/images/services/a1.png",
       "title": "HOME OFFICE ACCOMODATIONS",
       "href": "/services/asylum"
     },
     {
-      "src": "/images/services/h1.jpg",
+      "src": "/images/services/h1.png",
       "title": "HEALTHCARE AND CARE HOME CLEANING",
       "href": "/services/healthcare"
     },
     {
-      "src": "/images/services/o1.jpg",
+      "src": "/images/services/o1.png",
       "title": "OFFICE AND CORPORATE CLEANING",
       "href": "/services/office"
     },
     {
-      "src": "/images/services/c1.jpg",
+      "src": "/images/services/c1.png",
       "title": "COMMERCIAL BUILDING CLEANING",
       "href": "/services/commercial"
     },
     {
-      "src": "/images/services/e1.jpg",
+      "src": "/images/services/e1.png",
       "title": "EDUCATIONAL FACILITIES CLEANING",
       "href": "/services/education"
     },
     {
-      "src": "/images/services/d1.jpg",
+      "src": "/images/services/d1.png",
       "title": "DEEP CLEANING",
       "href": "/services/specialist"
     }

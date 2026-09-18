@@ -60,13 +60,13 @@ const trainingTopics = [
 
 export default function OperationalMethod() {
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
-      {/* Decorative background */}
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24 mt-8 md:mt-8">
+     
       <div className="pointer-events-none absolute -right-32 top-20 h-72 w-72 rounded-full bg-[#3cb6c6]/5" />
       <div className="pointer-events-none absolute -left-32 bottom-10 h-80 w-80 rounded-full bg-[#3cb6c6]/5" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
+    
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#3cb6c6]/20 bg-[#3cb6c6]/10 px-4 py-2 text-sm font-semibold text-[#3cb6c6]">
             <ShieldCheck className="h-4 w-4" />
@@ -83,7 +83,6 @@ export default function OperationalMethod() {
           </p>
         </div>
 
-        {/* Operational Methods */}
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {operationalMethods.map((method) => {
             const Icon = method.icon;
@@ -119,10 +118,8 @@ export default function OperationalMethod() {
           })}
         </div>
 
-        {/* Transparency Section */}
         <div className="mt-8 overflow-hidden rounded-3xl bg-[#3cb6c6] shadow-xl">
           <div className="grid lg:grid-cols-2">
-            {/* Content */}
             <div className="p-7 sm:p-10 lg:p-12">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
                 <Users className="h-6 w-6" />
@@ -157,7 +154,6 @@ export default function OperationalMethod() {
               </div>
             </div>
 
-            {/* Recruitment & Training */}
             <div className="bg-slate-50 p-7 sm:p-10 lg:p-12">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#3cb6c6]/10 text-[#3cb6c6]">
@@ -204,7 +200,6 @@ export default function OperationalMethod() {
           </div>
         </div>
 
-        {/* Bottom Safety Note */}
         <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-amber-100 bg-amber-50 p-5 sm:flex-row sm:items-center">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
             <AlertTriangle className="h-5 w-5" />

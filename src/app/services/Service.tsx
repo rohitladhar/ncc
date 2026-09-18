@@ -102,7 +102,7 @@ const Service: React.FC<ServiceProps> = ({ data }) => {
     : [];
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-16 sm:py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-slate-50 py-16 sm:py-20 lg:py-28 mt-8 md:mt-8">
       <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#3cb6c6]/10 blur-3xl" />
 
       <div className="pointer-events-none absolute -left-40 top-[45%] h-96 w-96 rounded-full bg-[#3cb6c6]/5 blur-3xl" />
