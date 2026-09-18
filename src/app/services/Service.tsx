@@ -181,6 +181,7 @@ const Service: React.FC<ServiceProps> = ({ data }) => {
                   width={700}
                   height={600}
                   priority
+                  loading="eager"
                   className="h-[380px] w-full object-cover sm:h-[500px] lg:h-[560px]"
                 />
 
@@ -215,6 +216,7 @@ const Service: React.FC<ServiceProps> = ({ data }) => {
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="eager"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
