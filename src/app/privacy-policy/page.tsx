@@ -58,8 +58,8 @@ export default function PrivacyPolicyPage() {
             <p className="mt-1 leading-6">
               If you apply for a position through our careers form, we may
               collect information such as your name, contact details, CV or
-              resume and other information that you choose to provide as part
-              of your application.
+              resume and other information that you choose to provide as part of
+              your application.
             </p>
 
             <h3 className="mt-4 text-lg font-semibold text-primary dark:text-white">
@@ -78,8 +78,8 @@ export default function PrivacyPolicyPage() {
             </h3>
 
             <p className="mt-1 leading-6">
-              If you choose to subscribe to our email newsletter, we collect
-              the email address that you provide to us.
+              If you choose to subscribe to our email newsletter, we collect the
+              email address that you provide to us.
             </p>
 
             <p className="mt-2 leading-6">
@@ -134,10 +134,10 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="leading-6">
-              We process your personal information where necessary to respond
-              to your request, provide our services, consider your job
-              application, comply with legal obligations, or pursue our
-              legitimate business interests where permitted by law.
+              We process your personal information where necessary to respond to
+              your request, provide our services, consider your job application,
+              comply with legal obligations, or pursue our legitimate business
+              interests where permitted by law.
             </p>
 
             <p className="mt-2 leading-6">
@@ -163,10 +163,10 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="leading-6">
-              Information submitted as part of a job application, including
-              your CV and supporting information, will be used for recruitment
-              and related purposes. We ask applicants to provide only
-              information that is relevant to their application.
+              Information submitted as part of a job application, including your
+              CV and supporting information, will be used for recruitment and
+              related purposes. We ask applicants to provide only information
+              that is relevant to their application.
             </p>
 
             <p className="mt-2 leading-6">
@@ -198,8 +198,8 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p className="mt-2 leading-6">
-              We do not sell, rent or share your personal information with
-              third parties for their own marketing purposes. We may disclose
+              We do not sell, rent or share your personal information with third
+              parties for their own marketing purposes. We may disclose
               information where necessary to operate our website, provide our
               services, protect our systems or comply with a legal obligation.
             </p>
@@ -236,8 +236,8 @@ export default function PrivacyPolicyPage() {
 
             <p className="mt-2 leading-6">
               <strong>Job applications:</strong> We retain career application
-              information, including CVs and supporting documents, for a
-              maximum of 6 months after the recruitment process has ended.
+              information, including CVs and supporting documents, for a maximum
+              of 6 months after the recruitment process has ended.
             </p>
 
             <p className="mt-2 leading-6">
@@ -307,8 +307,8 @@ export default function PrivacyPolicyPage() {
 
             <p className="mt-2 leading-6">
               Each marketing email will include a clear option to unsubscribe.
-              You can unsubscribe at any time, and we will respect your
-              request to stop receiving marketing communications.
+              You can unsubscribe at any time, and we will respect your request
+              to stop receiving marketing communications.
             </p>
 
             <p className="mt-2 leading-6">

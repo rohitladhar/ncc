@@ -32,7 +32,7 @@ interface CareerInfoProps {
 
 export default function CareerInfo({ onExplore }: CareerInfoProps) {
   return (
-    <div className="relative min-h-[650px] overflow-hidden bg-[#3cb6c6] p-8 sm:p-12 lg:p-14">
+    <div className="relative min-h-[650px] overflow-hidden rounded-l-3xl bg-[#3cb6c6] p-8 sm:p-12 lg:p-14">
       <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-white/10" />
       <div className="absolute -bottom-32 -left-28 h-96 w-96 rounded-full bg-white/10" />
       <div className="absolute right-12 top-24 h-32 w-32 rounded-full border border-white/10" />
@@ -75,13 +75,13 @@ export default function CareerInfo({ onExplore }: CareerInfoProps) {
         >
           <div
             className="
-      absolute left-2 top-2.5 z-10
-      flex h-11 w-12 items-center justify-center
-      rounded-xl bg-white
-      text-[#3cb6c6] shadow-lg
-      transition-all duration-700 ease-in-out
-      group-hover:left-[calc(100%-3.5rem)]
-    "
+            absolute left-2 top-2.5 z-10
+            flex h-11 w-12 items-center justify-center
+            rounded-xl bg-white
+            text-[#3cb6c6] shadow-lg
+            transition-all duration-700 ease-in-out
+            group-hover:left-[calc(100%-3.5rem)]
+          "
           >
             <ArrowUpRight className="h-6 w-6" />
           </div>
@@ -94,25 +94,25 @@ export default function CareerInfo({ onExplore }: CareerInfoProps) {
             <div className="relative h-5 overflow-hidden">
               <span
                 className="
-          absolute left-0 top-0
-          text-xs text-white/65
-          transition-all duration-300
-          group-hover:-translate-y-5
-          group-hover:opacity-0
-        "
+                  absolute left-0 top-0
+                  text-xs text-white/65
+                  transition-all duration-300
+                  group-hover:-translate-y-5
+                  group-hover:opacity-0
+                "
               >
                 Take the next step in your career.
               </span>
 
               <span
                 className="
-          absolute left-0 top-5
-          text-xs font-medium text-white
-          opacity-0
-          transition-all duration-300
-          group-hover:top-0
-          group-hover:opacity-100
-        "
+                  absolute left-0 top-5
+                  text-xs font-medium text-white
+                  opacity-0
+                  transition-all duration-300
+                  group-hover:top-0
+                  group-hover:opacity-100
+                "
               >
                 Click for more information
               </span>

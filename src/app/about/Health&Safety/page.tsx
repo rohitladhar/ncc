@@ -11,7 +11,7 @@ export default function HealthSafetyPolicy() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 space-y-6">
             <p className="text-gray-600 dark:text-white">
-              As an employer and contractor, NCC Cleaning Services accepts full
+              As an employer and contractor, NCC Cleaning Service accepts full
               responsibility for providing and maintaining a safe and healthy
               environment for all employees and others affected by its
               activities.

@@ -27,7 +27,7 @@ const benefits = [
 
 export default function ContactIntro() {
   return (
-    <div className="relative min-h-[680px] overflow-hidden bg-[#3cb6c6] p-6 sm:p-10 lg:p-14">
+    <div className="relative min-h-[650px] overflow-hidden rounded-l-3xl bg-[#3cb6c6] p-8 sm:p-12 lg:p-14">
       <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-white/10" />
       <div className="absolute -bottom-40 -left-32 h-[28rem] w-[28rem] rounded-full bg-white/10" />
       <div className="absolute right-16 top-32 h-40 w-40 rounded-full border border-white/10" />

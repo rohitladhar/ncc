@@ -7,10 +7,10 @@ export default function Quotes() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
           <div className="lg:flex h-full pt-10">
-            <HowWeProcessQuote/>
+            <HowWeProcessQuote />
           </div>
           <div className="w-full h-full pt-10 flex">
-            <div className="bg-gradient-to-r from-emerald-50 via-blue-50 to-indigo-100 border border-white/40 shadow-lg rounded-r-2xl p-6 sm:p-8 w-full h-full flex items-center">
+            <div className="flex h-full w-full items-center rounded-2xl border border-white/40 bg-gradient-to-r from-emerald-50 via-blue-50 to-indigo-100 p-6 shadow-lg sm:p-8">
               <Quote />
             </div>
           </div>

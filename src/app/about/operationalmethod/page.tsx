@@ -25,7 +25,7 @@ const operationalMethods = [
     icon: MessageSquareText,
     title: "Weekly Feedback",
     description:
-      "On a weekly basis, the NCC Cleaning Services supervisor and the client representative review performance and provide feedback. This helps us continuously improve our service and address any concerns promptly.",
+      "On a weekly basis, the NCC Cleaning Service supervisor and the client representative review performance and provide feedback. This helps us continuously improve our service and address any concerns promptly.",
   },
   {
     number: "03",

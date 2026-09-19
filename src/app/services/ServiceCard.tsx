@@ -285,7 +285,7 @@ const ServiceCard = () => {
                       text-white/80
                     "
                   >
-                    NCC Cleaning Services
+                    NCC Cleaning Service
                   </span>
 
                   <div

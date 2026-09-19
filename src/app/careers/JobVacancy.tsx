@@ -37,8 +37,8 @@ const skillsRequired = [
   "Reliable and dependable",
   "Strong attention to detail",
   "Effective time management skills",
-  "Ability to work independently and maintain high cleaning standards throughout the site"
-]
+  "Ability to work independently and maintain high cleaning standards throughout the site",
+];
 
 export default function JobVacancy({ jobs, open, onClose }: JobVacancyProps) {
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
@@ -261,13 +261,13 @@ export default function JobVacancy({ jobs, open, onClose }: JobVacancyProps) {
                   ))}
                 </ul>
               </div>
-               <div className="mt-8">
+              <div className="mt-8">
                 <h4 className="text-sm font-bold text-slate-900">
                   Skills and Attributes
                 </h4>
 
                 <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                  { skillsRequired.map((responsibility) => (
+                  {skillsRequired.map((responsibility) => (
                     <li
                       key={responsibility}
                       className="flex items-start gap-3 text-sm leading-6 text-slate-600"
@@ -278,8 +278,6 @@ export default function JobVacancy({ jobs, open, onClose }: JobVacancyProps) {
                   ))}
                 </ul>
               </div>
-
-             
             </>
           )}
         </div>

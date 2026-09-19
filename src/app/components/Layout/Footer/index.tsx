@@ -150,36 +150,36 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-6 min-w-[250px] cursor-pointer">
+          <div className="flex flex-col gap-2.5 min-w-[250px] cursor-pointer">
             <p className="font-bold text-offwhite text-primary dark:text-white">
               CONTACT US
             </p>
-            <div className="flex items-start gap-1">
+            <div className="flex items-start">
               <Icon
                 icon="tabler:map-pin"
                 width={22}
                 height={22}
                 className="text-primary dark:text-white mt-1"
               />
-              <p className="text-base font-normal text-offwhite text-primary dark:text-white">
+              <span className="text-base font-normal text-offwhite text-primary dark:text-white">
                 Unit 408, Bedford Heights Brickhill Drive, <br />
                 Bedford MK41 7PH
-              </p>
+              </span>
             </div>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center">
               <Icon
                 icon="tabler:phone"
                 width={22}
                 height={22}
                 className="text-primary dark:text-white"
               />
-              <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+              <span className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
                 +44 1234745377
-              </p>
+              </span>
             </div>
 
-            <div className="flex items-start gap-1">
+            <div className="flex items-start">
               <Icon
                 icon="tabler:mail"
                 width={22}
@@ -187,12 +187,12 @@ const Footer = () => {
                 className="text-primary dark:text-white mt-1"
               />
               <div>
-                <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+                <span className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
                   info@ncccleaning.co.uk
-                </p>
+                </span>
               </div>
             </div>
-            <div className="flex items-start gap-1">
+            <div className="flex items-start">
               <Icon
                 icon="tabler:shield-lock"
                 width={22}
@@ -201,12 +201,12 @@ const Footer = () => {
               />
 
               <div>
-                <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+                <span className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
                   <Link href="/privacy-policy">Privacy Policy</Link>
-                </p>
+                </span>
               </div>
             </div>
-            <div className="flex items-start gap-1">
+            <div className="flex items-start">
               <Icon
                 icon="tabler:cookie"
                 width={22}
@@ -215,9 +215,9 @@ const Footer = () => {
               />
 
               <div>
-                <p className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
+                <span className="text-base font-normal text-offwhite text-primary dark:text-white hover:text-primary dark:hover:text-primary">
                   <Link href="/cookie-policy">Cookie Policy</Link>
-                </p>
+                </span>
               </div>
             </div>
           </div>

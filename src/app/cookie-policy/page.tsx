@@ -21,7 +21,6 @@ export default function CookiePolicyPage() {
         </div>
 
         <div className="space-y-5 text-gray-700">
-          
           <div>
             <h2 className="mb-2 mt-5 text-2xl font-semibold text-primary dark:text-white">
               1. What are cookies?
@@ -35,7 +34,6 @@ export default function CookiePolicyPage() {
             </p>
           </div>
 
-     
           <div>
             <h2 className="mb-2 mt-5 text-2xl font-semibold text-primary dark:text-white">
               2. Does NCC use cookies?
@@ -53,7 +51,6 @@ export default function CookiePolicyPage() {
             </p>
           </div>
 
-   
           <div>
             <h2 className="mb-2 mt-5 text-2xl font-semibold text-primary dark:text-white">
               3. Information submitted through our forms
@@ -71,16 +68,15 @@ export default function CookiePolicyPage() {
             </p>
           </div>
 
-        
           <div>
             <h2 className="mb-2 mt-5 text-2xl font-semibold text-primary dark:text-white">
               4. Hosting and database
             </h2>
 
             <p className="leading-6">
-              Our website and database are hosted using GoDaddy
-              infrastructure. GoDaddy provides hosting and technical
-              infrastructure services to NCC.
+              Our website and database are hosted using GoDaddy infrastructure.
+              GoDaddy provides hosting and technical infrastructure services to
+              NCC.
             </p>
 
             <p className="mt-2 leading-6">
@@ -90,28 +86,26 @@ export default function CookiePolicyPage() {
             </p>
           </div>
 
-       
           <div>
             <h2 className="mb-2 mt-5 text-2xl font-semibold text-primary dark:text-white">
               5. Changes to this Cookie Policy
             </h2>
 
             <p className="leading-6">
-              We may update this Cookie Policy if our website, technology or
-              use of cookies changes. Any updated version will be published on
-              this page with a revised update date.
+              We may update this Cookie Policy if our website, technology or use
+              of cookies changes. Any updated version will be published on this
+              page with a revised update date.
             </p>
           </div>
 
-    
           <div>
             <h2 className="mb-2 mt-5 text-2xl font-semibold text-primary dark:text-white">
               6. Contact us
             </h2>
 
             <p className="leading-6">
-              If you have any questions about this Cookie Policy, please
-              contact us using the details below.
+              If you have any questions about this Cookie Policy, please contact
+              us using the details below.
             </p>
 
             <div className="mt-3 rounded-lg bg-gray-50 p-4">

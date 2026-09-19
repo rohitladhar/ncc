@@ -3,7 +3,7 @@
     {
       "label": "Cleaning Services",
       "submenu": [
-        { "label": "HOME OFFICE ACCOMODATIONS", "href": "/services/asylum" },
+        { "label": "HOME OFFICE ACCOMMODATION SERVICES", "href": "/services/homeoffice" },
         {
           "label": "OFFICE AND CORPORATE CLEANING",
           "href": "/services/office"
@@ -20,7 +20,7 @@
           "label": "COMMERCIAL BUILDING CLEANING",
           "href": "/services/commercial"
         },
-        { "label": "DEEP CLEANING", "href": "/services/specialist" }
+        { "label": "DEEP AND SPECIALIST CLEANING", "href": "/services/specialist" }
       ]
     },
     {
@@ -139,7 +139,7 @@
   "ServiceData": [
     {
       "slide": {
-        "one": "HOME OFFICE ACCOMODATIONS",
+        "one": "HOME OFFICE ACCOMMODATION SERVICES",
         "two": "HEALTHCARE AND CARE HOME CLEANING"
       },
 
@@ -192,7 +192,7 @@
     {
       "slide": {
         "one": "EDUCATIONAL FACILITIES CLEANING",
-        "two": "DEEP AND SPECIALIST CLEANING"
+        "two": "DEEP AND SPECIALIST PROFESSIONAL CLEANING"
       },
 
       "desc": {
@@ -222,8 +222,8 @@
       "section": "Our Services",
       "links": [
         {
-          "label": "HOME OFFICE ASYLUM",
-          "href": "/services/asylum"
+          "label": "HOME OFFICE ACCOMMODATION SERVICES",
+          "href": "/services/homeoffice"
         },
         {
           "label": "OFFICE AND CORPORATE CLEANING",
@@ -242,7 +242,7 @@
           "href": "/services/commercial"
         },
         {
-          "label": "DEEP CLEANING",
+          "label": "DEEP AND SPECIALIST PROFESSIONAL CLEANING",
           "href": "/services/specialist"
         }
       ]
@@ -264,7 +264,7 @@
   "ServicesData": [
     {
       "id": 1,
-      "title": "HOME OFFICE ACCOMODATIONS",
+      "title": "HOME OFFICE ACCOMMODATION SERVICES",
       "imgSrcOne": "/images/services/a1.png",
       "imgSrcTwo": "/images/services/a2.png",
       "paragraph": "Our home office accommodation cleaning services keep private, shared, and work areas clean, safe, and welcoming. We provide dusting, mopping, sanitizing kitchens and bathrooms, changing linens, and organizing spaces. Regular cleaning reduces germs, supports wellbeing, minimizes stress, and creates a comfortable, healthy, and productive environment for residents and staff.",
@@ -379,7 +379,7 @@
     },
     {
       "id": 6,
-      "title": "DEEP CLEANING",
+      "title": "DEEP AND SPECIALIST PROFESSIONAL CLEANING",
       "imgSrcOne": "/images/services/d1.png",
       "imgSrcTwo": "/images/services/d2.png",
       "paragraph": "Our deep cleaning services provide intensive cleaning for carpets, upholstery, tiles, grout, windows, and hard-to-reach areas. Using professional equipment and techniques, we remove dirt, stains, mould, and allergens often missed by routine cleaning. Deep cleaning improves hygiene, indoor air quality, and appearance while protecting furnishings, flooring, and fixtures and creating healthier environments.",
@@ -404,8 +404,8 @@
   "ServiceCards": [
     {
       "src": "/images/services/a1.png",
-      "title": "HOME OFFICE ACCOMODATIONS",
-      "href": "/services/asylum"
+      "title": "HOME OFFICE ACCOMMODATION SERVICES",
+      "href": "/services/homeoffice"
     },
     {
       "src": "/images/services/h1.png",
@@ -429,7 +429,7 @@
     },
     {
       "src": "/images/services/d1.png",
-      "title": "DEEP CLEANING",
+      "title": "DEEP AND SPECIALIST PROFESSIONAL CLEANING",
       "href": "/services/specialist"
     }
   ],
@@ -459,7 +459,7 @@
       "answer": "Yes. Our coverage includes Public Liability (£5,000,000), Products Liability (£5,000,000), and Employers' Liability (£10,000,000)."
     },
     {
-      "question": "Will the changeover to NCC Cleaning Services Ltd be smooth?",
+      "question": "Will the changeover to NCC Cleaning Service Ltd be smooth?",
       "answer": "Yes. We ensure a smooth transition through careful planning, communication, and compliance with all relevant legislation."
     },
     {

@@ -44,7 +44,7 @@ const Map = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                title="NCC Cleaning Services location"
+                title="NCC Cleaning Servicelocation"
               />
             </div>
 

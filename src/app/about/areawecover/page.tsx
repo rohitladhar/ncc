@@ -91,7 +91,7 @@ const AreaWeCover = () => {
 
               <img
                 src="/images/location/UK.png"
-                alt="Map showing the areas covered by NCC Cleaning Services"
+                alt="Map showing the areas covered by NCC Cleaning Service"
                 className="relative z-10 w-full max-w-[400px] object-contain drop-shadow-[0_20px_30px_rgba(60,182,198,0.12)] transition-transform duration-500 hover:scale-[1.03]"
               />
 
@@ -124,7 +124,7 @@ const AreaWeCover = () => {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg dark:text-white/60">
-              NCC Cleaning Services provides professional and reliable corporate
+              NCC Cleaning Service provides professional and reliable corporate
               cleaning solutions across the UK, with a strong presence in
               London, Bedfordshire, and South West England.
             </p>
