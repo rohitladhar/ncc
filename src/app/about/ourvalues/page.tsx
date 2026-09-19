@@ -177,10 +177,7 @@ const OurValues = () => {
                     <Icon className="h-7 w-7" strokeWidth={1.8} />
                   </div>
 
-                  <span className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#329eac]">
-                    0{index + 1}
-                  </span>
-
+                  
                   <h3 className="text-lg font-bold leading-tight text-slate-900">
                     {pillar.title}
                   </h3>
