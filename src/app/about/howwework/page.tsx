@@ -1,4 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+import {
+  ClipboardList,
+  MapPin,
+  FileText,
+  PlayCircle,
+  CheckCircle2,
+  ArrowDown,
+} from "lucide-react";
 
 const HowWeWork = () => {
   const steps = [
@@ -6,102 +16,207 @@ const HowWeWork = () => {
       id: "01",
       title: "Consultation",
       description: "We talk to you to understand your cleaning needs.",
+      icon: ClipboardList,
     },
     {
       id: "02",
       title: "Site Visit",
       description:
         "We visit your location to assess the space — completely free.",
+      icon: MapPin,
     },
     {
       id: "03",
       title: "Custom Proposal",
       description:
         "We create a tailored plan with clear and transparent pricing.",
+      icon: FileText,
     },
     {
       id: "04",
       title: "Execution",
       description:
         "We onboard our team and begin delivering high-quality service.",
+      icon: PlayCircle,
     },
   ];
 
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="mt-10 md:mt-16 py-12 md:py-16 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-primary dark:text-white mb-4 pt-5">
-          How We Work
-        </h1>
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden bg-gradient-to-r from-[#e3ffe7] to-[#d9e7ff] py-16 sm:py-20 md:py-24"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#3cb6c6]/10 blur-3xl"
+      />
 
-        <p className="text-center max-w-xl md:max-w-2xl mx-auto text-gray-600 dark:text-gray-300 mb-10 md:mb-12 text-sm sm:text-base">
-          Our structured onboarding ensures a smooth experience from day one.
-        </p>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 bottom-20 h-72 w-72 rounded-full bg-[#3cb6c6]/10 blur-3xl"
+      />
 
-        <div className="md:hidden relative pl-6">
-          <div className="absolute left-3 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700"></div>
-
-          <div className="space-y-10">
-            {steps.map((step, index) => (
-              <div key={step.id} className="relative">
-                <div className="absolute -left-[2px] top-1 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md">
-                  {step.id}
-                </div>
-                <div className="pl-8">
-                  <h3 className="text-base font-semibold text-gray-900 dark:text-white">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className={`mx-auto mb-14 max-w-2xl text-center transition-all duration-700 sm:mb-16 ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#3cb6c6]/20 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#329eac] shadow-sm backdrop-blur">
+            <CheckCircle2 className="h-4 w-4" />
+            Simple & Transparent
           </div>
-        </div>
-        <div className="hidden md:block relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 dark:bg-gray-700 h-full"></div>
 
-          <div className="space-y-12">
-            {steps.map((step, index) => (
-              <div
-                key={step.id}
-                className={`flex items-center ${
-                  index % 2 === 0 ? "flex-row-reverse" : ""
-                }`}
-              >
-                <div className="w-1/2 p-4">
-                  <div className="bg-white dark:bg-gray-900 shadow-xl rounded-2xl p-6">
-                    <h3 className="text-xl font-semibold text-primary dark:text-white mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {step.description}
-                    </p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+            How We <span className="text-[#3cb6c6]">Work</span>
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
+            Our structured onboarding process ensures a smooth experience from
+            the first conversation through to professional service delivery.
+          </p>
+        </div>
+
+        <div className="relative mx-auto max-w-4xl">
+          <div
+            aria-hidden="true"
+            className="absolute bottom-6 left-6 top-6 w-px bg-[#3cb6c6]/25 sm:left-1/2 sm:-translate-x-1/2"
+          />
+
+          <div className="space-y-8 sm:space-y-12">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+
+              return (
+                <div
+                  key={step.id}
+                  className={`relative flex items-center transition-all duration-700 ${
+                    visible
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-10 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: `${index * 150}ms`,
+                  }}
+                >
+                  <div className="flex w-full items-start gap-5 sm:hidden">
+                    <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3cb6c6] text-white shadow-lg shadow-[#3cb6c6]/20 ring-4 ring-[#e3ffe7]">
+                      <Icon className="h-5 w-5" strokeWidth={2} />
+                    </div>
+
+                    <div className="flex-1 cursor-pointer rounded-2xl border border-white/80 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#3cb6c6]/30 hover:shadow-xl">
+                      <div className="mb-2 flex items-center justify-between gap-3">
+                        <span className="text-xs font-bold tracking-wider text-[#3cb6c6]">
+                          STEP {step.id}
+                        </span>
+
+                        <CheckCircle2 className="h-4 w-4 text-[#3cb6c6]" />
+                      </div>
+
+                      <h3 className="text-lg font-bold text-slate-900">
+                        {step.title}
+                      </h3>
+
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="hidden w-full items-center sm:flex">
+                    <div className="w-1/2 pr-12">
+                      {index % 2 === 0 ? (
+                        <div className="cursor-pointer rounded-3xl border border-white/80 bg-white p-7 text-right shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#3cb6c6]/30 hover:shadow-xl">
+                          <div className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#3cb6c6]">
+                            Step {step.id}
+                          </div>
+
+                          <h3 className="text-xl font-bold text-slate-900">
+                            {step.title}
+                          </h3>
+
+                          <p className="mt-3 text-sm leading-7 text-slate-600">
+                            {step.description}
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="text-right text-sm font-bold text-[#3cb6c6]/40">
+                          {step.id}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#3cb6c6] text-white shadow-xl shadow-[#3cb6c6]/20 ring-8 ring-[#e3ffe7]">
+                      <Icon className="h-6 w-6" strokeWidth={2} />
+                    </div>
+
+                    <div className="w-1/2 pl-12">
+                      {index % 2 !== 0 ? (
+                        <div className="cursor-pointer rounded-3xl border border-white/80 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#3cb6c6]/30 hover:shadow-xl">
+                          <div className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#3cb6c6]">
+                            Step {step.id}
+                          </div>
+
+                          <h3 className="text-xl font-bold text-slate-900">
+                            {step.title}
+                          </h3>
+
+                          <p className="mt-3 text-sm leading-7 text-slate-600">
+                            {step.description}
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="text-sm font-bold text-[#3cb6c6]/40">
+                          {step.id}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full shadow-lg">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={3}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
-
-                <div className="w-1/2"></div>
-              </div>
-            ))}
+              );
+            })}
           </div>
+        </div>
+
+        <div
+          className={`mx-auto mt-14 flex max-w-2xl flex-col items-center text-center transition-all duration-700 sm:mt-16 ${
+            visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+          style={{
+            transitionDelay: "700ms",
+          }}
+        >
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#3cb6c6]/10 text-[#3cb6c6]">
+            <ArrowDown className="h-5 w-5" />
+          </div>
+
+          <p className="mt-4 text-sm font-medium text-slate-600">
+            From initial consultation to final delivery, we keep the process
+            simple, transparent, and professional.
+          </p>
         </div>
       </div>
     </section>

@@ -75,26 +75,48 @@ export default function CareerInfo({ onExplore }: CareerInfoProps) {
         >
           <div
             className="
-              absolute left-2 top-2.5 z-10
-              flex h-11 w-12 items-center justify-center
-              rounded-xl bg-white
-              text-[#3cb6c6] shadow-lg
-              transition-all duration-700 ease-in-out
-              group-hover:left-[calc(100%-3.5rem)]
-            "
+      absolute left-2 top-2.5 z-10
+      flex h-11 w-12 items-center justify-center
+      rounded-xl bg-white
+      text-[#3cb6c6] shadow-lg
+      transition-all duration-700 ease-in-out
+      group-hover:left-[calc(100%-3.5rem)]
+    "
           >
-            <ArrowUpRight className="h-10 w-10" />
+            <ArrowUpRight className="h-6 w-6" />
           </div>
 
-  
-          <div className="ml-16">
+          <div className="relative ml-16 min-h-[38px]">
             <p className="text-sm font-bold text-white">
               Explore opportunities
             </p>
 
-            <p className="text-xs text-white/65">
-              Take the next step in your career.
-            </p>
+            <div className="relative h-5 overflow-hidden">
+              <span
+                className="
+          absolute left-0 top-0
+          text-xs text-white/65
+          transition-all duration-300
+          group-hover:-translate-y-5
+          group-hover:opacity-0
+        "
+              >
+                Take the next step in your career.
+              </span>
+
+              <span
+                className="
+          absolute left-0 top-5
+          text-xs font-medium text-white
+          opacity-0
+          transition-all duration-300
+          group-hover:top-0
+          group-hover:opacity-100
+        "
+              >
+                Click for more information
+              </span>
+            </div>
           </div>
         </button>
 
