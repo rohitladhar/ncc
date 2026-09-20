@@ -209,7 +209,7 @@ const Service: React.FC<ServiceProps> = ({ data }) => {
 
         <div className="mt-28 lg:mt-36">
           <div className="grid overflow-hidden rounded-[2.5rem] bg-white shadow-xl shadow-slate-200 lg:grid-cols-2">
-            <div className="relative min-h-[350px] lg:min-h-[600px]">
+            <div className="relative min-h-[600px]">
               <Image
                 src={imageTwo}
                 alt="Benefits of professional cleaning"

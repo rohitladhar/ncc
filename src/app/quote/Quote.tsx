@@ -287,7 +287,7 @@ const Quote: React.FC = () => {
 
             {touched.comments && formData.comments === "" && (
               <span className="mt-1 block text-sm text-red-500">
-                Comments cannot be empty
+                Description cannot be empty
               </span>
             )}
           </div>
