@@ -7,7 +7,8 @@ import AreasWeCover from "./about/areawecover/page";
 import Certificate from "./components/Home/Certificate";
 import ServiceCard from "./services/ServiceCard";
 import ChartiableCause from "./about/charitable/page";
-  
+import WhatsAppButton from "./components/Whatsapp";
+
 export default function Home() {
   return (
     <main>
@@ -20,6 +21,7 @@ export default function Home() {
       <HowWeWork />
       <ChartiableCause />
       <ServiceCard />
+      <WhatsAppButton />
     </main>
   );
 }

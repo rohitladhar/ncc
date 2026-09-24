@@ -17,8 +17,59 @@ const DMSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "NCC",
-  description: "Cleaning Business in UK",
+  metadataBase: new URL("https://www.ncccleaning.co.uk"),
+
+  title: {
+    default: "NCC | Professional Commercial Cleaning Services in the UK",
+    template: "%s | NCC",
+  },
+
+  description:
+    "Professional commercial cleaning services in the UK. NCC provides reliable and high-quality cleaning solutions for businesses.",
+
+  keywords: [
+    "Commercial cleaning services UK",
+    "Professional commercial cleaning services",
+    "commercial cleaning",
+
+    "NCC Cleaning",
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://www.ncccleaning.co.uk",
+    siteName: "NCC",
+    title: "NCC | Professional Commercial Cleaning Services in the UK",
+    description:
+      "Professional commercial cleaning services in the UK. Reliable and high-quality cleaning solutions for businesses.",
+    images: [
+      {
+        url: "/images/slider/slider-1.png",
+        width: 1200,
+        height: 630,
+        alt: "NCC Professional Cleaning Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "NCC | Professional Cleaning Services in the UK",
+    description:
+      "Professional cleaning services for homes and businesses across the UK.",
+    images: ["/og-image.jpg"],
+  },
+
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
@@ -32,13 +83,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={`${DMSans.variable} antialiased dark:bg-darkmode`}>
-        <head>
-          <script
-            src="https://cdn.jsdelivr.net/npm/heic2any"
-            type="text/javascript"
-            async
-          ></script>
-        </head>
+        <script
+          src="https://cdn.jsdelivr.net/npm/heic2any"
+          type="text/javascript"
+          async
+        />
 
         <ThemeProvider
           attribute="class"
