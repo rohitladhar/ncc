@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://www.ncccleaning.co.uk",
     siteName: "NCC",
-    title: "NCC | Professional Commercial Cleaning Services in the UK",
+    title: "NCC | Professional Commercial Cleaning Services in the London",
     description:
       "Professional commercial cleaning services in the UK. Reliable and high-quality cleaning solutions for businesses.",
     images: [

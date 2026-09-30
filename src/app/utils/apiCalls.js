@@ -65,66 +65,6 @@ export function sendMarketingEmail(email) {
     });
 }
 
-export async function getFeedbackToken(token) {
-  const url = `${API_ENDPOINT}/feedback-get-token/${encodeURIComponent(token)}`;
-
-  try {
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    });
-    const data = await response.json();
-    return {
-      ...data,
-      httpStatus: response.status,
-      ok: response.ok,
-    };
-  } catch (error) {
-    return {
-      success: false,
-      message: "Unable to connect to the server.",
-      status: "error",
-      httpStatus: 0,
-      ok: false,
-    };
-  }
-}
-
-export async function updateFeedbackToken(token, formData) {
-  const url = `${API_ENDPOINT}/feedback-update-token/${encodeURIComponent(
-    token,
-  )}`;
-
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await response.json();
-
-    return {
-      ...data,
-      httpStatus: response.status,
-      ok: response.ok,
-    };
-  } catch (error) {
-    return {
-      success: false,
-      message: "Unable to connect to the server.",
-      status: "error",
-      httpStatus: 0,
-      ok: false,
-    };
-  }
-}
-
 export function allClientFeedback() {
   return fetch(API_ENDPOINT + "/all-client-feedback", {
     method: "GET",
