@@ -9,7 +9,7 @@ export type Accreditation = {
   history?: string;
   benefits?: string[];
   company_statement: string;
-  image?:string;
+  image:string;
 };
 
 export type ISOStandard = {
@@ -19,7 +19,7 @@ export type ISOStandard = {
   description: string;
   benefits?: string[];
   purpose?: string[];
-  image?:string;
+  image:string;
 };
 
 export type AccreditationItem = {

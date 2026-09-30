@@ -12,7 +12,9 @@ export function sendContactForm(formData) {
     .then((response) => {
       return response.json();
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 export function sendQuoteForm(formData) {
@@ -26,7 +28,9 @@ export function sendQuoteForm(formData) {
     .then((response) => {
       return response.json();
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 export function sendCareerForm(formData) {
@@ -38,7 +42,9 @@ export function sendCareerForm(formData) {
     .then((response) => {
       return response.json();
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 export function sendMarketingEmail(email) {
@@ -47,10 +53,90 @@ export function sendMarketingEmail(email) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({email:email}),
+    body: JSON.stringify({
+      email: email,
+    }),
   })
     .then((response) => {
       return response.json();
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+export async function getFeedbackToken(token) {
+  const url = `${API_ENDPOINT}/feedback-get-token/${encodeURIComponent(token)}`;
+
+  try {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const data = await response.json();
+    return {
+      ...data,
+      httpStatus: response.status,
+      ok: response.ok,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: "Unable to connect to the server.",
+      status: "error",
+      httpStatus: 0,
+      ok: false,
+    };
+  }
+}
+
+export async function updateFeedbackToken(token, formData) {
+  const url = `${API_ENDPOINT}/feedback-update-token/${encodeURIComponent(
+    token,
+  )}`;
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    return {
+      ...data,
+      httpStatus: response.status,
+      ok: response.ok,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: "Unable to connect to the server.",
+      status: "error",
+      httpStatus: 0,
+      ok: false,
+    };
+  }
+}
+
+export function allClientFeedback() {
+  return fetch(API_ENDPOINT + "/all-client-feedback", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+   
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }

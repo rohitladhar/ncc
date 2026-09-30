@@ -13,16 +13,16 @@ const Hero = () => {
   const slides = [
     {
       image: "/images/slider/slider-1.png",
-      title: "PROFESSIONAL CLEANING SERVICES ACROSS THE UK",
+      title: "PROFESSIONAL CLEANING SERVICE IN LONDON",
       points: [
         "Fully insured and thoroughly vetted cleaning professionals",
-        "Flexible service plans",
-        "Cleaning services available outside standard hours, including weekends",
+        "Flexible cleaning packages to suit your needs",
+        "Reliable cleaning services for homes and businesses",
       ],
     },
     {
       image: "/images/slider/slider-2.png",
-      title: "RELIABLE CLEANING SERVICES FOR YOUR HOME AND BUSINESS",
+      title: "PROFESSIONAL CLEANING SERVICE IN BEDFORDSHIRE",
       points: [
         "Fully insured and thoroughly vetted cleaning professionals",
         "Flexible cleaning packages to suit your needs",
@@ -31,10 +31,10 @@ const Hero = () => {
     },
     {
       image: "/images/slider/slider-3.png",
-      title: "A CLEANER SPACE, A BETTER EXPERIENCE",
+      title: "RELIABLE CLEANING SERVICES ACROSS ESSEX",
       points: [
         "Professional and experienced cleaning teams",
-        "Tailored cleaning solutions",
+        "Tailored cleaning solutions for every space",
         "High-quality service you can rely on",
       ],
     },
@@ -60,7 +60,6 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="relative min-h-[600px] pt-28 pb-20 flex items-center overflow-hidden">
-              {/* Background Image */}
               <div className="absolute inset-0 z-0">
                 <Image
                   src={getImgPath(slide.image)}
@@ -70,9 +69,9 @@ const Hero = () => {
                   sizes="100vw"
                   className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/65 to-transparent" />
               </div>
-              {/* Content */}
+
               <div className="container relative z-10 pt-10">
                 <div className="grid lg:grid-cols-12 gap-10 items-center">
                   <div className="lg:col-span-6 space-y-6">
@@ -123,7 +122,7 @@ const Hero = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* Custom Lucide Navigation */}
+
       <button
         type="button"
         className="hero-prev absolute left-4 top-1/2 z-20 -translate-y-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-white/90 text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-white"
