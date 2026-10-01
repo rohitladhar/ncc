@@ -173,9 +173,20 @@ export default function Accreditations() {
         {items.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2.5 text-sm leading-relaxed text-slate-600 dark:text-slate-300"
+            className="
+              flex
+              items-start
+              gap-2.5
+              text-sm
+              leading-relaxed
+              text-slate-600
+              dark:text-slate-300
+            "
           >
-            <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-blue-500" />
+            <CheckCircle2
+              size={16}
+              className="mt-0.5 shrink-0 text-[#3CB6C6]"
+            />
 
             <span>{item}</span>
           </li>
@@ -204,7 +215,7 @@ export default function Accreditations() {
             h-96
             w-96
             rounded-full
-            bg-blue-500/10
+            bg-[#3CB6C6]/10
             blur-[120px]
           "
         />
@@ -245,13 +256,36 @@ export default function Accreditations() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
-            <ShieldCheck
-              size={15}
-              className="text-blue-600 dark:text-blue-400"
-            />
+          <div
+            className="
+              mb-6
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-slate-200
+              bg-white/80
+              px-4
+              py-2
+              shadow-sm
+              backdrop-blur
+              dark:border-white/10
+              dark:bg-white/5
+            "
+          >
+            <ShieldCheck size={15} className="text-[#3CB6C6]" />
 
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-600 dark:text-slate-300">
+            <span
+              className="
+                text-[10px]
+                font-bold
+                uppercase
+                tracking-[0.22em]
+                text-slate-600
+                dark:text-slate-300
+              "
+            >
               Trusted & Accredited
             </span>
           </div>
@@ -272,8 +306,8 @@ export default function Accreditations() {
               className="
                 ml-2
                 bg-gradient-to-r
-                from-blue-600
-                via-indigo-500
+                from-[#3CB6C6]
+                via-[#3CB6C6]
                 to-emerald-500
                 bg-clip-text
                 text-transparent
@@ -331,7 +365,16 @@ export default function Accreditations() {
               {companyData.accreditations.length}
             </p>
 
-            <p className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-slate-500">
+            <p
+              className="
+                mt-1
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-widest
+                text-slate-500
+              "
+            >
               Accreditations
             </p>
           </div>
@@ -341,7 +384,16 @@ export default function Accreditations() {
               {companyData.iso_standards.length}
             </p>
 
-            <p className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-slate-500">
+            <p
+              className="
+                mt-1
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-widest
+                text-slate-500
+              "
+            >
               ISO Standards
             </p>
           </div>
@@ -351,7 +403,16 @@ export default function Accreditations() {
               100%
             </p>
 
-            <p className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-slate-500">
+            <p
+              className="
+                mt-1
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-widest
+                text-slate-500
+              "
+            >
               Commitment
             </p>
           </div>
@@ -397,7 +458,7 @@ export default function Accreditations() {
                   hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]
                   focus:outline-none
                   focus:ring-2
-                  focus:ring-blue-500/50
+                  focus:ring-[#3CB6C6]/50
                   dark:border-white/10
                   dark:bg-white/[0.035]
                   dark:shadow-none
@@ -413,7 +474,7 @@ export default function Accreditations() {
                     h-px
                     bg-gradient-to-r
                     from-transparent
-                    via-blue-500/60
+                    via-[#3CB6C6]/60
                     to-transparent
                     opacity-0
                     transition-opacity
@@ -450,7 +511,7 @@ export default function Accreditations() {
                       ${
                         isISO
                           ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
-                          : "bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                          : "bg-[#3CB6C6]/10 text-[#3CB6C6]"
                       }
                     `}
                   >
@@ -480,7 +541,7 @@ export default function Accreditations() {
                       inset-0
                       rounded-2xl
                       bg-gradient-to-br
-                      from-blue-500/[0.03]
+                      from-[#3CB6C6]/[0.03]
                       to-emerald-500/[0.03]
                     "
                   />
@@ -518,13 +579,27 @@ export default function Accreditations() {
                   </h3>
 
                   {"category" in item.data && item.data.category && (
-                    <p className="mt-1 text-xs font-medium text-blue-600 dark:text-blue-400">
+                    <p
+                      className="
+                        mt-1
+                        text-xs
+                        font-medium
+                        text-[#3CB6C6]
+                      "
+                    >
                       {item.data.category}
                     </p>
                   )}
 
                   {"provider" in item.data && item.data.provider && (
-                    <p className="mt-1 text-xs text-slate-500 dark:text-slate-500">
+                    <p
+                      className="
+                        mt-1
+                        text-xs
+                        text-slate-500
+                        dark:text-slate-500
+                      "
+                    >
                       {item.data.provider}
                     </p>
                   )}
@@ -555,7 +630,17 @@ export default function Accreditations() {
                     dark:border-white/10
                   "
                 >
-                  <span className="text-xs font-semibold text-slate-500 transition-colors group-hover:text-blue-600 dark:text-slate-500 dark:group-hover:text-blue-400">
+                  <span
+                    className="
+                      text-xs
+                      font-semibold
+                      text-slate-500
+                      transition-colors
+                      group-hover:text-[#3CB6C6]
+                      dark:text-slate-500
+                      dark:group-hover:text-[#3CB6C6]
+                    "
+                  >
                     Explore certification
                   </span>
 
@@ -571,8 +656,8 @@ export default function Accreditations() {
                       border-slate-200
                       text-slate-500
                       transition-all
-                      group-hover:border-blue-500
-                      group-hover:bg-blue-500
+                      group-hover:border-[#3CB6C6]
+                      group-hover:bg-[#3CB6C6]
                       group-hover:text-white
                       dark:border-white/10
                     "
@@ -605,7 +690,14 @@ export default function Accreditations() {
         >
           <Sparkles size={16} className="text-emerald-500" />
 
-          <p className="text-sm leading-6 text-slate-500 dark:text-slate-400">
+          <p
+            className="
+              text-sm
+              leading-6
+              text-slate-500
+              dark:text-slate-400
+            "
+          >
             Our certifications reflect an ongoing commitment to professional
             standards, responsible practices and continuous improvement.
           </p>
@@ -645,11 +737,26 @@ export default function Accreditations() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
+              <h3
+                className="
+                  text-xl
+                  font-semibold
+                  text-slate-950
+                  dark:text-white
+                "
+              >
                 About this certification
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+              <p
+                className="
+                  mt-3
+                  text-sm
+                  leading-7
+                  text-slate-600
+                  dark:text-slate-400
+                "
+              >
                 {selectedItem.data.description}
               </p>
             </div>
@@ -657,12 +764,35 @@ export default function Accreditations() {
             <div className="grid gap-3 sm:grid-cols-2">
               {"category" in selectedItem.data &&
                 selectedItem.data.category && (
-                  <div className="rounded-xl bg-slate-50 p-4 dark:bg-white/[0.03]">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                  <div
+                    className="
+                      rounded-xl
+                      bg-slate-50
+                      p-4
+                      dark:bg-white/[0.03]
+                    "
+                  >
+                    <p
+                      className="
+                        text-[10px]
+                        font-bold
+                        uppercase
+                        tracking-widest
+                        text-slate-400
+                      "
+                    >
                       Category
                     </p>
 
-                    <p className="mt-1 text-sm font-medium text-slate-900 dark:text-white">
+                    <p
+                      className="
+                        mt-1
+                        text-sm
+                        font-medium
+                        text-slate-900
+                        dark:text-white
+                      "
+                    >
                       {selectedItem.data.category}
                     </p>
                   </div>
@@ -670,12 +800,35 @@ export default function Accreditations() {
 
               {"provider" in selectedItem.data &&
                 selectedItem.data.provider && (
-                  <div className="rounded-xl bg-slate-50 p-4 dark:bg-white/[0.03]">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                  <div
+                    className="
+                      rounded-xl
+                      bg-slate-50
+                      p-4
+                      dark:bg-white/[0.03]
+                    "
+                  >
+                    <p
+                      className="
+                        text-[10px]
+                        font-bold
+                        uppercase
+                        tracking-widest
+                        text-slate-400
+                      "
+                    >
                       Provider
                     </p>
 
-                    <p className="mt-1 text-sm font-medium text-slate-900 dark:text-white">
+                    <p
+                      className="
+                        mt-1
+                        text-sm
+                        font-medium
+                        text-slate-900
+                        dark:text-white
+                      "
+                    >
                       {selectedItem.data.provider}
                     </p>
                   </div>
@@ -683,24 +836,70 @@ export default function Accreditations() {
 
               {"introduced" in selectedItem.data &&
                 selectedItem.data.introduced && (
-                  <div className="rounded-xl bg-slate-50 p-4 dark:bg-white/[0.03]">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                  <div
+                    className="
+                      rounded-xl
+                      bg-slate-50
+                      p-4
+                      dark:bg-white/[0.03]
+                    "
+                  >
+                    <p
+                      className="
+                        text-[10px]
+                        font-bold
+                        uppercase
+                        tracking-widest
+                        text-slate-400
+                      "
+                    >
                       Introduced
                     </p>
 
-                    <p className="mt-1 text-sm font-medium text-slate-900 dark:text-white">
+                    <p
+                      className="
+                        mt-1
+                        text-sm
+                        font-medium
+                        text-slate-900
+                        dark:text-white
+                      "
+                    >
                       {selectedItem.data.introduced}
                     </p>
                   </div>
                 )}
 
               {"type" in selectedItem.data && selectedItem.data.type && (
-                <div className="rounded-xl bg-slate-50 p-4 dark:bg-white/[0.03]">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <div
+                  className="
+                      rounded-xl
+                      bg-slate-50
+                      p-4
+                      dark:bg-white/[0.03]
+                    "
+                >
+                  <p
+                    className="
+                        text-[10px]
+                        font-bold
+                        uppercase
+                        tracking-widest
+                        text-slate-400
+                      "
+                  >
                     Membership
                   </p>
 
-                  <p className="mt-1 text-sm font-medium text-slate-900 dark:text-white">
+                  <p
+                    className="
+                        mt-1
+                        text-sm
+                        font-medium
+                        text-slate-900
+                        dark:text-white
+                      "
+                  >
                     {selectedItem.data.type}
                   </p>
                 </div>
@@ -710,11 +909,26 @@ export default function Accreditations() {
             {"importance" in selectedItem.data &&
               selectedItem.data.importance && (
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-950 dark:text-white">
+                  <h3
+                    className="
+                      text-sm
+                      font-semibold
+                      text-slate-950
+                      dark:text-white
+                    "
+                  >
                     Why it matters
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                  <p
+                    className="
+                      mt-2
+                      text-sm
+                      leading-6
+                      text-slate-600
+                      dark:text-slate-400
+                    "
+                  >
                     {selectedItem.data.importance}
                   </p>
                 </div>
@@ -734,11 +948,26 @@ export default function Accreditations() {
 
             {"history" in selectedItem.data && selectedItem.data.history && (
               <div>
-                <h3 className="text-sm font-semibold text-slate-950 dark:text-white">
+                <h3
+                  className="
+                      text-sm
+                      font-semibold
+                      text-slate-950
+                      dark:text-white
+                    "
+                >
                   History
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                <p
+                  className="
+                      mt-2
+                      text-sm
+                      leading-6
+                      text-slate-600
+                      dark:text-slate-400
+                    "
+                >
                   {selectedItem.data.history}
                 </p>
               </div>
@@ -750,24 +979,44 @@ export default function Accreditations() {
                   className="
                     rounded-2xl
                     border
-                    border-blue-500/10
-                    bg-blue-500/[0.04]
+                    border-[#3CB6C6]/10
+                    bg-[#3CB6C6]/[0.04]
                     p-5
-                    dark:bg-blue-500/[0.06]
+                    dark:bg-[#3CB6C6]/[0.06]
                   "
                 >
                   <div className="flex gap-3">
                     <ShieldCheck
                       size={18}
-                      className="mt-0.5 shrink-0 text-blue-500"
+                      className="
+                        mt-0.5
+                        shrink-0
+                        text-[#3CB6C6]
+                      "
                     />
 
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                      <p
+                        className="
+                          text-[10px]
+                          font-bold
+                          uppercase
+                          tracking-widest
+                          text-[#3CB6C6]
+                        "
+                      >
                         NCC Cleaning commitment
                       </p>
 
-                      <p className="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-300">
+                      <p
+                        className="
+                          mt-2
+                          text-sm
+                          leading-6
+                          text-slate-700
+                          dark:text-slate-300
+                        "
+                      >
                         {selectedItem.data.company_statement}
                       </p>
                     </div>

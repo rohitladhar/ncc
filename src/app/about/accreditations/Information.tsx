@@ -58,7 +58,13 @@ export default function Information({
             type="button"
             aria-label="Close dialog"
             onClick={onClose}
-            className="absolute inset-0 cursor-default bg-slate-950/70 backdrop-blur-md"
+            className="
+              absolute
+              inset-0
+              cursor-default
+              bg-slate-950/70
+              backdrop-blur-md
+            "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -85,12 +91,15 @@ export default function Information({
               ease: [0.22, 1, 0.36, 1],
             }}
             className="
-              relative z-10
-              w-full max-w-2xl
+              relative
+              z-10
+              w-full
+              max-w-2xl
               max-h-[90vh]
               overflow-hidden
               rounded-[2rem]
-              border border-white/20
+              border
+              border-white/20
               bg-white
               shadow-[0_30px_100px_rgba(0,0,0,0.3)]
               dark:border-white/10
@@ -100,10 +109,13 @@ export default function Information({
             <div
               className="
                 pointer-events-none
-                absolute -right-24 -top-24
-                h-64 w-64
+                absolute
+                -right-24
+                -top-24
+                h-64
+                w-64
                 rounded-full
-                bg-blue-500/10
+                bg-[#3CB6C6]/10
                 blur-3xl
               "
             />
@@ -111,10 +123,17 @@ export default function Information({
             <div className="relative max-h-[90vh] overflow-y-auto">
               <div
                 className="
-                  sticky top-0 z-20
-                  flex items-center justify-between
-                  border-b border-slate-200/80
-                  bg-white/90 px-6 py-5
+                  sticky
+                  top-0
+                  z-20
+                  flex
+                  items-center
+                  justify-between
+                  border-b
+                  border-slate-200/80
+                  bg-white/90
+                  px-6
+                  py-5
                   backdrop-blur-xl
                   dark:border-white/10
                   dark:bg-slate-950/90
@@ -122,13 +141,27 @@ export default function Information({
                 "
               >
                 <div>
-                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
+                  <p
+                    className="
+                      mb-1
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#3CB6C6]
+                    "
+                  >
                     NCC Cleaning
                   </p>
 
                   <h2
                     id={titleId}
-                    className="text-lg font-semibold text-slate-950 dark:text-white"
+                    className="
+                      text-lg
+                      font-semibold
+                      text-slate-950
+                      dark:text-white
+                    "
                   >
                     {title}
                   </h2>
@@ -139,9 +172,15 @@ export default function Information({
                   onClick={onClose}
                   aria-label="Close dialog"
                   className="
-                    flex h-10 w-10 shrink-0 items-center justify-center
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
                     rounded-full
-                    border border-slate-200
+                    border
+                    border-slate-200
                     bg-white
                     text-slate-500
                     transition-all
@@ -150,7 +189,7 @@ export default function Information({
                     hover:text-slate-950
                     focus:outline-none
                     focus:ring-2
-                    focus:ring-blue-500/50
+                    focus:ring-[#3CB6C6]/50
                     dark:border-white/10
                     dark:bg-white/5
                     dark:text-slate-400
