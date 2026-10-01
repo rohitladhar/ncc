@@ -1,10 +1,7 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { MessageSquare, Quote, Star } from "lucide-react";
-
 import { allClientFeedback } from "@/app/utils/apiCalls";
-
 type FeedbackItem = {
   name?: string | null;
   designation?: string | null;
@@ -34,7 +31,6 @@ const Feedback = () => {
         setFeedback(data);
       } catch (error) {
         console.error("Error fetching client feedback:", error);
-
         setFeedback([]);
       } finally {
         setLoading(false);
@@ -50,11 +46,19 @@ const Feedback = () => {
 
   const isMarqueeEnabled = feedback.length > MARQUEE_THRESHOLD;
 
-  const limitWords = (text: string) => {
-    const words = text.trim().split(/\s+/);
+  const limitWords = (text?: string | null) => {
+    const fallback =
+      "Professional service, excellent communication and consistently high standards.";
+
+    if (!text?.trim()) {
+      return fallback;
+    }
+
+    const cleanText = text.trim();
+    const words = cleanText.split(/\s+/);
 
     if (words.length <= MAX_WORDS) {
-      return text.trim();
+      return cleanText;
     }
 
     return words.slice(0, MAX_WORDS).join(" ") + "…";
@@ -79,12 +83,7 @@ const Feedback = () => {
     return (
       <div
         key={`${duplicate ? "duplicate" : "original"}-${index}-${item.name || "client"}`}
-        className="
-          w-[310px]
-          shrink-0
-          sm:w-[350px]
-          lg:w-[380px]
-        "
+        className="w-[310px] shrink-0 sm:w-[350px] lg:w-[380px]"
       >
         <article
           className="
@@ -107,7 +106,6 @@ const Feedback = () => {
             hover:shadow-xl
           "
         >
-          {/* Background Number */}
           <span
             aria-hidden="true"
             className="
@@ -126,7 +124,6 @@ const Feedback = () => {
             {String(index + 1).padStart(2, "0")}
           </span>
 
-          {/* Header */}
           <div
             className="
               relative
@@ -136,7 +133,6 @@ const Feedback = () => {
               justify-between
             "
           >
-            {/* Quote Icon */}
             <div
               className="
                 flex
@@ -155,7 +151,6 @@ const Feedback = () => {
               <Quote className="h-5 w-5" />
             </div>
 
-            {/* Rating */}
             <div className="flex gap-1" aria-label={`${rating} out of 5 stars`}>
               {Array.from({ length: 5 }).map((_, starIndex) => (
                 <Star
@@ -171,27 +166,12 @@ const Feedback = () => {
             </div>
           </div>
 
-          {/* Feedback */}
-          <p
-            className="
-              relative
-              z-10
-              mt-7
-              line-clamp-4
-              text-sm
-              leading-7
-              text-slate-600
-            "
-          >
-            “
-            {limitWords(
-              item.comments ||
-                "Professional service, excellent communication and consistently high standards.",
-            )}
-            ”
-          </p>
+          <div className="relative z-10 mt-7 h-[280px] overflow-hidden">
+            <p className="text-sm leading-7 text-slate-600">
+              “{limitWords(item.comments)}”
+            </p>
+          </div>
 
-          {/* Client Details */}
           <div
             className="
               relative
@@ -203,7 +183,6 @@ const Feedback = () => {
               pt-7
             "
           >
-            {/* Avatar */}
             <div
               className="
                 flex
@@ -222,7 +201,6 @@ const Feedback = () => {
               {getInitials(item.name)}
             </div>
 
-            {/* Name & Designation */}
             <div className="min-w-0">
               <p
                 className="
@@ -250,7 +228,6 @@ const Feedback = () => {
             </div>
           </div>
 
-          {/* Bottom Accent */}
           <div
             className="
               relative
@@ -282,7 +259,6 @@ const Feedback = () => {
       "
     >
       <div className="mx-auto max-w-7xl">
-        {/* Section Header */}
         <div
           className="
             flex
@@ -294,7 +270,6 @@ const Feedback = () => {
           "
         >
           <div className="max-w-2xl">
-            {/* Label */}
             <div
               className="
                 inline-flex
@@ -315,7 +290,6 @@ const Feedback = () => {
               Client Feedback
             </div>
 
-            {/* Heading */}
             <h2
               className="
                 mt-5
@@ -328,7 +302,6 @@ const Feedback = () => {
               What our clients say
             </h2>
 
-            {/* Description */}
             <p
               className="
                 mt-4
@@ -343,7 +316,6 @@ const Feedback = () => {
             </p>
           </div>
 
-          {/* Header Badge */}
           <div
             className="
               hidden
@@ -366,11 +338,9 @@ const Feedback = () => {
         </div>
       </div>
 
-      {/* Feedback Cards */}
       <div className="relative mt-10">
         {isMarqueeEnabled ? (
           <>
-            {/* Left Gradient */}
             <div
               aria-hidden="true"
               className="
@@ -389,7 +359,6 @@ const Feedback = () => {
               "
             />
 
-            {/* Right Gradient */}
             <div
               aria-hidden="true"
               className="
@@ -408,21 +377,17 @@ const Feedback = () => {
               "
             />
 
-            {/* Marquee */}
             <div
-              className={`
-                feedback-marquee
-                ${isPaused ? "feedback-marquee-paused" : ""}
-              `}
+              className={`feedback-marquee ${
+                isPaused ? "feedback-marquee-paused" : ""
+              }`}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
-              {/* Original Cards */}
               <div className="feedback-track">
                 {feedback.map((item, index) => renderCard(item, index))}
               </div>
 
-              {/* Duplicate Cards */}
               <div className="feedback-track" aria-hidden="true">
                 {feedback.map((item, index) => renderCard(item, index, true))}
               </div>
