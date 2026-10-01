@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  MessageSquare,
-  Quote,
-  Star,
-} from "lucide-react";
+import { MessageSquare, Quote, Star } from "lucide-react";
 
 import { allClientFeedback } from "@/app/utils/apiCalls";
 
@@ -16,7 +12,7 @@ type FeedbackItem = {
   comments?: string | null;
 };
 
-const MAX_WORDS = 50;
+const MAX_WORDS = 100;
 const MARQUEE_THRESHOLD = 3;
 
 const Feedback = () => {
@@ -37,10 +33,7 @@ const Feedback = () => {
 
         setFeedback(data);
       } catch (error) {
-        console.error(
-          "Error fetching client feedback:",
-          error,
-        );
+        console.error("Error fetching client feedback:", error);
 
         setFeedback([]);
       } finally {
@@ -55,8 +48,7 @@ const Feedback = () => {
     return null;
   }
 
-  const isMarqueeEnabled =
-    feedback.length > MARQUEE_THRESHOLD;
+  const isMarqueeEnabled = feedback.length > MARQUEE_THRESHOLD;
 
   const limitWords = (text: string) => {
     const words = text.trim().split(/\s+/);
@@ -65,14 +57,10 @@ const Feedback = () => {
       return text.trim();
     }
 
-    return (
-      words.slice(0, MAX_WORDS).join(" ") + "…"
-    );
+    return words.slice(0, MAX_WORDS).join(" ") + "…";
   };
 
-  const getInitials = (
-    name?: string | null,
-  ) => {
+  const getInitials = (name?: string | null) => {
     if (!name?.trim()) {
       return "C";
     }
@@ -81,21 +69,12 @@ const Feedback = () => {
       .trim()
       .split(/\s+/)
       .slice(0, 2)
-      .map((word) =>
-        word.charAt(0).toUpperCase(),
-      )
+      .map((word) => word.charAt(0).toUpperCase())
       .join("");
   };
 
-  const renderCard = (
-    item: FeedbackItem,
-    index: number,
-    duplicate = false,
-  ) => {
-    const rating = Math.min(
-      Math.max(Number(item.rating) || 0, 0),
-      5,
-    );
+  const renderCard = (item: FeedbackItem, index: number, duplicate = false) => {
+    const rating = Math.min(Math.max(Number(item.rating) || 0, 0), 5);
 
     return (
       <div
@@ -112,7 +91,7 @@ const Feedback = () => {
             group
             relative
             flex
-            min-h-[285px]
+            h-[500px]
             flex-col
             overflow-hidden
             rounded-3xl
@@ -128,6 +107,7 @@ const Feedback = () => {
             hover:shadow-xl
           "
         >
+          {/* Background Number */}
           <span
             aria-hidden="true"
             className="
@@ -146,6 +126,7 @@ const Feedback = () => {
             {String(index + 1).padStart(2, "0")}
           </span>
 
+          {/* Header */}
           <div
             className="
               relative
@@ -155,6 +136,7 @@ const Feedback = () => {
               justify-between
             "
           >
+            {/* Quote Icon */}
             <div
               className="
                 flex
@@ -173,26 +155,23 @@ const Feedback = () => {
               <Quote className="h-5 w-5" />
             </div>
 
-            <div
-              className="flex gap-1"
-              aria-label={`${rating} out of 5 stars`}
-            >
-              {Array.from({ length: 5 }).map(
-                (_, starIndex) => (
-                  <Star
-                    key={starIndex}
-                    className={
-                      starIndex < rating
-                        ? "h-5 w-5 fill-amber-400 text-amber-400"
-                        : "h-5 w-5 text-slate-200"
-                    }
-                    strokeWidth={1.8}
-                  />
-                ),
-              )}
+            {/* Rating */}
+            <div className="flex gap-1" aria-label={`${rating} out of 5 stars`}>
+              {Array.from({ length: 5 }).map((_, starIndex) => (
+                <Star
+                  key={starIndex}
+                  className={
+                    starIndex < rating
+                      ? "h-5 w-5 fill-amber-400 text-amber-400"
+                      : "h-5 w-5 text-slate-200"
+                  }
+                  strokeWidth={1.8}
+                />
+              ))}
             </div>
           </div>
 
+          {/* Feedback */}
           <p
             className="
               relative
@@ -212,6 +191,7 @@ const Feedback = () => {
             ”
           </p>
 
+          {/* Client Details */}
           <div
             className="
               relative
@@ -223,6 +203,7 @@ const Feedback = () => {
               pt-7
             "
           >
+            {/* Avatar */}
             <div
               className="
                 flex
@@ -241,6 +222,7 @@ const Feedback = () => {
               {getInitials(item.name)}
             </div>
 
+            {/* Name & Designation */}
             <div className="min-w-0">
               <p
                 className="
@@ -268,6 +250,7 @@ const Feedback = () => {
             </div>
           </div>
 
+          {/* Bottom Accent */}
           <div
             className="
               relative
@@ -299,6 +282,7 @@ const Feedback = () => {
       "
     >
       <div className="mx-auto max-w-7xl">
+        {/* Section Header */}
         <div
           className="
             flex
@@ -310,6 +294,7 @@ const Feedback = () => {
           "
         >
           <div className="max-w-2xl">
+            {/* Label */}
             <div
               className="
                 inline-flex
@@ -330,6 +315,7 @@ const Feedback = () => {
               Client Feedback
             </div>
 
+            {/* Heading */}
             <h2
               className="
                 mt-5
@@ -342,6 +328,7 @@ const Feedback = () => {
               What our clients say
             </h2>
 
+            {/* Description */}
             <p
               className="
                 mt-4
@@ -351,12 +338,12 @@ const Feedback = () => {
                 sm:text-base
               "
             >
-              Hear directly from the people and
-              businesses who trust our cleaning teams
-              to maintain their spaces.
+              Hear directly from the people and businesses who trust our
+              cleaning teams to maintain their spaces.
             </p>
           </div>
 
+          {/* Header Badge */}
           <div
             className="
               hidden
@@ -379,9 +366,11 @@ const Feedback = () => {
         </div>
       </div>
 
+      {/* Feedback Cards */}
       <div className="relative mt-10">
         {isMarqueeEnabled ? (
           <>
+            {/* Left Gradient */}
             <div
               aria-hidden="true"
               className="
@@ -400,6 +389,7 @@ const Feedback = () => {
               "
             />
 
+            {/* Right Gradient */}
             <div
               aria-hidden="true"
               className="
@@ -418,6 +408,7 @@ const Feedback = () => {
               "
             />
 
+            {/* Marquee */}
             <div
               className={`
                 feedback-marquee
@@ -426,23 +417,14 @@ const Feedback = () => {
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
+              {/* Original Cards */}
               <div className="feedback-track">
-                {feedback.map((item, index) =>
-                  renderCard(item, index),
-                )}
+                {feedback.map((item, index) => renderCard(item, index))}
               </div>
 
-              <div
-                className="feedback-track"
-                aria-hidden="true"
-              >
-                {feedback.map((item, index) =>
-                  renderCard(
-                    item,
-                    index,
-                    true,
-                  ),
-                )}
+              {/* Duplicate Cards */}
+              <div className="feedback-track" aria-hidden="true">
+                {feedback.map((item, index) => renderCard(item, index, true))}
               </div>
             </div>
           </>
@@ -456,9 +438,7 @@ const Feedback = () => {
               sm:gap-5
             "
           >
-            {feedback.map((item, index) =>
-              renderCard(item, index),
-            )}
+            {feedback.map((item, index) => renderCard(item, index))}
           </div>
         )}
       </div>
