@@ -3,7 +3,10 @@
     {
       "label": "Cleaning Services",
       "submenu": [
-        { "label": "HOME OFFICE ACCOMMODATION SERVICES", "href": "/services/homeoffice" },
+        {
+          "label": "HOME OFFICE ACCOMMODATION SERVICES",
+          "href": "/services/homeoffice"
+        },
         {
           "label": "OFFICE AND CORPORATE CLEANING",
           "href": "/services/office"
@@ -20,7 +23,10 @@
           "label": "COMMERCIAL BUILDING CLEANING",
           "href": "/services/commercial"
         },
-        { "label": "DEEP AND SPECIALIST CLEANING", "href": "/services/specialist" }
+        {
+          "label": "DEEP AND SPECIALIST CLEANING",
+          "href": "/services/specialist"
+        }
       ]
     },
     {

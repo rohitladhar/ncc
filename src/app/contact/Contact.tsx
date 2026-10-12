@@ -1,4 +1,5 @@
 "use client";
+
 const contactDetails = [
   {
     title: "Company",
@@ -31,6 +32,10 @@ const emailContacts = [
   {
     role: "Sales Manager",
     email: "sales@ncccleaning.co.uk",
+  },
+  {
+    role: "Sales administrator",
+    email: "operations@ncccleaning.co.uk",
   },
 ];
 
@@ -99,18 +104,16 @@ const ContactInfo = () => {
         ))}
 
         <div className="flex flex-col gap-3 py-8 md:flex-row md:gap-12">
-          <h2 className="w-full text-2xl font-semibold md:w-64">
-            Email
-          </h2>
+          <h2 className="w-full text-2xl font-semibold md:w-64">Email</h2>
 
-          <div className="space-y-5 text-xl">
+          <div className="space-y-2 text-xl">
             {emailContacts.map((contact) => (
-              <div key={contact.email}>
-                <p className="font-semibold">{contact.role}</p>
+              <div key={contact.email} className="space-y-0">
+                <p className="font-semibold leading-6">{contact.role}</p>
 
                 <a
                   href={`mailto:${contact.email}`}
-                  className="transition-colors hover:text-primary"
+                  className="text-base leading-5 transition-colors hover:text-primary"
                 >
                   {contact.email}
                 </a>
@@ -126,10 +129,7 @@ const ContactInfo = () => {
 
           <div className="space-y-2 text-xl">
             {openingHours.map((hours) => (
-              <p
-                key={hours}
-                className="transition-colors hover:text-primary"
-              >
+              <p key={hours} className="transition-colors hover:text-primary">
                 {hours}
               </p>
             ))}

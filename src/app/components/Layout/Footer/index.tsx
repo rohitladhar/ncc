@@ -260,7 +260,7 @@ const Footer = () => {
               Crafted & Developed by{" "}
             </span>{" "}
             <Link
-              href="https://rohit-kumar-portfolio.vercel.app"
+              href="https://rohit-kumar.co.uk"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent transition-all duration-300 hover:scale-105"
